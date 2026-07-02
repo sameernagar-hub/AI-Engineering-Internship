@@ -56,6 +56,10 @@ Starter candidates include:
 - Week 3: Prototype integration around one selected tool.
 - Week 4: Final report, presentation deck, publication cleanup, and delivery.
 
+## License
+
+This project is licensed under the MIT License. See [`LICENSE`](LICENSE) for details.
+
 ## Repository Status
 
 Phase 1 is focused on kickoff and source understanding: clarifying the research question, identifying the deliverables, and keeping the planning documents visible. The next phase creates the research workspace, templates, citation conventions, and evidence system.
