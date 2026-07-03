@@ -9,6 +9,7 @@ Daily rhythm:
 - Start by reading the previous day's exit artifact.
 - Do the day's research or build work.
 - Save notes, commands, links, and evidence.
+- Update `CHANGELOG.md` when a work session changes project direction, artifacts, prototype code, report/deck content, or repository structure.
 - End by writing the day's artifact before moving on.
 
 ## End Goal
@@ -70,6 +71,7 @@ Tasks:
 
 - Create longlist entries for GnuCash, Beancount, Ledger CLI, HLedger, Firefly III, OpenTaxSolver, IRS Direct File posture, OFX/QIF tooling, and CSV-to-ledger tooling.
 - For each entry, capture repo or project URL, docs URL, license, latest visible release, and apparent integration surface.
+- Note obvious third-party wrappers or integrations if they are immediately visible.
 - Add quick notes on whether the tool is bookkeeping, tax calculation, tax submission, or adjacent infrastructure.
 
 Exit artifact:
@@ -87,6 +89,7 @@ Objective: find credible tools not listed in the original brief.
 Tasks:
 
 - Search for open-source tax calculators, tax form generators, ledger import/export tools, OFX/QIF parsers, and tax-line mapping tools.
+- Search for third-party wrappers, integrations, plugins, package bindings, and prior-art automation examples.
 - Look for non-US comparators only when they reveal useful API or schema patterns.
 - Add discovered tools to the longlist if they are relevant and publicly inspectable.
 - Record exclusions when a tool is closed-source, abandoned, irrelevant, or not consumer-oriented.
@@ -107,6 +110,7 @@ Objective: gather comparable project-health evidence before choosing the shortli
 Tasks:
 
 - Record repo activity, recent commits, release cadence, license, contributor signals, and documentation quality for each plausible candidate.
+- Record visible annual tax-year support patterns for tax-oriented projects.
 - Note whether the data format is plain text, database-backed, XML, binary, or external-service-backed.
 - Capture evidence links for each claim.
 
@@ -127,6 +131,7 @@ Tasks:
 - Identify whether each tool offers a CLI, library import, REST API, plugin system, file format, or schema.
 - Mark surfaces as documented, stable, experimental, inferred, or unclear.
 - Note structured output support such as JSON, XML, CSV, OpenAPI, typed APIs, or machine-readable schemas.
+- Note whether input shapes are machine-readable or must be reconstructed from prose documentation.
 
 Exit artifact:
 
@@ -226,7 +231,7 @@ Tasks:
 
 - Install or inspect the third shortlisted tool.
 - Exercise available programmatic surfaces.
-- Look for tax-form coverage, tax-line mapping, export formats, and explicit non-goals.
+- Look for Form 1040, Schedules A/B/C/D/E, common credits, tax-line mapping, export formats, tax-year support, and explicit non-goals.
 - Test failure behavior where the tool is runnable.
 - Fill out the tool record.
 
@@ -541,6 +546,7 @@ Tasks:
 - Remove unsupported claims.
 - Add limitations and future-work sections.
 - Standardize tool names, dates, and terminology.
+- Confirm the report still reflects the internship brief and the changelog's project history.
 
 Exit artifact:
 

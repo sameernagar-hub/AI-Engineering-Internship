@@ -12,6 +12,17 @@ Answer one practical research question:
 
 The final work should be portfolio-ready, reproducible, synthetic-data-only, and publishable under an OSI-approved license.
 
+## Brief Anchors
+
+The source internship brief frames this as an educational, self-directed, remote/asynchronous research internship with weekly mentor check-ins. The project is unpaid, time-bounded to July 1-31, 2026, and student-owned. There is no promise of employment, no IP assignment, no NDA, and no production work for commercial projects.
+
+Educational objectives to preserve:
+
+- Evaluate an open-source software landscape across tool choice, project health, licensing, and API surface.
+- Read and exercise unfamiliar codebases.
+- Design a small programmatic integration over a real third-party tool surface.
+- Write and present technical findings to a non-trivial audience.
+
 ## Final Deliverables
 
 1. Written research report
@@ -44,12 +55,14 @@ Each evaluated tool gets a structured record with these dimensions:
 
 - Identity: name, category, repository, license, latest release, activity level.
 - Programmatic surface: CLI, library import, REST API, plugin system, plain-text file format, schema, or database.
+- Prior art: existing third-party wrappers, integrations, or automation examples.
 - First useful call: time and steps from fresh install to first meaningful operation.
 - Code drivability: structured input/output, typed interfaces, JSON/XML modes, error clarity, documentation quality.
-- Workflow coverage: bookkeeping, reporting, tax-line mapping, form generation, tax-year support, submission pathway.
+- Workflow coverage: bookkeeping, reporting, tax-line mapping, Form 1040 and Schedules A/B/C/D/E coverage, common credits, tax-year support, form generation, and submission pathway.
 - Safety: dry-run or validation mode, scratch data support, irreversible operations, failure modes on bad input.
-- Project health: maintainers, recent commits/releases, issue activity, data format durability, license constraints.
+- Project health: maintainers, recent commits/releases, issue activity, annual tax-year support pattern, data format durability, license constraints.
 - Integration fit: how good a candidate it is for a thin API wrapper or automation layer.
+- Stated limits: what the project itself says it is not for, such as state returns, foreign filers, business returns, e-file, or production filing.
 
 ## Proposed Tool Set
 
@@ -86,6 +99,7 @@ Tasks:
 - Add a license, README, research log, and structured tool-record template.
 - Survey the starter candidates and add any credible tools discovered along the way.
 - Record repository metadata, licenses, release cadence, documentation links, and apparent integration surfaces.
+- Look for existing wrappers or integrations as prior art.
 - Identify which tools are worth installing and exercising in Week 2.
 - Hold or prepare for the first mentor check-in with the shortlist and selection rationale.
 
@@ -114,6 +128,7 @@ Tasks:
   - compute balances
   - run a report
   - export or inspect tax-relevant output
+- For tax-oriented tools, inspect Form 1040, Schedules A/B/C/D/E, common credits, tax-year support, stated non-goals, and whether output is PDF, MeF XML, paper-only, or handoff-oriented.
 - Test failure behavior with malformed dates, unknown accounts, invalid amounts, and missing files.
 - Identify safe sandboxing patterns such as temporary files, dry-run flags, test databases, or isolated config directories.
 - Fill out the rubric for each tool.
@@ -177,6 +192,7 @@ Tasks:
 - Create a presentation deck aligned with the report.
 - Rehearse a 20-30 minute walkthrough.
 - Finalize repository cleanup and publish artifacts.
+- Keep `CHANGELOG.md` current so changes can be backtracked without reconstructing history from git alone.
 
 Exit criteria:
 

@@ -34,6 +34,8 @@ Each tool will be evaluated for:
 
 - [`codex_execution_plan_ai_tax_tooling.md`](codex_execution_plan_ai_tax_tooling.md) defines the month-long execution plan, deliverables, evaluation rubric, risks, and decision gates.
 - [`day_by_day_ai_tax_tooling_phases.md`](day_by_day_ai_tax_tooling_phases.md) breaks the internship into daily phases from July 1 through July 31, 2026.
+- [`CHANGELOG.md`](CHANGELOG.md) records what changed, why it changed, supporting files, and the next step after each meaningful work session.
+- [`notes/internship_brief_alignment.md`](notes/internship_brief_alignment.md) tracks alignment between the attached internship brief and the repository plan.
 
 ## Initial Candidate Tools
 
@@ -62,4 +64,4 @@ This project is licensed under the MIT License. See [`LICENSE`](LICENSE) for det
 
 ## Repository Status
 
-Phase 1 is focused on kickoff and source understanding: clarifying the research question, identifying the deliverables, and keeping the planning documents visible. The next phase creates the research workspace, templates, citation conventions, and evidence system.
+Phase 2 created the research workspace, evidence folders, citation convention, rolling research log, reusable tool-record template, and changelog/backtracking convention. The next phase turns the starter candidates into a structured longlist.
