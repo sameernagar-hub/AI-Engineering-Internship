@@ -104,3 +104,39 @@ Create a persistent changelog and compare the repository plan against the attach
 ### Tomorrow's Starting Point
 
 Execute Phase 3 by creating `research/longlist.md` for the starter candidate tools.
+
+## 2026-07-04 - Phase 3: Starter Tool Inventory
+
+### Goal
+
+Turn the starter candidate list into a structured longlist with first-pass metadata, docs links, release/status notes, licenses, categories, integration surfaces, and immediately visible wrappers or adjacent tools.
+
+### What I Did
+
+- Created `research/longlist.md` as the Day 3 exit artifact.
+- Checked primary project, documentation, release, license, PyPI, and official government pages for the starter candidates.
+- Captured first-pass entries for GnuCash, Beancount, Ledger CLI, hledger, Firefly III, OpenTaxSolver, IRS Direct File posture, OFX/QIF parser tooling, and CSV-to-ledger tooling.
+- Added immediate adjacent prior art including piecash, beangulp, smart_importer, beancount-import, ledger-autosync, Firefly III Data Importer, and OpenFile.
+
+### Evidence Captured
+
+- `research/longlist.md`
+- Source links and compact citation IDs inside `research/longlist.md`
+- Primary source families checked: GitHub repositories/releases, PyPI package pages, official documentation sites, SourceForge project/download pages, and IRS Direct File pages.
+
+### Decisions Made
+
+- Treat IRS Direct File as reference architecture and schema/API prior art, not as an active filing candidate.
+- Treat OFX/QIF and CSV-to-ledger tooling as adjacent import infrastructure rather than standalone tax or bookkeeping candidates.
+- Keep both API-first and plain-text/CLI-first paths alive until the Day 7 shortlist decision.
+
+### Problems / Open Questions
+
+- OpenTaxSolver appears tax-form-relevant but may not expose a clean programmatic API.
+- GnuCash Python bindings are optional/build-dependent and need local verification before being considered easy to automate.
+- ledger-autosync has newer PyPI metadata than its GitHub latest-release page, so package/release metadata needs reconciliation during the health snapshot.
+- OpenFile may deserve promotion to the longlist during Day 4 discovery because it is an active-looking fork of IRS Direct File, but accuracy and status caveats are prominent.
+
+### Tomorrow's Starting Point
+
+Execute Day 4 discovery search: expand the longlist with credible additional tools and create `research/exclusions.md` for closed-source, abandoned, irrelevant, or non-consumer candidates.

@@ -11,6 +11,29 @@ Each entry should answer:
 - What evidence or files were added?
 - What is next?
 
+## 2026-07-04 - Phase 3: Starter Tool Inventory
+
+### What Changed
+
+- Created `research/longlist.md` with structured starter entries for GnuCash, Beancount, Ledger CLI, hledger, Firefly III, OpenTaxSolver, IRS Direct File posture, OFX/QIF parser tooling, and CSV-to-ledger tooling.
+- Captured first-pass project URLs, docs URLs, licenses, latest visible release/status notes, categories, apparent integration surfaces, and immediately visible wrappers or adjacent tools.
+- Added source IDs and access dates inside the longlist so later report claims can trace back to primary sources.
+- Updated the research log and README status for Phase 3 completion.
+
+### Why
+
+The project needed a baseline tool inventory before Day 4 discovery, Day 5 health snapshots, Day 6 programmatic-surface comparison, and the Day 7 shortlist decision.
+
+### Evidence / Files
+
+- `research/longlist.md`
+- `notes/research_log.md`
+- `README.md`
+
+### Next
+
+Execute Day 4 discovery search, expand `research/longlist.md` with credible additional tools, and create `research/exclusions.md` for tools that are closed-source, irrelevant, abandoned, or outside the consumer/freelancer scope.
+
 ## 2026-07-03 - Project Tracking and Brief Alignment
 
 ### What Changed

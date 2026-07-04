@@ -64,4 +64,4 @@ This project is licensed under the MIT License. See [`LICENSE`](LICENSE) for det
 
 ## Repository Status
 
-Phase 2 created the research workspace, evidence folders, citation convention, rolling research log, reusable tool-record template, and changelog/backtracking convention. The next phase turns the starter candidates into a structured longlist.
+Phase 3 created `research/longlist.md`, turning the starter candidates into a structured first-pass inventory with source links, releases/status notes, licenses, categories, apparent integration surfaces, and adjacent wrapper/import tooling. The next phase expands discovery and records exclusions.
