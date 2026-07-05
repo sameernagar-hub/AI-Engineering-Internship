@@ -1,8 +1,8 @@
-# Starter Tool Longlist
+# Tool Longlist
 
-Day 3 artifact for Phase 3: Starter Tool Inventory.
+Day 3 artifact for Phase 3: Starter Tool Inventory, expanded during Day 4 discovery search.
 
-Planned phase date: 2026-07-03. Source access date: 2026-07-04. This is a first-pass inventory, not a final health assessment. Release and activity metadata should be normalized in `research/project_health_snapshot.md` during Day 5.
+Planned starter-inventory date: 2026-07-03. Day 3 source access date: 2026-07-04. Day 4 discovery executed on 2026-07-05 for the planned 2026-07-04 phase. This is still a first-pass inventory, not a final health assessment. Release and activity metadata should be normalized in `research/project_health_snapshot.md` during Day 5.
 
 ## Summary Matrix
 
@@ -15,8 +15,23 @@ Planned phase date: 2026-07-03. Source access date: 2026-07-04. This is a first-
 | Firefly III | Self-hosted personal finance | v6.6.6, released 2026-07-01 | AGPL-3.0 | JSON REST API, Swagger/OpenAPI docs, data importer, third-party app ecosystem | Strong API-native personal-finance candidate |
 | OpenTaxSolver | Tax calculation / form preparation | 23.06 for tax year 2025, visible 2026-03-20 | GPL-2.0 | Local GUI/textual app, source-distributed form calculators, print/PDF workflow | Keep as tax-form-oriented comparator |
 | IRS Direct File posture | Tax preparation / submission reference | IRS page says Direct File is no longer available; repo has no conventional releases | Public domain / CC0 for released code | Reference source, Fact Graph, MeF XML path, State API JSON/MeF transfer model | Treat as reference architecture, not active filing candidate |
+| OpenFile | Direct File fork / tax preparation reference | No releases published; README disclaims accuracy and notes official Direct File suspension | License visible but exact terms not normalized; verify on Day 5 | Dockerized fork of IRS Direct File with client/state API style surfaces inherited from upstream | Promote as cautionary reference/fork candidate |
 | OFX/QIF parser tooling | Adjacent import infrastructure | ofxtools 1.1.1 on 2026-06-12; ofxparse 0.21 on PyPI; QIF parsers vary | Mixed: GPL-3.0-or-later, MIT, GPL-3.0 | Python parsers/clients/generators for bank-file formats | Keep as import-layer support, not standalone tax tool |
 | CSV-to-ledger tooling | Adjacent import infrastructure | beangulp 0.2.0, smart_importer 1.2, beancount-import 1.4.0, ledger-autosync 1.2.0 on PyPI | Mixed: GPL-2.0, MIT, GPL-3.0 | CSV import rules, importer frameworks, ML-assisted categorization, OFX/bank sync | Keep as integration substrate and prior art |
+| UsTaxes | US tax preparation / form generation | README supports tax years 2020-2025; release metadata not normalized yet | AGPL-3.0 | Client-side web app, desktop build, schemas, PDF/form workflow | Promote as direct US 1040 candidate |
+| HabuTax | US tax solver / form calculation | Tags visible; package install documented; release metadata not normalized yet | GPL-2.0 | Python package and CLI over INI-style inputs, solution files/stdout, PDF fill path | Promote as scriptable tax-form candidate |
+| Filed Open Tax Engine | US federal 1040 calculation engine | v2.0.2, latest visible GitHub release 2026-05-11 | AGPL-3.0 plus commercial license | Single-binary CLI, JSON return data, form-node schemas, agent-oriented docs | Promote with maturity/accuracy caution |
+| PSL Tax-Calculator | Federal tax microsimulation | GitHub latest visible release 6.7.1 on 2026-07-03; docs still showed 6.7.0 on 2026-06-24 | CC0-1.0 visible in repo badge; verify license file on Day 5 | Python package, documented Python API, CLI, policy/input/output variables | Keep as programmatic tax-model comparator |
+| PolicyEngine US | US tax-benefit rules engine / microsimulation | Active-looking repository; package install documented; release cadence not normalized yet | AGPL-3.0 | Python package, household-level calculations, PolicyEngine/OpenFisca API patterns | Keep as rules-as-code comparator, not filing tool |
+| IRS Tax Withholding Estimator | Withholding estimator / official reference | README says TWE 2.0 went live 2026-02-27 | CC0-1.0 / public domain dedication | Web app/codebase, withholding math, W-4/W-4P output, not filing | Keep as official transparency/reference candidate |
+| tenforty | Python tax calculation wrapper | Supports 2018-2025 in README; release metadata not normalized yet | MIT | Python library, validated function inputs, dataframe/grid evaluation, OpenTaxSolver-backed calculations | Keep as lightweight programmatic bridge |
+| Actual Budget | Local-first personal finance / budgeting | v26.7.0 release notes, released 2026-07-01; GitHub latest visible release 2026-07-02 | MIT | Node API package, stable CLI, import/export ecosystem, local/sync data model | Promote as API/CLI-native personal-finance comparator |
+| KMyMoney | Desktop personal finance | 5.2.0 release notes on 2025-06-21; health not normalized yet | KDE SPDX/GPL-family; verify exact SPDX mix on Day 5 | Local app/files, QIF/OFX/CSV import/export, GnuCash importer | Keep as desktop full-app comparator |
+| HomeBank | Desktop personal finance | Active website; release metadata not normalized yet | GNU GPL per website | Desktop app, import/export, assignment rules, duplicate detection | Low-priority full-app comparator |
+| Money Manager Ex | Desktop/mobile personal finance | Stable release link visible; release metadata not normalized yet | GPL-2.0 | CSV/QIF/XML/HTML import/export, nonproprietary SQLite database | Low-priority full-app comparator |
+| Fava | Beancount web UI / ecosystem component | Tags and PyPI badge visible; release metadata not normalized yet | MIT | Web interface over Beancount, Python package, extension/API docs | Keep as Beancount ecosystem prior art |
+| Paisa | Plain-text-accounting web UI/reporting | v0.7.4, latest visible GitHub release 2025-08-03 | AGPL-3.0 | Reads Ledger/hledger/Beancount files into SQLite, web reports/charts | Keep as UI/reporting comparator around plain-text accounting |
+| ofxstatement | Bank-statement conversion infrastructure | 0.9.2, latest visible GitHub release 2024-11-25 | GPL-3.0 | CLI and plugin system converting proprietary statements to OFX | Keep as import-layer prior art |
 
 ## Candidate Entries
 
@@ -154,6 +169,24 @@ Planned phase date: 2026-07-03. Source access date: 2026-07-04. This is a first-
   - Very useful as architecture and schema prior art.
   - Not suitable as an active tax-submission prototype unless the project explicitly frames it as historical/reference-only.
 
+### OpenFile
+
+- Project URL: https://github.com/openfiletax/openfile
+- Docs URL: https://docs.openfile.tax/en/latest/reference.html
+- License: repository has a visible license file, but exact terms were not normalized during Day 4; verify before relying on it.
+- Latest visible release/status:
+  - No GitHub releases were published in the Day 4 pass.
+  - README states the project makes no guarantees of accuracy and notes the official Direct File project's suspension.
+- Category: Direct File fork / tax preparation reference.
+- Apparent integration surface:
+  - Dockerized application forked from IRS Direct File.
+  - Inherits much of the upstream architecture surface, including client and state-API-oriented components, but should not be treated as equivalent to an IRS-supported filing channel.
+- Obvious third-party wrappers / integrations:
+  - The tool itself is the visible fork of IRS Direct File.
+- First-pass fit:
+  - Worth promoting out of the IRS Direct File note because it is a live-looking public fork.
+  - Accuracy and release status caveats make it risky as a prototype target until Day 5/6 evidence says otherwise.
+
 ### OFX/QIF Parser Tooling
 
 - Representative project URLs:
@@ -215,13 +248,275 @@ Planned phase date: 2026-07-03. Source access date: 2026-07-04. This is a first-
   - Very relevant for the prototype even if not evaluated as standalone final candidates.
   - Best treated as supporting infrastructure around Beancount, Ledger, or hledger.
 
+### UsTaxes
+
+- Project URL: https://github.com/ustaxes/ustaxes
+- Website / docs URL: https://ustaxes.org/
+- License: AGPL-3.0.
+- Latest visible release/status:
+  - README states support for many income and deduction inputs for tax years 2020 through 2025.
+  - GitHub release metadata was not normalized during Day 4 and should be checked during Day 5.
+- Category: US individual income tax preparation / Form 1040 web and desktop application.
+- Apparent integration surface:
+  - Client-side web application with local browser storage and a desktop build path.
+  - Repository includes schemas and source code for form logic and PDF/form output.
+  - Docker and Node-based development workflow are documented.
+- Obvious third-party wrappers / integrations:
+  - None obvious in the Day 4 pass.
+- First-pass fit:
+  - One of the most directly relevant newly discovered tools because it targets Federal 1040 preparation and is public, inspectable, and local-data oriented.
+  - Needs careful accuracy, state-return, and setup review before being shortlisted.
+
+### HabuTax
+
+- Project URL: https://github.com/habutax/habutax
+- License: GPL-2.0.
+- Latest visible release/status:
+  - GitHub showed tags but no normalized release summary in the Day 4 pass.
+  - README documents package installation with `pip install habutax`.
+- Category: US personal income tax solver / form calculation engine.
+- Apparent integration surface:
+  - Python package and CLI.
+  - Plain-text INI-style input files, interactive prompting for missing inputs, solution file output, and stdout output.
+  - PDF filling is available through a `fill-pdfs` command when `pdftk` is installed.
+  - Commands exist for listing forms and form inputs.
+- Obvious third-party wrappers / integrations:
+  - None obvious in the Day 4 pass.
+- First-pass fit:
+  - Strong candidate for programmatic tax-form experimentation because it is CLI-first and exposes form/input listing behavior.
+  - Scope and annual tax-year coverage need Day 5/6 review.
+
+### Filed Open Tax Engine
+
+- Project URL: https://github.com/filedcom/opentax
+- Website / docs URL: https://opentax.filed.com/
+- License: dual-licensed under AGPL-3.0 and a Filed commercial license.
+- Latest visible release: v2.0.2, latest visible GitHub release dated 2026-05-11.
+- Category: US federal 1040 calculation engine / agent-oriented deterministic tax calculator.
+- Apparent integration surface:
+  - Single-binary CLI for macOS, Linux, and Windows.
+  - JSON-oriented return creation, form-node insertion, and return retrieval examples.
+  - Repository includes form folders, a catalog, CLI code, docs, and agent-oriented skill/plugin material.
+- Obvious third-party wrappers / integrations:
+  - The project itself is explicitly agent-oriented and publishes MCP/skill-style materials, but those should be treated as project-provided surfaces rather than independent validation.
+- First-pass fit:
+  - Highly relevant to the internship's AI-agent-consumable integration question.
+  - Newer and lower social proof than older tools, so Day 5 should scrutinize tests, release cadence, coverage, and accuracy disclaimers.
+
+### PSL Tax-Calculator
+
+- Project URL: https://github.com/PSLmodels/Tax-Calculator
+- Docs URL: https://taxcalc.pslmodels.org/
+- License: CC0-1.0 is visible in the repository badge; verify the license file during Day 5.
+- Latest visible release:
+  - GitHub showed release 6.7.1 with a latest visible date of 2026-07-03.
+  - The documentation landing page still showed 6.7.0, dated 2026-06-24, so release metadata should be reconciled during Day 5.
+- Category: federal individual income and payroll tax microsimulation / policy model.
+- Apparent integration surface:
+  - Python package installable with PyPI or conda.
+  - Documented Python API, command-line interface, input variables, output variables, and policy/assumption parameters.
+  - Can process custom-created filing-unit data as well as prepared sample data for aggregate analysis.
+- Obvious third-party wrappers / integrations:
+  - Policy Simulation Library ecosystem and TaxData are adjacent infrastructure, but not direct consumer preparation tools.
+- First-pass fit:
+  - Excellent programmatic comparator for tax calculation and transparent modeling.
+  - Not a consumer return-preparation or filing tool, so shortlist value depends on whether the project wants a model comparator.
+
+### PolicyEngine US
+
+- Project URL: https://github.com/PolicyEngine/policyengine-us
+- Website / docs URL: https://policyengine.org/us
+- Related rules-engine pattern: https://openfisca.org/en/
+- License: AGPL-3.0.
+- Latest visible release/status:
+  - Repository appeared active in July 2026, but release cadence was not normalized during Day 4.
+  - README documents installation with `pip install policyengine-us` and notes that direct microsimulation is moving toward the managed `policyengine.py` bundle.
+- Category: US federal/state tax-benefit rules engine and microsimulation model.
+- Apparent integration surface:
+  - Python package containing US tax-benefit rules and household-level calculations.
+  - PolicyEngine web app/API and OpenFisca-style JSON/Python API patterns are relevant programmatic comparators.
+- Obvious third-party wrappers / integrations:
+  - `policyengine.py` is the recommended managed bundle for broader microsimulation workflows.
+- First-pass fit:
+  - Useful for rules-as-code, variable/parameter modeling, and API/schema comparison.
+  - Not a tax filing or consumer bookkeeping tool; should be treated as a comparator rather than a direct prototype target unless tax-calculation modeling becomes central.
+
+### IRS Tax Withholding Estimator
+
+- Project URL: https://github.com/IRS-Public/tax-withholding-estimator
+- Official tool URL: https://www.irs.gov/individuals/tax-withholding-estimator
+- License: CC0-1.0 / public domain dedication as stated in the repository README.
+- Latest visible release/status:
+  - README says TWE 2.0 went live on 2026-02-27 and that the public repository exists for transparency, collaboration, and research.
+- Category: official federal withholding estimator / W-4 and W-4P recommendation engine.
+- Apparent integration surface:
+  - Public web-app codebase for estimating federal withholding and pre-populating Forms W-4/W-4P.
+  - Architecture and math documentation are linked from the repository.
+  - Repository explicitly states it is not a filing tool and should not be used by taxpayers in place of the official IRS tool.
+- Obvious third-party wrappers / integrations:
+  - None obvious in the Day 4 pass.
+- First-pass fit:
+  - Strong official reference for transparent tax math and scoped non-filing disclaimers.
+  - Not a return-preparation or submission candidate.
+
+### tenforty
+
+- Project URL: https://github.com/mmacpherson/tenforty
+- License: MIT.
+- Latest visible release/status:
+  - README documents support for years 2018 through 2025.
+  - Release metadata should be normalized during Day 5.
+- Category: Python tax calculation wrapper / educational tax scenario evaluator.
+- Apparent integration surface:
+  - Python functions `evaluate_return` and `evaluate_returns`.
+  - Validated inputs for year, state, filing status, dependents, income types, deductions, and related scenarios.
+  - Returns structured Python/Pydantic-style outputs and supports dataframe-style scenario sweeps.
+  - Built on top of OpenTaxSolver.
+- Obvious third-party wrappers / integrations:
+  - It is itself a wrapper over OpenTaxSolver and therefore important prior art if OpenTaxSolver is otherwise hard to automate.
+- First-pass fit:
+  - Promising bridge between a tax-form-oriented tool and a Python integration surface.
+  - Needs direct install/test validation because it inherits limits from OpenTaxSolver and supports only selected states.
+
+### Actual Budget
+
+- Project URL: https://github.com/actualbudget/actual
+- Docs URL: https://actualbudget.org/docs/
+- API docs URL: https://actualbudget.org/docs/api/
+- CLI docs URL: https://actualbudget.org/docs/api/cli/
+- License: MIT.
+- Latest visible release:
+  - Release notes show 26.7.0 with release date 2026-07-01.
+  - GitHub showed v26.7.0 as the latest visible release dated 2026-07-02.
+- Category: local-first personal finance / budgeting; tax-adjacent through transaction data, reports, imports, and exports.
+- Apparent integration surface:
+  - Official Node.js API package `@actual-app/api`.
+  - Official CLI package `@actual-app/cli`, with JSON, table, and CSV output options in the docs.
+  - Import support for bank files including CSV, QIF, OFX, QFX, and CAMT per docs.
+  - Community integrations include importers, local REST bridges, a Python API, backup tools, and transaction categorization helpers.
+- Obvious third-party wrappers / integrations:
+  - Official community-projects docs list bank sync/import projects, a local REST bridge, and a Python API implementation.
+- First-pass fit:
+  - Strong API/CLI-native personal-finance comparator.
+  - Less tax-specific than GnuCash/Beancount workflows, but attractive if the prototype values clean external control surfaces.
+
+### KMyMoney
+
+- Project URL: https://github.com/KDE/kmymoney
+- Website URL: https://kmymoney.org/
+- Import/export docs: https://docs.kde.org/trunk_kf6/en/kmymoney/kmymoney/details.impexp.html
+- License: KDE SPDX license set / GPL-family visible from repository; exact file-level mix should be checked during Day 5.
+- Latest visible release: 5.2.0 release notes dated 2025-06-21 were visible in the Day 4 pass.
+- Category: desktop personal finance manager.
+- Apparent integration surface:
+  - Desktop app with local files.
+  - Import/export support spans GnuCash XML import, QIF importer/exporter, OFX importer/exporter, CSV importer/exporter, and Woob importer.
+  - No obvious stable public API found during Day 4.
+- Obvious third-party wrappers / integrations:
+  - KMyMoney itself interoperates with common personal-finance file formats and GnuCash files.
+- First-pass fit:
+  - Useful GUI/full-desktop comparator, especially if GnuCash setup proves too heavy.
+  - Weak as a prototype target unless file import/export is sufficient.
+
+### HomeBank
+
+- Project URL: https://www.gethomebank.org/
+- Source / download URL: https://sourceforge.net/projects/homebank/
+- License: GNU GPL per the project website.
+- Latest visible release/status:
+  - Active website and SourceForge presence observed; exact release/version metadata should be normalized during Day 5.
+- Category: desktop personal accounting / personal finance.
+- Apparent integration surface:
+  - Desktop app with import/export, templates, category splits, scheduled transactions, duplicate detection, and assignment rules.
+  - FAQ/docs mention CSV workflows and common personal-finance bank formats.
+  - No obvious stable public API found during Day 4.
+- Obvious third-party wrappers / integrations:
+  - ofxstatement explicitly targets HomeBank as one destination for generated OFX.
+- First-pass fit:
+  - Plausible consumer-finance comparator but likely lower priority than GnuCash, KMyMoney, Firefly III, and Actual because automation appears file-driven.
+
+### Money Manager Ex
+
+- Project URL: https://github.com/moneymanagerex/moneymanagerex
+- Website / docs URL: https://moneymanagerex.org/
+- Import/export docs: https://moneymanagerex.org/docs/features/importexport/
+- License: GPL-2.0.
+- Latest visible release/status:
+  - Stable release links were visible, but exact release metadata should be normalized during Day 5.
+- Category: desktop/mobile personal finance manager.
+- Apparent integration surface:
+  - Desktop and mobile apps backed by a nonproprietary SQLite database.
+  - Import/export docs list QIF, CSV, HTML, and XML.
+  - CSV importer can accept user-selected field order instead of one fixed column order.
+  - No obvious stable public API found during Day 4.
+- Obvious third-party wrappers / integrations:
+  - Android companion app and shared database/file workflows are visible from the project ecosystem.
+- First-pass fit:
+  - Useful as a mainstream personal-finance comparator with a durable SQLite/storage story.
+  - Likely weaker than Actual/Firefly III for API-style integration.
+
+### Fava
+
+- Project URL: https://github.com/beancount/fava
+- Docs URL: https://beancount.github.io/fava/
+- License: MIT.
+- Latest visible release/status:
+  - GitHub showed tags and a PyPI version badge, but exact version/release date should be normalized during Day 5.
+- Category: Beancount web UI / plain-text-accounting ecosystem component.
+- Apparent integration surface:
+  - Python package launched as `fava ledger.beancount`.
+  - Web interface over a Beancount ledger.
+  - Documentation includes API documentation and extension/plugin namespaces.
+- Obvious third-party wrappers / integrations:
+  - Fava is already a major Beancount ecosystem integration.
+- First-pass fit:
+  - Important prior art for turning a plain-text ledger into a richer web workflow.
+  - Probably not a standalone shortlist tool unless Beancount is shortlisted and Fava becomes part of the evaluation stack.
+
+### Paisa
+
+- Project URL: https://github.com/ananthakumaran/paisa
+- Website / docs URL: https://paisa.fyi/
+- Related hledger note: https://hledger.org/paisa.html
+- License: AGPL-3.0-or-later.
+- Latest visible release: v0.7.4, latest visible GitHub release dated 2025-08-03.
+- Category: plain-text-accounting web UI / personal-finance reporting.
+- Apparent integration surface:
+  - Reads Ledger, hledger, or Beancount files.
+  - Uses a SQLite database generated from the source journal.
+  - Provides reports, charts, investment tracking, and a web UI.
+- Obvious third-party wrappers / integrations:
+  - The hledger project documents Paisa as a related web app and notes hledger support caveats.
+- First-pass fit:
+  - Valuable comparator for UI/reporting on top of plain-text accounting.
+  - Focused partly on Indian users and market data, so US tax relevance is indirect.
+
+### ofxstatement
+
+- Project URL: https://github.com/kedder/ofxstatement
+- License: GPL-3.0.
+- Latest visible release: 0.9.2, latest visible GitHub release dated 2024-11-25.
+- Category: bank-statement conversion / adjacent import infrastructure.
+- Apparent integration surface:
+  - Python CLI `ofxstatement`.
+  - Plugin system for converting proprietary bank statement exports to OFX.
+  - Intended workflow is export from bank, convert to OFX, then import into accounting software.
+- Obvious third-party wrappers / integrations:
+  - README lists many bank-specific plugins and a sample plugin project.
+- First-pass fit:
+  - Strong prior art for synthetic bank-file ingestion into GnuCash, HomeBank, or other OFX-capable tools.
+  - Not a standalone tax or bookkeeping tool.
+
 ## Immediate Follow-Up Questions
 
 - Should the shortlist prioritize a REST-first path, represented by Firefly III, or a file/CLI-first path, represented by Beancount/hledger/Ledger?
 - Can OpenTaxSolver be driven repeatably through textual input/output, or is it better treated as a manual/reference tax-form comparator?
 - Does GnuCash's optional Python binding setup work cleanly in the local environment, especially on Windows?
-- Is IRS Direct File useful only as reference architecture, or should OpenFile be promoted to the longlist during Day 4 discovery?
+- Does OpenFile's Direct File fork have enough independent accuracy, maintenance, and licensing evidence to evaluate, or should it stay reference-only?
 - Which import layer is most convincing for a synthetic-data demo: CSV rules, OFX/QIF parsing, or a direct JSON/REST transaction API?
+- Are the newer tax-engine candidates, especially Filed Open Tax Engine, mature enough to evaluate deeply, or should they be treated as promising but unproven?
+- Is UsTaxes broad enough for a Week 2 hands-on test, or will state/schedule gaps make HabuTax/OpenTaxSolver better tax-form comparators?
+- Should PolicyEngine US / Tax-Calculator stay in the shortlist conversation as model comparators despite not being consumer filing tools?
 
 ## Source Index
 
@@ -323,3 +618,59 @@ Planned phase date: 2026-07-03. Source access date: 2026-07-04. This is a first-
   - Used for: QIF parser identity and license.
 - [REL-qifparse-001] qifparse PyPI page, https://pypi.org/project/qifparse/, accessed 2026-07-04.
   - Observed: 0.5 package metadata.
+- [REPO-ustaxes-001] UsTaxes repository, https://github.com/ustaxes/ustaxes, accessed 2026-07-05.
+  - Used for: project identity, AGPL-3.0 license, Federal 1040 scope, supported tax years/forms, client-side data posture, and local run instructions.
+- [DOC-ustaxes-001] UsTaxes website, https://ustaxes.org/, accessed 2026-07-05.
+  - Used for: project website and user-facing identity.
+- [REPO-habutax-001] HabuTax repository, https://github.com/habutax/habutax, accessed 2026-07-05.
+  - Used for: CLI/Python surface, implemented forms, plain-text input/output model, PDF filling path, and GPL-2.0 license.
+- [REPO-filed-opentax-001] Filed Open Tax Engine repository, https://github.com/filedcom/opentax, accessed 2026-07-05.
+  - Used for: source location, CLI/JSON examples, release/license metadata, coverage claims, and agent-oriented project posture.
+- [DOC-filed-opentax-001] Filed Open Tax Engine website, https://opentax.filed.com/, accessed 2026-07-05.
+  - Used for: public positioning, installation examples, and AI-agent-oriented interface claims.
+- [REPO-tax-calculator-001] PSL Tax-Calculator repository, https://github.com/PSLmodels/Tax-Calculator, accessed 2026-07-05.
+  - Used for: source location, model identity, latest visible GitHub release, and license badge.
+- [DOC-tax-calculator-001] PSL Tax-Calculator documentation, https://taxcalc.pslmodels.org/, accessed 2026-07-05.
+  - Used for: Python API, CLI, package installation, custom filing-unit data support, and docs-release metadata.
+- [REPO-policyengine-us-001] PolicyEngine US repository, https://github.com/PolicyEngine/policyengine-us, accessed 2026-07-05.
+  - Used for: source location, package identity, AGPL-3.0 license, install notes, and household-level tax-benefit rules scope.
+- [DOC-openfisca-001] OpenFisca website, https://openfisca.org/en/, accessed 2026-07-05.
+  - Used for: JSON web API and vectorial Python API rules-as-code comparison pattern.
+- [REPO-irs-twe-001] IRS Tax Withholding Estimator repository, https://github.com/IRS-Public/tax-withholding-estimator, accessed 2026-07-05.
+  - Used for: official public codebase, TWE 2.0 status, CC0/public-domain dedication, W-4/W-4P scope, and non-filing disclaimer.
+- [REPO-tenforty-001] tenforty repository, https://github.com/mmacpherson/tenforty, accessed 2026-07-05.
+  - Used for: Python library surface, OpenTaxSolver wrapper relationship, supported years/states, structured output fields, and MIT license.
+- [REPO-actual-001] Actual Budget repository, https://github.com/actualbudget/actual, accessed 2026-07-05.
+  - Used for: source location, local-first identity, license, setup modes, and latest visible GitHub release.
+- [DOC-actual-api-001] Actual Budget API docs, https://actualbudget.org/docs/api/, accessed 2026-07-05.
+  - Used for: official Node API package and programmatic-access model.
+- [DOC-actual-cli-001] Actual Budget CLI docs, https://actualbudget.org/docs/api/cli/, accessed 2026-07-05.
+  - Used for: official CLI package, configuration, and JSON/table/CSV output options.
+- [REL-actual-001] Actual Budget release notes, https://actualbudget.org/docs/releases/, accessed 2026-07-05.
+  - Observed: 26.7.0 release date and stable CLI note.
+- [DOC-actual-community-001] Actual Budget community projects, https://actualbudget.org/docs/community-repos/, accessed 2026-07-05.
+  - Used for: third-party importers, local REST bridge, Python API, and helper projects around Actual.
+- [REPO-kmymoney-001] KMyMoney repository, https://github.com/KDE/kmymoney, accessed 2026-07-05.
+  - Used for: project identity, supported platforms, source location, and license-file posture.
+- [DOC-kmymoney-import-001] KMyMoney import/export documentation, https://docs.kde.org/trunk_kf6/en/kmymoney/kmymoney/details.impexp.html, accessed 2026-07-05.
+  - Used for: GnuCash, QIF, OFX, CSV, and Woob import/export surfaces.
+- [REL-kmymoney-001] KMyMoney 5.2.0 release notes, https://kmymoney.org/2025/06/21/kmymoney-5-2-0-released.html, accessed 2026-07-05.
+  - Observed: 5.2.0 release date and import-related bugfix context.
+- [DOC-homebank-001] HomeBank website, https://www.gethomebank.org/, accessed 2026-07-05.
+  - Used for: personal-accounting scope, GNU GPL statement, import/export features, assignment rules, and duplicate detection.
+- [PROJ-homebank-001] HomeBank SourceForge project, https://sourceforge.net/projects/homebank/, accessed 2026-07-05.
+  - Used for: source/download location and format-support signal.
+- [REPO-mmex-001] Money Manager Ex repository, https://github.com/moneymanagerex/moneymanagerex, accessed 2026-07-05.
+  - Used for: source location, GPL-2.0 license, SQLite storage, CSV/QIF import, and desktop/mobile scope.
+- [DOC-mmex-import-001] Money Manager Ex import/export docs, https://moneymanagerex.org/docs/features/importexport/, accessed 2026-07-05.
+  - Used for: QIF, CSV, HTML, XML, and flexible CSV importer details.
+- [REPO-fava-001] Fava repository, https://github.com/beancount/fava, accessed 2026-07-05.
+  - Used for: source location, Beancount web-interface identity, license, install/run command, and ecosystem status.
+- [DOC-fava-001] Fava documentation, https://beancount.github.io/fava/, accessed 2026-07-05.
+  - Used for: documentation home and API/extension docs presence.
+- [REPO-paisa-001] Paisa repository, https://github.com/ananthakumaran/paisa, accessed 2026-07-05.
+  - Used for: source location, license, release metadata, Ledger dependency, and personal-finance web UI scope.
+- [DOC-paisa-hledger-001] hledger note on Paisa, https://hledger.org/paisa.html, accessed 2026-07-05.
+  - Used for: Ledger/hledger/Beancount file support, SQLite workflow, and hledger support caveats.
+- [REPO-ofxstatement-001] ofxstatement repository, https://github.com/kedder/ofxstatement, accessed 2026-07-05.
+  - Used for: CLI/plugin conversion model, license, latest visible release, and import-layer workflow.

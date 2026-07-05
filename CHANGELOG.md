@@ -11,6 +11,54 @@ Each entry should answer:
 - What evidence or files were added?
 - What is next?
 
+## 2026-07-05 - Phase 5: Metadata and Health Snapshot
+
+### What Changed
+
+- Created `research/project_health_snapshot.md` with normalized activity, release/package, license, community, documentation, tax-year, and data-format notes for plausible candidates.
+- Created the Day 5 exit note at `notes/day_05_metadata_health_snapshot.md`.
+- Updated `notes/research_log.md` and the README repository status for Phase 5 completion.
+- Separated core shortlist-pressure candidates from supporting import, UI, and desktop comparators.
+
+### Why
+
+The project needs comparable health evidence before the Day 6 programmatic-surface survey and Day 7 shortlist decision. The Day 4 longlist was broad, but its metadata was uneven across GitHub, PyPI, SourceForge, IRS pages, and project docs.
+
+### Evidence / Files
+
+- `research/project_health_snapshot.md`
+- `notes/day_05_metadata_health_snapshot.md`
+- `notes/research_log.md`
+- `README.md`
+
+### Next
+
+Execute Day 6 by creating `research/programmatic_surface_survey.md` and comparing documented/inferred automation surfaces across the strongest candidates.
+
+## 2026-07-05 - Phase 4: Discovery Search
+
+### What Changed
+
+- Expanded `research/longlist.md` beyond the starter candidates with newly discovered tax-specific, tax-model, personal-finance, UI, and import-layer tools.
+- Promoted UsTaxes, HabuTax, Filed Open Tax Engine, PSL Tax-Calculator, PolicyEngine US, IRS Tax Withholding Estimator, tenforty, OpenFile, Actual Budget, KMyMoney, HomeBank, Money Manager Ex, Fava, Paisa, and ofxstatement.
+- Created `research/exclusions.md` to record tools excluded or deferred because of license, scope, project health, maturity, narrowness, or lack of open/local inspectability.
+- Added the Day 4 exit note and updated the rolling research log.
+
+### Why
+
+The project needed a broader discovery pass before Day 5 health snapshots and the Day 7 shortlist decision. The starter list was strong, but it missed several directly relevant US tax-form and tax-model projects plus stronger API/CLI personal-finance comparators.
+
+### Evidence / Files
+
+- `research/longlist.md`
+- `research/exclusions.md`
+- `notes/day_04_discovery_search.md`
+- `notes/research_log.md`
+
+### Next
+
+Execute Day 5 by creating `research/project_health_snapshot.md` and normalizing release dates, recent commits, licenses, contributor signals, documentation quality, annual tax-year support, and data-format evidence for plausible candidates.
+
 ## 2026-07-04 - Phase 3: Starter Tool Inventory
 
 ### What Changed

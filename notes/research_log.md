@@ -140,3 +140,77 @@ Turn the starter candidate list into a structured longlist with first-pass metad
 ### Tomorrow's Starting Point
 
 Execute Day 4 discovery search: expand the longlist with credible additional tools and create `research/exclusions.md` for closed-source, abandoned, irrelevant, or non-consumer candidates.
+
+## 2026-07-05 - Phase 4: Discovery Search
+
+### Goal
+
+Find credible open-source tools not listed in the original brief, expand the longlist, and document exclusions.
+
+### What I Did
+
+- Searched for open-source US tax calculators, 1040/form generators, tax-benefit rules engines, withholding estimators, personal-finance apps, plain-text-accounting interfaces, and import/export tooling.
+- Checked primary sources including GitHub repositories, official docs, IRS repositories/pages, PyPI pages, SourceForge pages, and project websites.
+- Expanded `research/longlist.md` with newly discovered candidates and prior-art tools.
+- Created `research/exclusions.md` for tools excluded because of license, scope, health, maturity, narrowness, or lack of public inspectability.
+- Wrote the Day 4 exit note at `notes/day_04_discovery_search.md`.
+
+### Evidence Captured
+
+- `research/longlist.md`
+- `research/exclusions.md`
+- `notes/day_04_discovery_search.md`
+- Source links and citation IDs embedded in the longlist and exclusions file.
+
+### Decisions Made
+
+- Promote UsTaxes, HabuTax, Filed Open Tax Engine, Tax-Calculator, PolicyEngine US, IRS Tax Withholding Estimator, tenforty, and OpenFile as tax-specific or tax-model candidates.
+- Promote Actual Budget, KMyMoney, HomeBank, Money Manager Ex, Fava, Paisa, and ofxstatement as personal-finance, UI, or import-layer comparators.
+- Treat OpenFile as a cautionary Direct File fork, not as an active filing-channel candidate.
+- Treat Tax-Calculator and PolicyEngine US as programmatic tax-model comparators rather than consumer filing tools.
+- Exclude or defer Akaunting, ERPNext, Maybe Finance, OpenTaxForms, Python-Taxes, TaxStuff, Kresus, ezBookkeeping, Skrooge, NBER TAXSIM, IRS Free File Fillable Forms, and closed commercial tax products.
+
+### Problems / Open Questions
+
+- New tax-engine candidates need health and accuracy scrutiny before shortlisting.
+- Exact license details for KMyMoney and OpenFile need verification.
+- Desktop personal-finance tools may be file-format-only, making them weaker for API-style integration.
+
+### Tomorrow's Starting Point
+
+Execute Day 5 by creating `research/project_health_snapshot.md` and normalizing release dates, recent activity, licenses, contributor signals, documentation quality, annual tax-year support, and data-format evidence for plausible candidates.
+
+## 2026-07-05 - Phase 5: Metadata and Health Snapshot
+
+### Goal
+
+Gather comparable project-health evidence before choosing the shortlist.
+
+### What I Did
+
+- Created `research/project_health_snapshot.md` as the Day 5 exit artifact.
+- Checked GitHub, PyPI, SourceForge, IRS, and official project documentation sources for health, release, license, docs, tax-year, and data-format evidence.
+- Split candidates into core shortlist-pressure targets and supporting/lower-priority comparators.
+- Wrote the Day 5 exit note at `notes/day_05_metadata_health_snapshot.md`.
+
+### Evidence Captured
+
+- `research/project_health_snapshot.md`
+- `notes/day_05_metadata_health_snapshot.md`
+- Source links and compact citation IDs inside the snapshot.
+
+### Decisions Made
+
+- Prioritize hledger, Firefly III, Actual Budget, Beancount, GnuCash, OpenTaxSolver, UsTaxes, tenforty, Tax-Calculator, and PolicyEngine US for Day 6 surface review.
+- Treat IRS Direct File, OpenFile, and IRS Tax Withholding Estimator as reference/cautionary entries.
+- Treat import tools such as ofxtools, ofxstatement, beangulp, smart_importer, beancount-import, and ledger-autosync as supporting infrastructure.
+
+### Problems / Open Questions
+
+- Some projects publish outside GitHub, so GitHub release metadata alone is not reliable.
+- GnuCash automation on Windows needs local verification.
+- Filed Open Tax Engine is promising but too new to trust without hands-on validation.
+
+### Tomorrow's Starting Point
+
+Execute Day 6 by creating `research/programmatic_surface_survey.md` and comparing documented/inferred automation surfaces across the strongest candidates.

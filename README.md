@@ -64,4 +64,4 @@ This project is licensed under the MIT License. See [`LICENSE`](LICENSE) for det
 
 ## Repository Status
 
-Phase 3 created `research/longlist.md`, turning the starter candidates into a structured first-pass inventory with source links, releases/status notes, licenses, categories, apparent integration surfaces, and adjacent wrapper/import tooling. The next phase expands discovery and records exclusions.
+Phase 5 created `research/project_health_snapshot.md` to normalize release dates, activity, licenses, contributor signals, documentation quality, tax-year support, and data-format evidence before shortlisting. The next phase creates `research/programmatic_surface_survey.md` to compare CLI, library, REST API, plugin, file-format, schema, database, and structured-output surfaces.
