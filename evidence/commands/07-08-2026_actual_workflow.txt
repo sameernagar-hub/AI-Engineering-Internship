@@ -1,0 +1,134 @@
+﻿Actual Budget Day 10 common workflow transcript
+Working directory: C:\Users\nagar\OneDrive\Documents\AI Engineering Internship
+Temp dependency directory: C:\Users\nagar\AppData\Local\Temp\actual-day10-eval-recorded
+Evaluation helper: evidence\fixtures\actual_day10_evaluate.mjs
+
+Command: copy evaluation helper into temp dependency directory
+Copied helper to: C:\Users\nagar\AppData\Local\Temp\actual-day10-eval-recorded\actual_day10_evaluate.mjs
+
+Command: node <temp>\actual_day10_evaluate.mjs
+[Breadcrumb] { message: 'Closing budget' }
+[Breadcrumb] {
+  message: 'Loading budget C:\\Users\\nagar\\AppData\\Local\\Temp\\actual-day10-data\\Synthetic-Freelancer-Day-10-f2a91a4'
+}
+[Breadcrumb] { message: 'loading spreadsheet', category: 'server' }
+Loading fresh spreadsheet
+[Breadcrumb] { message: 'loaded spreadsheet', category: 'server' }
+[Breadcrumb] { message: 'Closing budget' }
+[Breadcrumb] {
+  message: 'Loading budget C:\\Users\\nagar\\AppData\\Local\\Temp\\actual-day10-data\\Synthetic-Freelancer-Day-10-f2a91a4'
+}
+[Breadcrumb] { message: 'loading spreadsheet', category: 'server' }
+Loading fresh spreadsheet
+[Breadcrumb] { message: 'loaded spreadsheet', category: 'server' }
+cloudStorage.upload failed during finish-import { type: 'FileUploadError', reason: 'unauthorized', meta: undefined }
+Performing transaction reconciliation
+Performing transaction reconciliation matching
+Debug data for the operations: {
+  transactionsStep1: [
+    {
+      payee_name: 'Acme Design Co',
+      trans: [Object],
+      subtransactions: null,
+      match: [Object],
+      fuzzyDataset: null
+    }
+  ],
+  transactionsStep2: [
+    {
+      payee_name: 'Acme Design Co',
+      trans: [Object],
+      subtransactions: null,
+      match: [Object],
+      fuzzyDataset: null
+    }
+  ],
+  transactionsStep3: [
+    {
+      payee_name: 'Acme Design Co',
+      trans: [Object],
+      subtransactions: null,
+      match: [Object],
+      fuzzyDataset: null
+    }
+  ],
+  added: [],
+  updated: [
+    {
+      id: '20f0ee60-7efb-4c7b-8f72-777c4755d660',
+      imported_id: 'T001',
+      payee: 'cd2b4974-5c5e-42df-a5d8-fa2a7ae5c319',
+      category: 'a194773e-aa39-40a2-89e5-09e9939961e2',
+      imported_payee: 'Duplicate T001 importTransactions dry-run test',
+      notes: 'T001 | Schedule C gross receipts | Synthetic client income',
+      cleared: true,
+      raw_synced_data: null
+    }
+  ],
+  updatedPreview: [ { transaction: [Object], existing: [Object] } ]
+}
+[Breadcrumb] { message: 'Closing budget' }
+[Breadcrumb] {
+  message: 'Loading budget C:\\Users\\nagar\\AppData\\Local\\Temp\\actual-day10-data\\does-not-exist'
+}
+[Exception] Error: budget directory does not exist
+    at _loadBudget (C:\Users\nagar\AppData\Local\Temp\actual-day10-eval-recorded\node_modules\@actual-app\api\dist\index.js:121749:36)
+    at async Object.loadBudget$1 [as load-budget] (C:\Users\nagar\AppData\Local\Temp\actual-day10-eval-recorded\node_modules\@actual-app\api\dist\index.js:121602:9)
+    at async handlers$1.api/load-budget (C:\Users\nagar\AppData\Local\Temp\actual-day10-eval-recorded\node_modules\@actual-app\api\dist\index.js:112918:21)
+[Breadcrumb] { message: 'Closing budget' }
+{
+  "budgetName": "Synthetic Freelancer Day 10",
+  "baselineCheckingBalance": 8964.77,
+  "afterAddCheckingBalance": 8939.78,
+  "finalCheckingBalanceAfterFailureTests": 11438.78,
+  "baselineTransactionCount": 19,
+  "afterAddTransactionCount": 20,
+  "finalTransactionCount": 22,
+  "failureTests": [
+    {
+      "name": "malformed_date",
+      "accepted": false,
+      "errorName": "Error",
+      "message": "Bad date format: 13-40-2025\n\nExpression stack:\n  {\"date\":{\"$lt\":\"13-40-2025\"}}\n  filter([\n    {\n      \"account\": \"839133ed-b97a-45a0-b3f6-9738997a28f4\",\n      \"is_parent\": false\n    },\n    {\n      \"$or\": [\n        {\n          \"date\": {\n            \"$lt\": \"13-40-2025\"\n          }\n        },\n        {\n          \"$and\": [\n            {\n              \"date\": \"13-40-2025\"\n            },\n            {\n              \"$or\": [\n                {\n                  \"sort_order\": {\n                    \"$ne\": null\n                  }\n                }\n              ]\n            }\n          ]\n        }\n      ]\n    }\n  ])"
+    },
+    {
+      "name": "invalid_amount",
+      "accepted": false,
+      "errorName": "Error",
+      "message": "Amount is invalid, must be an integer: NaN"
+    },
+    {
+      "name": "unknown_category",
+      "accepted": true,
+      "result": "ok"
+    },
+    {
+      "name": "duplicate_imported_id_importTransactions_dry_run",
+      "accepted": true,
+      "result": {
+        "errors": [],
+        "addedCount": 0,
+        "updatedCount": 1,
+        "updatedPreviewCount": 1,
+        "addedImportedIds": []
+      }
+    },
+    {
+      "name": "duplicate_imported_id_addTransactions",
+      "accepted": true,
+      "result": "ok"
+    },
+    {
+      "name": "missing_budget_file",
+      "accepted": false,
+      "errorName": "Error",
+      "message": "Budget \"does-not-exist\" not found. Check the ID of your budget in the Advanced section of the settings page."
+    }
+  ]
+}
+
+Node script exit code: 0
+
+Generated evidence files:
+- evidence\fixtures\actual_day10_summary.json
+- evidence\fixtures\actual_day10_transactions_after_add.json

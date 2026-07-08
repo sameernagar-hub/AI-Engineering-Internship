@@ -11,6 +11,118 @@ Each entry should answer:
 - What evidence or files were added?
 - What is next?
 
+## 07-08-2026 - Phase 11: Evaluate Tool 3
+
+### What Changed
+
+- Evaluated Firefly III `6.6.6` against the shared synthetic freelancer dataset.
+- Ran Firefly III and MariaDB in isolated Docker containers, with local-only synthetic auth setup and redacted tokens.
+- Added a Firefly-specific REST API evaluation helper and normalized JSON output artifacts under `evidence/fixtures/`.
+- Captured setup, version, workflow, and failure behavior transcripts under `evidence/commands/`.
+- Created the completed third tool record at `tool_records/tool_3.md`.
+- Created the Day 11 exit note at `notes/day_11_evaluate_firefly_iii.md`.
+- Updated the rolling research log, fixture index, tool-record index, and README repository status.
+
+### Why
+
+Week 2 needs comparable hands-on records across different integration styles. Firefly III was evaluated third because it represents the true REST JSON, self-hosted personal-finance API path, contrasting with hledger's file/CLI workflow and Actual Budget's local-first Node API/CLI workflow.
+
+### Evidence / Files
+
+- `tool_records/tool_3.md`
+- `notes/day_11_evaluate_firefly_iii.md`
+- `evidence/commands/07-08-2026_firefly-iii_setup.txt`
+- `evidence/commands/07-08-2026_firefly-iii_version.txt`
+- `evidence/commands/07-08-2026_firefly-iii_workflow.txt`
+- `evidence/commands/07-08-2026_firefly-iii_failure-tests.txt`
+- `evidence/fixtures/firefly_day11_evaluate.mjs`
+- `evidence/fixtures/firefly_day11_summary.json`
+- `evidence/fixtures/firefly_day11_transactions_after_add.json`
+- `evidence/fixtures/firefly_day11_failure_results.json`
+- `notes/research_log.md`
+- `evidence/fixtures/README.md`
+- `tool_records/README.md`
+- `README.md`
+
+### Next
+
+Execute Day 12 by evaluating a fourth shortlisted tool or backup candidate, preferably a tax-specific candidate such as `tenforty`.
+
+## 07-08-2026 - Phase 10: Evaluate Tool 2
+
+### What Changed
+
+- Evaluated Actual Budget `26.7.0` against the shared synthetic freelancer dataset.
+- Installed `@actual-app/api` and `@actual-app/cli` in a temporary npm directory without adding dependency artifacts to the repo.
+- Added an Actual-specific Node API evaluation helper and normalized JSON output artifacts under `evidence/fixtures/`.
+- Captured setup, version, common workflow, and failure behavior transcripts under `evidence/commands/`.
+- Created the completed second tool record at `tool_records/tool_2.md`.
+- Created the Day 10 exit note at `notes/day_10_evaluate_actual.md`.
+- Updated the rolling research log, fixture index, tool-record index, and README repository status.
+
+### Why
+
+Week 2 needs comparable hands-on records across different integration styles. Actual Budget was evaluated second because it contrasts hledger's file/CLI/JSON workflow with a local-first app model, official Node API, and stable JSON-oriented CLI.
+
+### Evidence / Files
+
+- `tool_records/tool_2.md`
+- `notes/day_10_evaluate_actual.md`
+- `evidence/commands/07-08-2026_actual_setup.txt`
+- `evidence/commands/07-08-2026_actual_version.txt`
+- `evidence/commands/07-08-2026_actual_workflow.txt`
+- `evidence/commands/07-08-2026_actual_failure-tests.txt`
+- `evidence/fixtures/actual_day10_evaluate.mjs`
+- `evidence/fixtures/actual_day10_summary.json`
+- `evidence/fixtures/actual_day10_transactions_after_add.json`
+- `notes/research_log.md`
+- `evidence/fixtures/README.md`
+- `tool_records/README.md`
+- `README.md`
+
+### Next
+
+Execute Day 11 by evaluating Firefly III as the REST/API-backed personal-finance comparator.
+
+## 07-08-2026 - Phase 9: Evaluate Tool 1
+
+### What Changed
+
+- Evaluated hledger `1.52.1` against the shared synthetic freelancer dataset.
+- Added hledger-specific CSV rules, `TADD`, bad-input fixtures, and JSON output artifacts under `evidence/fixtures/`.
+- Captured setup, version, common workflow, and failure behavior transcripts under `evidence/commands/`.
+- Created the completed first tool record at `tool_records/tool_1.md`.
+- Created the Day 9 exit note at `notes/day_09_evaluate_hledger.md`.
+- Updated the rolling research log, fixture index, tool-record index, and README repository status.
+
+### Why
+
+Week 2 needs comparable hands-on records for each shortlisted tool. hledger was evaluated first because it is the fastest low-setup candidate for validating the shared CSV-to-report workflow and testing whether the evaluation method produces useful evidence.
+
+### Evidence / Files
+
+- `tool_records/tool_1.md`
+- `notes/day_09_evaluate_hledger.md`
+- `evidence/commands/07-08-2026_hledger_setup.txt`
+- `evidence/commands/07-08-2026_hledger_version.txt`
+- `evidence/commands/07-08-2026_hledger_workflow.txt`
+- `evidence/commands/07-08-2026_hledger_failure-tests.txt`
+- `evidence/fixtures/hledger_synthetic_freelancer.rules`
+- `evidence/fixtures/hledger_synthetic_freelancer_tadd.csv`
+- `evidence/fixtures/hledger_bad_date.csv`
+- `evidence/fixtures/hledger_bad_amount.csv`
+- `evidence/fixtures/hledger_unknown_account.csv`
+- `evidence/fixtures/hledger_duplicate_t001.csv`
+- `evidence/fixtures/hledger_day9_baseline_print.json`
+- `evidence/fixtures/hledger_day9_baseline_checking_balance.json`
+- `evidence/fixtures/hledger_day9_with_tadd_print.json`
+- `notes/research_log.md`
+- `README.md`
+
+### Next
+
+Execute Day 10 by evaluating Actual Budget against the same synthetic dataset and comparing its setup, structured output, and failure behavior with hledger.
+
 ## 07-07-2026 - Phase 8: Evaluation Harness and Synthetic Data
 
 ### What Changed

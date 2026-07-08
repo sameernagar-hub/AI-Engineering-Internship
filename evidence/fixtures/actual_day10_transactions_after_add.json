@@ -1,0 +1,202 @@
+[
+  {
+    "id": "33d5c647-5608-43fd-b6b0-e77ff27b4747",
+    "date": "2025-01-01",
+    "amountCents": 120000,
+    "amountDollars": 1200,
+    "category": "Equity:Opening Balances",
+    "importedId": "T000",
+    "notes": "T000 | None | Seed balance for tests",
+    "cleared": true
+  },
+  {
+    "id": "20f0ee60-7efb-4c7b-8f72-777c4755d660",
+    "date": "2025-01-15",
+    "amountCents": 250000,
+    "amountDollars": 2500,
+    "category": "Income:Freelance:Design",
+    "importedId": "T001",
+    "notes": "T001 | Schedule C gross receipts | Synthetic client income",
+    "cleared": true
+  },
+  {
+    "id": "d511a07d-375f-4983-8b6c-41a7e621d7ff",
+    "date": "2025-01-31",
+    "amountCents": -5900,
+    "amountDollars": -59,
+    "category": "Expenses:Business:Software",
+    "importedId": "T002",
+    "notes": "T002 | Schedule C software | Synthetic business expense",
+    "cleared": true
+  },
+  {
+    "id": "5732348c-410b-4255-9ff5-e6da2afae8bb",
+    "date": "2025-02-03",
+    "amountCents": -32000,
+    "amountDollars": -320,
+    "category": "Expenses:Business:Office Equipment",
+    "importedId": "T003",
+    "notes": "T003 | Schedule C office equipment | Synthetic business expense",
+    "cleared": true
+  },
+  {
+    "id": "83c7e321-79cb-4fd7-b59a-ec6f8acdbd33",
+    "date": "2025-03-12",
+    "amountCents": 180000,
+    "amountDollars": 1800,
+    "category": "Income:Freelance:Consulting",
+    "importedId": "T004",
+    "notes": "T004 | Schedule C gross receipts | Synthetic client income",
+    "cleared": true
+  },
+  {
+    "id": "32b2efec-f06b-4600-adda-fc5c50cf7f78",
+    "date": "2025-03-16",
+    "amountCents": -3875,
+    "amountDollars": -38.75,
+    "category": "Expenses:Business:Travel",
+    "importedId": "T005",
+    "notes": "T005 | Schedule C local travel | Synthetic business expense",
+    "cleared": true
+  },
+  {
+    "id": "5d9b0712-31e8-41bc-a9f8-1d3dac72ac3d",
+    "date": "2025-03-31",
+    "amountCents": 4218,
+    "amountDollars": 42.18,
+    "category": "Income:Interest",
+    "importedId": "T006",
+    "notes": "T006 | Schedule B interest | Synthetic interest income",
+    "cleared": true
+  },
+  {
+    "id": "b312cfcd-07aa-4831-b9a0-1a6f6477d8e2",
+    "date": "2025-04-05",
+    "amountCents": -12000,
+    "amountDollars": -120,
+    "category": "Expenses:Charity",
+    "importedId": "T007",
+    "notes": "T007 | Schedule A cash charity | Synthetic charitable donation",
+    "cleared": true
+  },
+  {
+    "id": "70408ff7-265c-4d4e-8670-77d35758ac03",
+    "date": "2025-05-08",
+    "amountCents": -7423,
+    "amountDollars": -74.23,
+    "category": "Expenses:Business:Office Supplies",
+    "importedId": "T008",
+    "notes": "T008 | Schedule C office supplies | Synthetic business expense",
+    "cleared": true
+  },
+  {
+    "id": "b6f8ada5-d113-42eb-ac6e-f88ca391cc60",
+    "date": "2025-06-01",
+    "amountCents": -1200,
+    "amountDollars": -12,
+    "category": "Expenses:Business:Bank Fees",
+    "importedId": "T009",
+    "notes": "T009 | Schedule C bank fees | Synthetic business expense",
+    "cleared": true
+  },
+  {
+    "id": "75d2bf07-e1fc-42a1-a94b-f1196941fe3e",
+    "date": "2025-06-15",
+    "amountCents": -40000,
+    "amountDollars": -400,
+    "category": "Liabilities:Federal Tax:Estimated Payments",
+    "importedId": "T010",
+    "notes": "T010 | Form 1040 estimated payments | Synthetic tax payment",
+    "cleared": true
+  },
+  {
+    "id": "28e906ee-7d7d-4840-a1fa-459c6be0d020",
+    "date": "2025-06-20",
+    "amountCents": 320000,
+    "amountDollars": 3200,
+    "category": "Income:Freelance:Design",
+    "importedId": "T011",
+    "notes": "T011 | Schedule C gross receipts | Synthetic client income",
+    "cleared": true
+  },
+  {
+    "id": "46585a65-9975-4267-812b-863666099537",
+    "date": "2025-07-04",
+    "amountCents": -24900,
+    "amountDollars": -249,
+    "category": "Expenses:Business:Professional Education",
+    "importedId": "T012",
+    "notes": "T012 | Schedule C education placeholder | Synthetic business expense",
+    "cleared": true
+  },
+  {
+    "id": "5843ee1e-20ac-4786-a309-2c033a095649",
+    "date": "2025-08-15",
+    "amountCents": -18000,
+    "amountDollars": -180,
+    "category": "Expenses:Business:Software",
+    "importedId": "T013",
+    "notes": "T013 | Schedule C software | Synthetic business expense",
+    "cleared": true
+  },
+  {
+    "id": "4e3380c6-0e43-4f01-a968-0f303ca45468",
+    "date": "2025-09-03",
+    "amountCents": -21000,
+    "amountDollars": -210,
+    "category": "Expenses:Business:Coworking",
+    "importedId": "T014",
+    "notes": "T014 | Schedule C workspace | Synthetic business expense",
+    "cleared": true
+  },
+  {
+    "id": "f739bca2-bac5-480b-a635-b4442c379e8e",
+    "date": "2025-09-10",
+    "amountCents": -25000,
+    "amountDollars": -250,
+    "category": "Expenses:Charity",
+    "importedId": "T015",
+    "notes": "T015 | Schedule A cash charity | Synthetic charitable donation",
+    "cleared": true
+  },
+  {
+    "id": "58408264-5913-4b50-8f54-666640160be9",
+    "date": "2025-10-01",
+    "amountCents": 3557,
+    "amountDollars": 35.57,
+    "category": "Income:Interest",
+    "importedId": "T016",
+    "notes": "T016 | Schedule B interest | Synthetic interest income",
+    "cleared": true
+  },
+  {
+    "id": "33f30cca-6400-4349-91b5-10b7a7223880",
+    "date": "2025-11-05",
+    "amountCents": 275000,
+    "amountDollars": 2750,
+    "category": "Income:Freelance:Consulting",
+    "importedId": "T017",
+    "notes": "T017 | Schedule C gross receipts | Synthetic client income",
+    "cleared": true
+  },
+  {
+    "id": "ca33841c-e50d-468b-bba9-56e0676a1152",
+    "date": "2025-12-15",
+    "amountCents": -65000,
+    "amountDollars": -650,
+    "category": "Liabilities:Federal Tax:Estimated Payments",
+    "importedId": "T018",
+    "notes": "T018 | Form 1040 estimated payments | Synthetic tax payment",
+    "cleared": true
+  },
+  {
+    "id": "8e536b3f-5062-43e0-99d6-502473528664",
+    "date": "2025-12-31",
+    "amountCents": -2499,
+    "amountDollars": -24.99,
+    "category": "Expenses:Business:Software",
+    "importedId": "TADD",
+    "notes": "TADD | Schedule C software",
+    "cleared": true
+  }
+]

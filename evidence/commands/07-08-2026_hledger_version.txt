@@ -1,0 +1,7 @@
+# hledger version check
+# Started: 2026-07-07 20:48:29 -07:00
+# Binary: C:\Users\nagar\AppData\Local\Temp\ai-tax-hledger-day9-d4c56bd6f8da40cf979644bbf3f82dfb\hledger-1.52.1\hledger.exe
+
+PS> & 'C:\Users\nagar\AppData\Local\Temp\ai-tax-hledger-day9-d4c56bd6f8da40cf979644bbf3f82dfb\hledger-1.52.1\hledger.exe' --version
+
+hledger 1.52.1-g3834a163b-20260428, windows-x86_64

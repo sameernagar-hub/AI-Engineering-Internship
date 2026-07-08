@@ -1,0 +1,16 @@
+# Firefly III Day 11 version transcript
+Recorded: 2026-07-07T21:33:12.5803370-07:00
+Token: generated in container and redacted from transcript
+
+## Local API /about
+{"data":{"version":"6.6.6","api_version":"6.6.6","php_version":"8.5.7","os":"Linux","driver":"mysql"}}
+
+## Artisan output-version
+6.6.6
+
+## Docker images
+fireflyiii/core:version-6.6.6
+[fireflyiii/core:version-6.6.6] sha256:ae69fdd95cdef9038cd7a460a5aec731f14813973e4f096511d5a4ea9ff0e972 2026-07-01T19:10:26.999201297Z
+
+mariadb:lts
+[mariadb:lts] sha256:628f228f0fd5913a220438693576b29b6fe4dc1fa0a1298c0e98579fae28635f 2026-07-02T02:30:33.802014522Z

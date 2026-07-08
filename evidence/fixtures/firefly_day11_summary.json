@@ -1,0 +1,267 @@
+{
+  "evaluated_at": "2026-07-08T04:32:23.356Z",
+  "tool": "Firefly III",
+  "base_url": "http://127.0.0.1:18080/api/v1",
+  "about": {
+    "version": "6.6.6",
+    "api_version": "6.6.6",
+    "php_version": "8.5.7",
+    "os": "Linux",
+    "driver": "mysql"
+  },
+  "dataset_id": "synthetic-freelancer-2025-v1",
+  "mapping_notes": [
+    "The asset account was created with Firefly account opening_balance for T000.",
+    "Each non-opening CSV row was posted to /api/v1/transactions as one deposit or withdrawal split.",
+    "Original CSV categories were stored as Firefly category_name values; tax hints were stored in notes and tags.",
+    "Firefly creates revenue/expense counterpart accounts from source_name or destination_name during transaction posting."
+  ],
+  "created": {
+    "checking_account_id": "1",
+    "category_count": 12,
+    "baseline_transaction_posts": 18,
+    "add_transaction_group_id": "20"
+  },
+  "expected": {
+    "baseline_ending_checking_balance": "8964.77",
+    "after_add_ending_checking_balance": "8939.78",
+    "baseline_schedule_c_cash_expenses_before_mileage": "1142.98",
+    "after_add_schedule_c_cash_expenses_before_mileage": "1167.97",
+    "baseline_schedule_c_net_before_mileage": "9107.02",
+    "after_add_schedule_c_net_before_mileage": "9082.03"
+  },
+  "baseline": {
+    "firefly_transaction_rows_exported": 18,
+    "totals": {
+      "transaction_count_with_synthetic_ids": 18,
+      "checking_balance": "8964.77",
+      "freelance_gross_receipts": "10250.00",
+      "interest_income": "77.75",
+      "schedule_c_cash_expenses_before_mileage": "1142.98",
+      "schedule_c_net_before_mileage": "9107.02",
+      "cash_charitable_contributions": "370.00",
+      "federal_estimated_tax_payments": "1050.00"
+    },
+    "insights": {
+      "expense_by_category": [
+        {
+          "id": "9",
+          "name": "Expenses:Business:Bank Fees",
+          "difference": "-12.000000000000",
+          "difference_float": -12,
+          "currency_id": "12",
+          "currency_code": "USD"
+        },
+        {
+          "id": "12",
+          "name": "Expenses:Business:Coworking",
+          "difference": "-210.000000000000",
+          "difference_float": -210,
+          "currency_id": "12",
+          "currency_code": "USD"
+        },
+        {
+          "id": "3",
+          "name": "Expenses:Business:Office Equipment",
+          "difference": "-320.000000000000",
+          "difference_float": -320,
+          "currency_id": "12",
+          "currency_code": "USD"
+        },
+        {
+          "id": "8",
+          "name": "Expenses:Business:Office Supplies",
+          "difference": "-74.230000000000",
+          "difference_float": -74.23,
+          "currency_id": "12",
+          "currency_code": "USD"
+        },
+        {
+          "id": "11",
+          "name": "Expenses:Business:Professional Education",
+          "difference": "-249.000000000000",
+          "difference_float": -249,
+          "currency_id": "12",
+          "currency_code": "USD"
+        },
+        {
+          "id": "2",
+          "name": "Expenses:Business:Software",
+          "difference": "-239.000000000000",
+          "difference_float": -239,
+          "currency_id": "12",
+          "currency_code": "USD"
+        },
+        {
+          "id": "5",
+          "name": "Expenses:Business:Travel",
+          "difference": "-38.750000000000",
+          "difference_float": -38.75,
+          "currency_id": "12",
+          "currency_code": "USD"
+        },
+        {
+          "id": "7",
+          "name": "Expenses:Charity",
+          "difference": "-370.000000000000",
+          "difference_float": -370,
+          "currency_id": "12",
+          "currency_code": "USD"
+        },
+        {
+          "id": "10",
+          "name": "Liabilities:Federal Tax:Estimated Payments",
+          "difference": "-1050.000000000000",
+          "difference_float": -1050,
+          "currency_id": "12",
+          "currency_code": "USD"
+        }
+      ],
+      "income_by_category": [
+        {
+          "id": "4",
+          "name": "Income:Freelance:Consulting",
+          "difference": "4550.000000000000",
+          "difference_float": 4550,
+          "currency_id": "12",
+          "currency_code": "USD"
+        },
+        {
+          "id": "1",
+          "name": "Income:Freelance:Design",
+          "difference": "5700.000000000000",
+          "difference_float": 5700,
+          "currency_id": "12",
+          "currency_code": "USD"
+        },
+        {
+          "id": "6",
+          "name": "Income:Interest",
+          "difference": "77.750000000000",
+          "difference_float": 77.75,
+          "currency_id": "12",
+          "currency_code": "USD"
+        }
+      ]
+    }
+  },
+  "after_add": {
+    "firefly_transaction_rows_exported": 19,
+    "totals": {
+      "transaction_count_with_synthetic_ids": 19,
+      "checking_balance": "8939.78",
+      "freelance_gross_receipts": "10250.00",
+      "interest_income": "77.75",
+      "schedule_c_cash_expenses_before_mileage": "1167.97",
+      "schedule_c_net_before_mileage": "9082.03",
+      "cash_charitable_contributions": "370.00",
+      "federal_estimated_tax_payments": "1050.00"
+    },
+    "insights": {
+      "expense_by_category": [
+        {
+          "id": "9",
+          "name": "Expenses:Business:Bank Fees",
+          "difference": "-12.000000000000",
+          "difference_float": -12,
+          "currency_id": "12",
+          "currency_code": "USD"
+        },
+        {
+          "id": "12",
+          "name": "Expenses:Business:Coworking",
+          "difference": "-210.000000000000",
+          "difference_float": -210,
+          "currency_id": "12",
+          "currency_code": "USD"
+        },
+        {
+          "id": "3",
+          "name": "Expenses:Business:Office Equipment",
+          "difference": "-320.000000000000",
+          "difference_float": -320,
+          "currency_id": "12",
+          "currency_code": "USD"
+        },
+        {
+          "id": "8",
+          "name": "Expenses:Business:Office Supplies",
+          "difference": "-74.230000000000",
+          "difference_float": -74.23,
+          "currency_id": "12",
+          "currency_code": "USD"
+        },
+        {
+          "id": "11",
+          "name": "Expenses:Business:Professional Education",
+          "difference": "-249.000000000000",
+          "difference_float": -249,
+          "currency_id": "12",
+          "currency_code": "USD"
+        },
+        {
+          "id": "2",
+          "name": "Expenses:Business:Software",
+          "difference": "-263.990000000000",
+          "difference_float": -263.99,
+          "currency_id": "12",
+          "currency_code": "USD"
+        },
+        {
+          "id": "5",
+          "name": "Expenses:Business:Travel",
+          "difference": "-38.750000000000",
+          "difference_float": -38.75,
+          "currency_id": "12",
+          "currency_code": "USD"
+        },
+        {
+          "id": "7",
+          "name": "Expenses:Charity",
+          "difference": "-370.000000000000",
+          "difference_float": -370,
+          "currency_id": "12",
+          "currency_code": "USD"
+        },
+        {
+          "id": "10",
+          "name": "Liabilities:Federal Tax:Estimated Payments",
+          "difference": "-1050.000000000000",
+          "difference_float": -1050,
+          "currency_id": "12",
+          "currency_code": "USD"
+        }
+      ],
+      "income_by_category": [
+        {
+          "id": "4",
+          "name": "Income:Freelance:Consulting",
+          "difference": "4550.000000000000",
+          "difference_float": 4550,
+          "currency_id": "12",
+          "currency_code": "USD"
+        },
+        {
+          "id": "1",
+          "name": "Income:Freelance:Design",
+          "difference": "5700.000000000000",
+          "difference_float": 5700,
+          "currency_id": "12",
+          "currency_code": "USD"
+        },
+        {
+          "id": "6",
+          "name": "Income:Interest",
+          "difference": "77.750000000000",
+          "difference_float": 77.75,
+          "currency_id": "12",
+          "currency_code": "USD"
+        }
+      ]
+    }
+  },
+  "output_files": {
+    "normalized_transactions_after_add": "evidence/fixtures/firefly_day11_transactions_after_add.json",
+    "summary": "evidence/fixtures/firefly_day11_summary.json"
+  }
+}

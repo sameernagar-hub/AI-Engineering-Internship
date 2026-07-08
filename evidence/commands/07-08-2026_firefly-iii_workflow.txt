@@ -1,0 +1,15 @@
+﻿# Firefly III Day 11 workflow transcript
+Recorded: 2026-07-07T21:32:18.7124912-07:00
+Token: generated in container and redacted from transcript
+Node: v24.16.0
+
+Firefly III Day 11 workflow start
+about: version=6.6.6, api=6.6.6, driver=mysql
+created checking account id=1
+created categories=12
+posted baseline API transactions=18
+baseline balance=8964.77
+posted add transaction=TADD, group=20
+after-add balance=8939.78
+wrote evidence\fixtures\firefly_day11_summary.json
+wrote evidence\fixtures\firefly_day11_transactions_after_add.json

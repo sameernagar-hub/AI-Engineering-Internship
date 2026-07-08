@@ -64,4 +64,4 @@ This project is licensed under the MIT License. See [`LICENSE`](LICENSE) for det
 
 ## Repository Status
 
-Phase 8 created `evidence/synthetic_dataset.md`, machine-readable synthetic fixtures, and `research/evaluation_checklist.md` for Week 2 hands-on evaluation. The next phase evaluates hledger against the shared dataset and fills the first tool record.
+Phase 11 evaluated Firefly III against the shared synthetic dataset, captured Docker/API setup plus workflow/failure evidence, and completed `tool_records/tool_3.md`. The next phase evaluates a fourth shortlisted tool or backup candidate, likely a tax-specific surface such as `tenforty`.

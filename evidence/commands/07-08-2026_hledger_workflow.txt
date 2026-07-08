@@ -1,0 +1,204 @@
+# hledger common workflow transcript
+# Started: 2026-07-07 20:50:11 -07:00
+# Binary: C:\Users\nagar\AppData\Local\Temp\ai-tax-hledger-day9-d4c56bd6f8da40cf979644bbf3f82dfb\hledger-1.52.1\hledger.exe
+# Rules: evidence\fixtures\hledger_synthetic_freelancer.rules
+# Baseline CSV: evidence\fixtures\synthetic_freelancer_transactions.csv
+# Add transaction CSV: evidence\fixtures\hledger_synthetic_freelancer_tadd.csv
+
+
+PS> & hledger --rules evidence\fixtures\hledger_synthetic_freelancer.rules -f evidence\fixtures\synthetic_freelancer_transactions.csv print
+2025-01-01 (T000) Opening Balance | Synthetic starting checking balance  ; tax_hint:None, memo:Seed balance for tests
+    Assets:Checking              USD1200.00
+    Equity:Opening Balances     USD-1200.00
+
+2025-01-15 (T001) Acme Design Co | Freelance design project payment  ; tax_hint:Schedule C gross receipts, memo:Synthetic client income
+    Assets:Checking              USD2500.00
+    Income:Freelance:Design     USD-2500.00
+
+2025-01-31 (T002) CloudCode Tools | Monthly software subscription  ; tax_hint:Schedule C software, memo:Synthetic business expense
+    Assets:Checking                  USD-59.00
+    Expenses:Business:Software        USD59.00
+
+2025-02-03 (T003) DeskHub Supply | Office chair purchase  ; tax_hint:Schedule C office equipment, memo:Synthetic business expense
+    Assets:Checking                         USD-320.00
+    Expenses:Business:Office Equipment       USD320.00
+
+2025-03-12 (T004) Northstar Analytics | Freelance consulting payment  ; tax_hint:Schedule C gross receipts, memo:Synthetic client income
+    Assets:Checking                  USD1800.00
+    Income:Freelance:Consulting     USD-1800.00
+
+2025-03-16 (T005) Metro Transit | Transit to client meeting  ; tax_hint:Schedule C local travel, memo:Synthetic business expense
+    Assets:Checking                USD-38.75
+    Expenses:Business:Travel        USD38.75
+
+2025-03-31 (T006) Sample Bank HYSA | Savings account interest  ; tax_hint:Schedule B interest, memo:Synthetic interest income
+    Assets:Checking        USD42.18
+    Income:Interest       USD-42.18
+
+2025-04-05 (T007) City Library Foundation | Cash charitable donation  ; tax_hint:Schedule A cash charity, memo:Synthetic charitable donation
+    Assets:Checking       USD-120.00
+    Expenses:Charity       USD120.00
+
+2025-05-08 (T008) OfficeMart | Printer paper and ink  ; tax_hint:Schedule C office supplies, memo:Synthetic business expense
+    Assets:Checking                         USD-74.23
+    Expenses:Business:Office Supplies        USD74.23
+
+2025-06-01 (T009) Sample Bank | Business checking service fee  ; tax_hint:Schedule C bank fees, memo:Synthetic business expense
+    Assets:Checking                   USD-12.00
+    Expenses:Business:Bank Fees        USD12.00
+
+2025-06-15 (T010) Synthetic Federal Treasury | Quarterly estimated tax payment  ; tax_hint:Form 1040 estimated payments, memo:Synthetic tax payment
+    Assets:Checking                                 USD-400.00
+    Liabilities:Federal Tax:Estimated Payments       USD400.00
+
+2025-06-20 (T011) Acme Design Co | Freelance redesign payment  ; tax_hint:Schedule C gross receipts, memo:Synthetic client income
+    Assets:Checking              USD3200.00
+    Income:Freelance:Design     USD-3200.00
+
+2025-07-04 (T012) Open Source Finance Summit | Professional education ticket  ; tax_hint:Schedule C education placeholder, memo:Synthetic business expense
+    Assets:Checking                               USD-249.00
+    Expenses:Business:Professional Education       USD249.00
+
+2025-08-15 (T013) CloudCode Tools | Annual software plan  ; tax_hint:Schedule C software, memo:Synthetic business expense
+    Assets:Checking                 USD-180.00
+    Expenses:Business:Software       USD180.00
+
+2025-09-03 (T014) DeskHub Coworking | Coworking day passes  ; tax_hint:Schedule C workspace, memo:Synthetic business expense
+    Assets:Checking                  USD-210.00
+    Expenses:Business:Coworking       USD210.00
+
+2025-09-10 (T015) Neighborhood Food Fund | Cash charitable donation  ; tax_hint:Schedule A cash charity, memo:Synthetic charitable donation
+    Assets:Checking       USD-250.00
+    Expenses:Charity       USD250.00
+
+2025-10-01 (T016) Sample Bank HYSA | Savings account interest  ; tax_hint:Schedule B interest, memo:Synthetic interest income
+    Assets:Checking        USD35.57
+    Income:Interest       USD-35.57
+
+2025-11-05 (T017) Northstar Analytics | Freelance analytics payment  ; tax_hint:Schedule C gross receipts, memo:Synthetic client income
+    Assets:Checking                  USD2750.00
+    Income:Freelance:Consulting     USD-2750.00
+
+2025-12-15 (T018) Synthetic Federal Treasury | Quarterly estimated tax payment  ; tax_hint:Form 1040 estimated payments, memo:Synthetic tax payment
+    Assets:Checking                                 USD-650.00
+    Liabilities:Federal Tax:Estimated Payments       USD650.00
+Exit code: 0
+
+PS> & hledger --rules evidence\fixtures\hledger_synthetic_freelancer.rules -f evidence\fixtures\synthetic_freelancer_transactions.csv stats
+Main file           : .../synthetic_freelancer_transactions.csv
+Included files      : 0
+Txns span           : 2025-01-01 to 2025-12-16 (349 days)
+Last txn            : 2025-12-15 (204 days ago)
+Txns                : 19 (0.1 per day)
+Txns last 30 days   : 0 (0.0 per day)
+Txns last 7 days    : 0 (0.0 per day)
+Payees/descriptions : 17
+Accounts            : 14 (depth 3)
+Commodities         : 1
+Market prices       : 0
+Runtime stats       : 0.09 s elapsed, 212 txns/s, 4 MB live, 15 MB alloc
+Exit code: 0
+
+PS> & hledger --rules evidence\fixtures\hledger_synthetic_freelancer.rules -f evidence\fixtures\synthetic_freelancer_transactions.csv accounts --flat
+Assets:Checking
+Equity:Opening Balances
+Expenses:Business:Bank Fees
+Expenses:Business:Coworking
+Expenses:Business:Office Equipment
+Expenses:Business:Office Supplies
+Expenses:Business:Professional Education
+Expenses:Business:Software
+Expenses:Business:Travel
+Expenses:Charity
+Income:Freelance:Consulting
+Income:Freelance:Design
+Income:Interest
+Liabilities:Federal Tax:Estimated Payments
+Exit code: 0
+
+PS> & hledger --rules evidence\fixtures\hledger_synthetic_freelancer.rules -f evidence\fixtures\synthetic_freelancer_transactions.csv balance Assets:Checking
+          USD8964.77  Assets:Checking
+--------------------
+          USD8964.77
+Exit code: 0
+
+PS> & hledger --rules evidence\fixtures\hledger_synthetic_freelancer.rules -f evidence\fixtures\synthetic_freelancer_transactions.csv balance Income:Freelance Income:Interest Expenses:Business Expenses:Charity Liabilities:Federal --depth 3
+            USD12.00  Expenses:Business:Bank Fees
+           USD210.00  Expenses:Business:Coworking
+           USD320.00  Expenses:Business:Office Equipment
+            USD74.23  Expenses:Business:Office Supplies
+           USD249.00  Expenses:Business:Professional Education
+           USD239.00  Expenses:Business:Software
+            USD38.75  Expenses:Business:Travel
+           USD370.00  Expenses:Charity
+         USD-4550.00  Income:Freelance:Consulting
+         USD-5700.00  Income:Freelance:Design
+           USD-77.75  Income:Interest
+          USD1050.00  Liabilities:Federal Tax:Estimated Payments
+--------------------
+         USD-7764.77
+Exit code: 0
+
+PS> & hledger --rules evidence\fixtures\hledger_synthetic_freelancer.rules -f evidence\fixtures\synthetic_freelancer_transactions.csv incomestatement --depth 3
+Income Statement 2025-01-01..2025-12-15
+
+                                          || 2025-01-01..2025-12-15
+==========================================++========================
+ Revenues                                 ||
+------------------------------------------++------------------------
+ Income:Freelance:Consulting              ||             USD4550.00
+ Income:Freelance:Design                  ||             USD5700.00
+ Income:Interest                          ||               USD77.75
+------------------------------------------++------------------------
+                                          ||            USD10327.75
+==========================================++========================
+ Expenses                                 ||
+------------------------------------------++------------------------
+ Expenses:Business:Bank Fees              ||               USD12.00
+ Expenses:Business:Coworking              ||              USD210.00
+ Expenses:Business:Office Equipment       ||              USD320.00
+ Expenses:Business:Office Supplies        ||               USD74.23
+ Expenses:Business:Professional Education ||              USD249.00
+ Expenses:Business:Software               ||              USD239.00
+ Expenses:Business:Travel                 ||               USD38.75
+ Expenses:Charity                         ||              USD370.00
+------------------------------------------++------------------------
+                                          ||             USD1512.98
+==========================================++========================
+ Net:                                     ||             USD8814.77
+Exit code: 0
+
+PS> & hledger --rules evidence\fixtures\hledger_synthetic_freelancer.rules -f evidence\fixtures\synthetic_freelancer_transactions.csv -f evidence\fixtures\hledger_synthetic_freelancer_tadd.csv balance Assets:Checking
+          USD8939.78  Assets:Checking
+--------------------
+          USD8939.78
+Exit code: 0
+
+PS> & hledger --rules evidence\fixtures\hledger_synthetic_freelancer.rules -f evidence\fixtures\synthetic_freelancer_transactions.csv -f evidence\fixtures\hledger_synthetic_freelancer_tadd.csv balance Income:Freelance Income:Interest Expenses:Business Expenses:Charity Liabilities:Federal --depth 3
+            USD12.00  Expenses:Business:Bank Fees
+           USD210.00  Expenses:Business:Coworking
+           USD320.00  Expenses:Business:Office Equipment
+            USD74.23  Expenses:Business:Office Supplies
+           USD249.00  Expenses:Business:Professional Education
+           USD263.99  Expenses:Business:Software
+            USD38.75  Expenses:Business:Travel
+           USD370.00  Expenses:Charity
+         USD-4550.00  Income:Freelance:Consulting
+         USD-5700.00  Income:Freelance:Design
+           USD-77.75  Income:Interest
+          USD1050.00  Liabilities:Federal Tax:Estimated Payments
+--------------------
+         USD-7739.78
+Exit code: 0
+
+PS> & hledger --rules evidence\fixtures\hledger_synthetic_freelancer.rules -f evidence\fixtures\synthetic_freelancer_transactions.csv print -O json > evidence\fixtures\hledger_day9_baseline_print.json
+Exit code: 0
+Wrote: evidence\fixtures\hledger_day9_baseline_print.json
+
+PS> & hledger --rules evidence\fixtures\hledger_synthetic_freelancer.rules -f evidence\fixtures\synthetic_freelancer_transactions.csv balance Assets:Checking -O json > evidence\fixtures\hledger_day9_baseline_checking_balance.json
+Exit code: 0
+Wrote: evidence\fixtures\hledger_day9_baseline_checking_balance.json
+
+PS> & hledger --rules evidence\fixtures\hledger_synthetic_freelancer.rules -f evidence\fixtures\synthetic_freelancer_transactions.csv -f evidence\fixtures\hledger_synthetic_freelancer_tadd.csv print -O json > evidence\fixtures\hledger_day9_with_tadd_print.json
+Exit code: 0
+Wrote: evidence\fixtures\hledger_day9_with_tadd_print.json

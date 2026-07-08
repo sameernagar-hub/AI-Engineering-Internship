@@ -1,0 +1,344 @@
+[
+  {
+    "group_id": "20",
+    "transaction_journal_id": "20",
+    "transaction_id": "TADD",
+    "type": "withdrawal",
+    "date": "2025-12-31T00:00:00+00:00",
+    "amount": "24.990000000000",
+    "description": "CloudCode Tools - Year-end software add-transaction test",
+    "source_name": "Synthetic Checking (Day 11 Firefly III)",
+    "destination_name": "CloudCode Tools",
+    "category_name": "Expenses:Business:Software",
+    "tags": [
+      "tax:Schedule C software",
+      "synthetic-id:TADD"
+    ],
+    "notes": "TADD | Schedule C software | Standard Day 11 add-transaction test",
+    "external_id": "synthetic-freelancer-2025-v1:TADD"
+  },
+  {
+    "group_id": "19",
+    "transaction_journal_id": "19",
+    "transaction_id": "T018",
+    "type": "withdrawal",
+    "date": "2025-12-15T00:00:00+00:00",
+    "amount": "650.000000000000",
+    "description": "Synthetic Federal Treasury - Quarterly estimated tax payment",
+    "source_name": "Synthetic Checking (Day 11 Firefly III)",
+    "destination_name": "Synthetic Federal Treasury",
+    "category_name": "Liabilities:Federal Tax:Estimated Payments",
+    "tags": [
+      "tax:Form 1040 estimated payments",
+      "synthetic-id:T018"
+    ],
+    "notes": "T018 | Form 1040 estimated payments | Synthetic tax payment",
+    "external_id": "synthetic-freelancer-2025-v1:T018"
+  },
+  {
+    "group_id": "18",
+    "transaction_journal_id": "18",
+    "transaction_id": "T017",
+    "type": "deposit",
+    "date": "2025-11-05T00:00:00+00:00",
+    "amount": "2750.000000000000",
+    "description": "Northstar Analytics - Freelance analytics payment",
+    "source_name": "Revenue: Income:Freelance:Consulting",
+    "destination_name": "Synthetic Checking (Day 11 Firefly III)",
+    "category_name": "Income:Freelance:Consulting",
+    "tags": [
+      "tax:Schedule C gross receipts",
+      "synthetic-id:T017"
+    ],
+    "notes": "T017 | Schedule C gross receipts | Synthetic client income",
+    "external_id": "synthetic-freelancer-2025-v1:T017"
+  },
+  {
+    "group_id": "17",
+    "transaction_journal_id": "17",
+    "transaction_id": "T016",
+    "type": "deposit",
+    "date": "2025-10-01T00:00:00+00:00",
+    "amount": "35.570000000000",
+    "description": "Sample Bank HYSA - Savings account interest",
+    "source_name": "Revenue: Income:Interest",
+    "destination_name": "Synthetic Checking (Day 11 Firefly III)",
+    "category_name": "Income:Interest",
+    "tags": [
+      "tax:Schedule B interest",
+      "synthetic-id:T016"
+    ],
+    "notes": "T016 | Schedule B interest | Synthetic interest income",
+    "external_id": "synthetic-freelancer-2025-v1:T016"
+  },
+  {
+    "group_id": "16",
+    "transaction_journal_id": "16",
+    "transaction_id": "T015",
+    "type": "withdrawal",
+    "date": "2025-09-10T00:00:00+00:00",
+    "amount": "250.000000000000",
+    "description": "Neighborhood Food Fund - Cash charitable donation",
+    "source_name": "Synthetic Checking (Day 11 Firefly III)",
+    "destination_name": "Neighborhood Food Fund",
+    "category_name": "Expenses:Charity",
+    "tags": [
+      "tax:Schedule A cash charity",
+      "synthetic-id:T015"
+    ],
+    "notes": "T015 | Schedule A cash charity | Synthetic charitable donation",
+    "external_id": "synthetic-freelancer-2025-v1:T015"
+  },
+  {
+    "group_id": "15",
+    "transaction_journal_id": "15",
+    "transaction_id": "T014",
+    "type": "withdrawal",
+    "date": "2025-09-03T00:00:00+00:00",
+    "amount": "210.000000000000",
+    "description": "DeskHub Coworking - Coworking day passes",
+    "source_name": "Synthetic Checking (Day 11 Firefly III)",
+    "destination_name": "DeskHub Coworking",
+    "category_name": "Expenses:Business:Coworking",
+    "tags": [
+      "tax:Schedule C workspace",
+      "synthetic-id:T014"
+    ],
+    "notes": "T014 | Schedule C workspace | Synthetic business expense",
+    "external_id": "synthetic-freelancer-2025-v1:T014"
+  },
+  {
+    "group_id": "14",
+    "transaction_journal_id": "14",
+    "transaction_id": "T013",
+    "type": "withdrawal",
+    "date": "2025-08-15T00:00:00+00:00",
+    "amount": "180.000000000000",
+    "description": "CloudCode Tools - Annual software plan",
+    "source_name": "Synthetic Checking (Day 11 Firefly III)",
+    "destination_name": "CloudCode Tools",
+    "category_name": "Expenses:Business:Software",
+    "tags": [
+      "tax:Schedule C software",
+      "synthetic-id:T013"
+    ],
+    "notes": "T013 | Schedule C software | Synthetic business expense",
+    "external_id": "synthetic-freelancer-2025-v1:T013"
+  },
+  {
+    "group_id": "13",
+    "transaction_journal_id": "13",
+    "transaction_id": "T012",
+    "type": "withdrawal",
+    "date": "2025-07-04T00:00:00+00:00",
+    "amount": "249.000000000000",
+    "description": "Open Source Finance Summit - Professional education ticket",
+    "source_name": "Synthetic Checking (Day 11 Firefly III)",
+    "destination_name": "Open Source Finance Summit",
+    "category_name": "Expenses:Business:Professional Education",
+    "tags": [
+      "tax:Schedule C education placeholder",
+      "synthetic-id:T012"
+    ],
+    "notes": "T012 | Schedule C education placeholder | Synthetic business expense",
+    "external_id": "synthetic-freelancer-2025-v1:T012"
+  },
+  {
+    "group_id": "12",
+    "transaction_journal_id": "12",
+    "transaction_id": "T011",
+    "type": "deposit",
+    "date": "2025-06-20T00:00:00+00:00",
+    "amount": "3200.000000000000",
+    "description": "Acme Design Co - Freelance redesign payment",
+    "source_name": "Revenue: Income:Freelance:Design",
+    "destination_name": "Synthetic Checking (Day 11 Firefly III)",
+    "category_name": "Income:Freelance:Design",
+    "tags": [
+      "tax:Schedule C gross receipts",
+      "synthetic-id:T011"
+    ],
+    "notes": "T011 | Schedule C gross receipts | Synthetic client income",
+    "external_id": "synthetic-freelancer-2025-v1:T011"
+  },
+  {
+    "group_id": "11",
+    "transaction_journal_id": "11",
+    "transaction_id": "T010",
+    "type": "withdrawal",
+    "date": "2025-06-15T00:00:00+00:00",
+    "amount": "400.000000000000",
+    "description": "Synthetic Federal Treasury - Quarterly estimated tax payment",
+    "source_name": "Synthetic Checking (Day 11 Firefly III)",
+    "destination_name": "Synthetic Federal Treasury",
+    "category_name": "Liabilities:Federal Tax:Estimated Payments",
+    "tags": [
+      "tax:Form 1040 estimated payments",
+      "synthetic-id:T010"
+    ],
+    "notes": "T010 | Form 1040 estimated payments | Synthetic tax payment",
+    "external_id": "synthetic-freelancer-2025-v1:T010"
+  },
+  {
+    "group_id": "10",
+    "transaction_journal_id": "10",
+    "transaction_id": "T009",
+    "type": "withdrawal",
+    "date": "2025-06-01T00:00:00+00:00",
+    "amount": "12.000000000000",
+    "description": "Sample Bank - Business checking service fee",
+    "source_name": "Synthetic Checking (Day 11 Firefly III)",
+    "destination_name": "Sample Bank",
+    "category_name": "Expenses:Business:Bank Fees",
+    "tags": [
+      "tax:Schedule C bank fees",
+      "synthetic-id:T009"
+    ],
+    "notes": "T009 | Schedule C bank fees | Synthetic business expense",
+    "external_id": "synthetic-freelancer-2025-v1:T009"
+  },
+  {
+    "group_id": "9",
+    "transaction_journal_id": "9",
+    "transaction_id": "T008",
+    "type": "withdrawal",
+    "date": "2025-05-08T00:00:00+00:00",
+    "amount": "74.230000000000",
+    "description": "OfficeMart - Printer paper and ink",
+    "source_name": "Synthetic Checking (Day 11 Firefly III)",
+    "destination_name": "OfficeMart",
+    "category_name": "Expenses:Business:Office Supplies",
+    "tags": [
+      "tax:Schedule C office supplies",
+      "synthetic-id:T008"
+    ],
+    "notes": "T008 | Schedule C office supplies | Synthetic business expense",
+    "external_id": "synthetic-freelancer-2025-v1:T008"
+  },
+  {
+    "group_id": "8",
+    "transaction_journal_id": "8",
+    "transaction_id": "T007",
+    "type": "withdrawal",
+    "date": "2025-04-05T00:00:00+00:00",
+    "amount": "120.000000000000",
+    "description": "City Library Foundation - Cash charitable donation",
+    "source_name": "Synthetic Checking (Day 11 Firefly III)",
+    "destination_name": "City Library Foundation",
+    "category_name": "Expenses:Charity",
+    "tags": [
+      "tax:Schedule A cash charity",
+      "synthetic-id:T007"
+    ],
+    "notes": "T007 | Schedule A cash charity | Synthetic charitable donation",
+    "external_id": "synthetic-freelancer-2025-v1:T007"
+  },
+  {
+    "group_id": "7",
+    "transaction_journal_id": "7",
+    "transaction_id": "T006",
+    "type": "deposit",
+    "date": "2025-03-31T00:00:00+00:00",
+    "amount": "42.180000000000",
+    "description": "Sample Bank HYSA - Savings account interest",
+    "source_name": "Revenue: Income:Interest",
+    "destination_name": "Synthetic Checking (Day 11 Firefly III)",
+    "category_name": "Income:Interest",
+    "tags": [
+      "tax:Schedule B interest",
+      "synthetic-id:T006"
+    ],
+    "notes": "T006 | Schedule B interest | Synthetic interest income",
+    "external_id": "synthetic-freelancer-2025-v1:T006"
+  },
+  {
+    "group_id": "6",
+    "transaction_journal_id": "6",
+    "transaction_id": "T005",
+    "type": "withdrawal",
+    "date": "2025-03-16T00:00:00+00:00",
+    "amount": "38.750000000000",
+    "description": "Metro Transit - Transit to client meeting",
+    "source_name": "Synthetic Checking (Day 11 Firefly III)",
+    "destination_name": "Metro Transit",
+    "category_name": "Expenses:Business:Travel",
+    "tags": [
+      "tax:Schedule C local travel",
+      "synthetic-id:T005"
+    ],
+    "notes": "T005 | Schedule C local travel | Synthetic business expense",
+    "external_id": "synthetic-freelancer-2025-v1:T005"
+  },
+  {
+    "group_id": "5",
+    "transaction_journal_id": "5",
+    "transaction_id": "T004",
+    "type": "deposit",
+    "date": "2025-03-12T00:00:00+00:00",
+    "amount": "1800.000000000000",
+    "description": "Northstar Analytics - Freelance consulting payment",
+    "source_name": "Revenue: Income:Freelance:Consulting",
+    "destination_name": "Synthetic Checking (Day 11 Firefly III)",
+    "category_name": "Income:Freelance:Consulting",
+    "tags": [
+      "tax:Schedule C gross receipts",
+      "synthetic-id:T004"
+    ],
+    "notes": "T004 | Schedule C gross receipts | Synthetic client income",
+    "external_id": "synthetic-freelancer-2025-v1:T004"
+  },
+  {
+    "group_id": "4",
+    "transaction_journal_id": "4",
+    "transaction_id": "T003",
+    "type": "withdrawal",
+    "date": "2025-02-03T00:00:00+00:00",
+    "amount": "320.000000000000",
+    "description": "DeskHub Supply - Office chair purchase",
+    "source_name": "Synthetic Checking (Day 11 Firefly III)",
+    "destination_name": "DeskHub Supply",
+    "category_name": "Expenses:Business:Office Equipment",
+    "tags": [
+      "tax:Schedule C office equipment",
+      "synthetic-id:T003"
+    ],
+    "notes": "T003 | Schedule C office equipment | Synthetic business expense",
+    "external_id": "synthetic-freelancer-2025-v1:T003"
+  },
+  {
+    "group_id": "3",
+    "transaction_journal_id": "3",
+    "transaction_id": "T002",
+    "type": "withdrawal",
+    "date": "2025-01-31T00:00:00+00:00",
+    "amount": "59.000000000000",
+    "description": "CloudCode Tools - Monthly software subscription",
+    "source_name": "Synthetic Checking (Day 11 Firefly III)",
+    "destination_name": "CloudCode Tools",
+    "category_name": "Expenses:Business:Software",
+    "tags": [
+      "tax:Schedule C software",
+      "synthetic-id:T002"
+    ],
+    "notes": "T002 | Schedule C software | Synthetic business expense",
+    "external_id": "synthetic-freelancer-2025-v1:T002"
+  },
+  {
+    "group_id": "2",
+    "transaction_journal_id": "2",
+    "transaction_id": "T001",
+    "type": "deposit",
+    "date": "2025-01-15T00:00:00+00:00",
+    "amount": "2500.000000000000",
+    "description": "Acme Design Co - Freelance design project payment",
+    "source_name": "Revenue: Income:Freelance:Design",
+    "destination_name": "Synthetic Checking (Day 11 Firefly III)",
+    "category_name": "Income:Freelance:Design",
+    "tags": [
+      "tax:Schedule C gross receipts",
+      "synthetic-id:T001"
+    ],
+    "notes": "T001 | Schedule C gross receipts | Synthetic client income",
+    "external_id": "synthetic-freelancer-2025-v1:T001"
+  }
+]

@@ -1,0 +1,12 @@
+skip 1
+fields transaction_id, date, payee, description_text, account, category, tax_hint, amount_usd, cleared, memo
+
+date %date
+date-format %m-%d-%Y
+code %transaction_id
+description %payee | %description_text
+account1 %account
+account2 %category
+amount %amount_usd
+currency USD
+comment tax_hint:%tax_hint, memo:%memo

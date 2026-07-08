@@ -1,0 +1,49 @@
+[
+  [
+    [
+      "Assets:Checking",
+      "Assets:Checking",
+      0,
+      [
+        {
+          "acommodity": "USD",
+          "acost": null,
+          "acostbasis": null,
+          "aquantity": {
+            "decimalMantissa": 896477,
+            "decimalPlaces": 2,
+            "floatingPoint": 8964.77
+          },
+          "astyle": {
+            "ascommodityside": "L",
+            "ascommodityspaced": false,
+            "asdecimalmark": ".",
+            "asdigitgroups": null,
+            "asprecision": 2,
+            "asrounding": "HardRounding"
+          }
+        }
+      ]
+    ]
+  ],
+  [
+    {
+      "acommodity": "USD",
+      "acost": null,
+      "acostbasis": null,
+      "aquantity": {
+        "decimalMantissa": 896477,
+        "decimalPlaces": 2,
+        "floatingPoint": 8964.77
+      },
+      "astyle": {
+        "ascommodityside": "L",
+        "ascommodityspaced": false,
+        "asdecimalmark": ".",
+        "asdigitgroups": null,
+        "asprecision": 2,
+        "asrounding": "HardRounding"
+      }
+    }
+  ]
+]

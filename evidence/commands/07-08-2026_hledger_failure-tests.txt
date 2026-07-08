@@ -1,0 +1,91 @@
+# hledger failure behavior transcript
+# Started: 2026-07-07 20:51:07 -07:00
+# Binary: C:\Users\nagar\AppData\Local\Temp\ai-tax-hledger-day9-d4c56bd6f8da40cf979644bbf3f82dfb\hledger-1.52.1\hledger.exe
+# Rules: evidence\fixtures\hledger_synthetic_freelancer.rules
+
+
+PS> & hledger --rules evidence\fixtures\hledger_synthetic_freelancer.rules -f evidence\fixtures\hledger_bad_date.csv print
+hledger.exe : hledger.exe: Error: could not parse "13-40-2025" as a date using date format "%m-%d-%Y"
+At line:11 char:13
++   $output = & $hledger @hArgs 2>&1 | Out-String
++             ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (hledger.exe: Er...rmat "%m-%d-%Y":String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+record: TBADDATE,13-40-2025,Bad Date Example,Malformed date test,Assets:Checking,Expenses:Business:Software,Schedule C
+software,-10.00,true,Synthetic bad date test
+the date rule is:   %date
+the date-format is: %m-%d-%Y
+you may need to change your date rule, change your date-format rule, or change your skip rule
+for m/d/y or d/m/y dates, use date-format %-m/%-d/%Y or date-format %-d/%-m/%Y
+Exit code: 1
+
+PS> & hledger --rules evidence\fixtures\hledger_synthetic_freelancer.rules -f evidence\fixtures\hledger_bad_amount.csv print
+hledger.exe : hledger.exe: Error: could not parse "not-a-number" as an amount
+At line:11 char:13
++   $output = & $hledger @hArgs 2>&1 | Out-String
++             ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (hledger.exe: Er...r" as an amount:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+record: TBADAMT,12-31-2025,Bad Amount Example,Invalid amount test,Assets:Checking,Expenses:Business:Software,Schedule
+C software,not-a-number,true,Synthetic bad amount test
+the account2 rule is: %category
+the account1 rule is: %account
+the amount rule is: %amount_usd
+the code rule is: %transaction_id
+the comment rule is: tax_hint:%tax_hint, memo:%memo
+the currency rule is: USD
+the date rule is: %date
+the description rule is: %payee | %description_text
+
+the parse error is:      1:8:
+  |
+1 | USDnot-a-number
+  |        ^
+unexpected 'a'
+expecting number
+
+you may need to change your amount*, balance*, or currency* rules, or add or change your skip rule
+Exit code: 1
+
+PS> & hledger --rules evidence\fixtures\hledger_synthetic_freelancer.rules -f evidence\fixtures\synthetic_freelancer_transactions.csv -f evidence\fixtures\hledger_unknown_account.csv accounts --flat
+Assets:Checking
+Equity:Opening Balances
+Expenses:Business:Bank Fees
+Expenses:Business:Coworking
+Expenses:Business:Imaginary Category
+Expenses:Business:Office Equipment
+Expenses:Business:Office Supplies
+Expenses:Business:Professional Education
+Expenses:Business:Software
+Expenses:Business:Travel
+Expenses:Charity
+Income:Freelance:Consulting
+Income:Freelance:Design
+Income:Interest
+Liabilities:Federal Tax:Estimated Payments
+Exit code: 0
+
+PS> & hledger --rules evidence\fixtures\hledger_synthetic_freelancer.rules -f evidence\fixtures\does_not_exist.csv print
+hledger.exe : hledger.exe: Error: data file "C:\Users\nagar\OneDrive\Documents\AI Engineering
+Internship\evidence\fixtures\does_not_exist.csv" was not found.
+At line:11 char:13
++   $output = & $hledger @hArgs 2>&1 | Out-String
++             ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (hledger.exe: Er... was not found.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+Please create it first, eg with "hledger add" or a text editor.
+Or, specify an existing data file with -f or $LEDGER_FILE.
+Exit code: 1
+
+PS> & hledger --rules evidence\fixtures\hledger_synthetic_freelancer.rules -f evidence\fixtures\synthetic_freelancer_transactions.csv -f evidence\fixtures\hledger_duplicate_t001.csv print code:T001
+2025-01-15 (T001) Acme Design Co | Freelance design project payment  ; tax_hint:Schedule C gross receipts, memo:Synthetic client income
+    Assets:Checking              USD2500.00
+    Income:Freelance:Design     USD-2500.00
+
+2025-01-15 (T001) Acme Design Co | Duplicate transaction ID test  ; tax_hint:Schedule C gross receipts, memo:Synthetic duplicate ID test
+    Assets:Checking              USD2500.00
+    Income:Freelance:Design     USD-2500.00
+Exit code: 0

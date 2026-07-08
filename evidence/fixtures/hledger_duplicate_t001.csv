@@ -1,0 +1,2 @@
+transaction_id,date,payee,description,account,category,tax_hint,amount_usd,cleared,memo
+T001,01-15-2025,Acme Design Co,Duplicate transaction ID test,Assets:Checking,Income:Freelance:Design,Schedule C gross receipts,2500.00,true,Synthetic duplicate ID test

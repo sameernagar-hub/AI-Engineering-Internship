@@ -1,0 +1,2 @@
+transaction_id,date,payee,description,account,category,tax_hint,amount_usd,cleared,memo
+TBADAMT,12-31-2025,Bad Amount Example,Invalid amount test,Assets:Checking,Expenses:Business:Software,Schedule C software,not-a-number,true,Synthetic bad amount test

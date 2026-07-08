@@ -1,0 +1,2 @@
+transaction_id,date,payee,description,account,category,tax_hint,amount_usd,cleared,memo
+TBADDATE,13-40-2025,Bad Date Example,Malformed date test,Assets:Checking,Expenses:Business:Software,Schedule C software,-10.00,true,Synthetic bad date test

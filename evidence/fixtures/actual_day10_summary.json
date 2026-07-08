@@ -1,0 +1,478 @@
+{
+  "evaluatedAt": "2026-07-08T04:12:15.428Z",
+  "package": {
+    "name": "@actual-app/api",
+    "version": "26.7.0",
+    "license": "MIT"
+  },
+  "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "dataDir": "C:\\Users\\nagar\\AppData\\Local\\Temp\\actual-day10-data",
+    "localOnly": true
+  },
+  "budget": {
+    "name": "Synthetic Freelancer Day 10",
+    "cloudFileId": null,
+    "id": "Synthetic-Freelancer-Day-10-f2a91a4"
+  },
+  "baseline": {
+    "transactionCount": 19,
+    "checkingBalanceCents": 896477,
+    "checkingBalanceDollars": 8964.77,
+    "freelanceGrossReceiptsCents": 1025000,
+    "interestIncomeCents": 7775,
+    "scheduleCExpenseCents": 114298,
+    "charityExpenseCents": 37000,
+    "estimatedTaxPaymentsCents": 105000,
+    "byCategory": {
+      "Liabilities:Federal Tax:Estimated Payments": -1050,
+      "Income:Freelance:Consulting": 4550,
+      "Income:Interest": 77.75,
+      "Expenses:Charity": -370,
+      "Expenses:Business:Coworking": -210,
+      "Expenses:Business:Software": -239,
+      "Expenses:Business:Professional Education": -249,
+      "Income:Freelance:Design": 5700,
+      "Expenses:Business:Bank Fees": -12,
+      "Expenses:Business:Office Supplies": -74.23,
+      "Expenses:Business:Travel": -38.75,
+      "Expenses:Business:Office Equipment": -320,
+      "Equity:Opening Balances": 1200
+    },
+    "freelanceGrossReceiptsDollars": 10250,
+    "interestIncomeDollars": 77.75,
+    "scheduleCExpenseDollars": 1142.98,
+    "charityExpenseDollars": 370,
+    "estimatedTaxPaymentsDollars": 1050,
+    "scheduleCNetBeforeMileageDollars": 9107.02,
+    "apiBalanceCents": 896477,
+    "apiBalanceDollars": 8964.77
+  },
+  "afterAdd": {
+    "transactionCount": 20,
+    "checkingBalanceCents": 893978,
+    "checkingBalanceDollars": 8939.78,
+    "freelanceGrossReceiptsCents": 1025000,
+    "interestIncomeCents": 7775,
+    "scheduleCExpenseCents": 116797,
+    "charityExpenseCents": 37000,
+    "estimatedTaxPaymentsCents": 105000,
+    "byCategory": {
+      "Expenses:Business:Software": -263.99,
+      "Liabilities:Federal Tax:Estimated Payments": -1050,
+      "Income:Freelance:Consulting": 4550,
+      "Income:Interest": 77.75,
+      "Expenses:Charity": -370,
+      "Expenses:Business:Coworking": -210,
+      "Expenses:Business:Professional Education": -249,
+      "Income:Freelance:Design": 5700,
+      "Expenses:Business:Bank Fees": -12,
+      "Expenses:Business:Office Supplies": -74.23,
+      "Expenses:Business:Travel": -38.75,
+      "Expenses:Business:Office Equipment": -320,
+      "Equity:Opening Balances": 1200
+    },
+    "freelanceGrossReceiptsDollars": 10250,
+    "interestIncomeDollars": 77.75,
+    "scheduleCExpenseDollars": 1167.97,
+    "charityExpenseDollars": 370,
+    "estimatedTaxPaymentsDollars": 1050,
+    "scheduleCNetBeforeMileageDollars": 9082.03,
+    "apiBalanceCents": 893978,
+    "apiBalanceDollars": 8939.78
+  },
+  "finalAfterFailureTests": {
+    "transactionCount": 22,
+    "checkingBalanceCents": 1143878,
+    "checkingBalanceDollars": 11438.78,
+    "freelanceGrossReceiptsCents": 1275000,
+    "interestIncomeCents": 7775,
+    "scheduleCExpenseCents": 116797,
+    "charityExpenseCents": 37000,
+    "estimatedTaxPaymentsCents": 105000,
+    "byCategory": {
+      "(uncategorized)": -1,
+      "Expenses:Business:Software": -263.99,
+      "Liabilities:Federal Tax:Estimated Payments": -1050,
+      "Income:Freelance:Consulting": 4550,
+      "Income:Interest": 77.75,
+      "Expenses:Charity": -370,
+      "Expenses:Business:Coworking": -210,
+      "Expenses:Business:Professional Education": -249,
+      "Income:Freelance:Design": 8200,
+      "Expenses:Business:Bank Fees": -12,
+      "Expenses:Business:Office Supplies": -74.23,
+      "Expenses:Business:Travel": -38.75,
+      "Expenses:Business:Office Equipment": -320,
+      "Equity:Opening Balances": 1200
+    },
+    "freelanceGrossReceiptsDollars": 12750,
+    "interestIncomeDollars": 77.75,
+    "scheduleCExpenseDollars": 1167.97,
+    "charityExpenseDollars": 370,
+    "estimatedTaxPaymentsDollars": 1050,
+    "scheduleCNetBeforeMileageDollars": 11582.03,
+    "apiBalanceCents": 1143878,
+    "apiBalanceDollars": 11438.78
+  },
+  "accounts": [
+    {
+      "id": "839133ed-b97a-45a0-b3f6-9738997a28f4",
+      "name": "Checking",
+      "offbudget": false,
+      "closed": false
+    }
+  ],
+  "categories": [
+    {
+      "id": "19cbe21d-abe6-477b-a34b-8581e020f22a",
+      "name": "Opening Balances",
+      "groupId": "9c356e51-8b5e-47f7-b873-e928a4ddee8d",
+      "isIncome": false,
+      "hidden": false
+    },
+    {
+      "id": "f7ff4fec-1cb4-42b2-ade5-9c428e3ecde3",
+      "name": "Coworking",
+      "groupId": "7de949b0-a0c5-41fa-a920-65a6d421ac98",
+      "isIncome": false,
+      "hidden": false
+    },
+    {
+      "id": "2113c28d-0e5d-42e5-b032-6241be6a7960",
+      "name": "Professional Education",
+      "groupId": "7de949b0-a0c5-41fa-a920-65a6d421ac98",
+      "isIncome": false,
+      "hidden": false
+    },
+    {
+      "id": "a63d0379-4359-4e86-a54c-6508634a8c3e",
+      "name": "Bank Fees",
+      "groupId": "7de949b0-a0c5-41fa-a920-65a6d421ac98",
+      "isIncome": false,
+      "hidden": false
+    },
+    {
+      "id": "caa519f8-fdec-47fb-aed5-22addbc07b63",
+      "name": "Office Supplies",
+      "groupId": "7de949b0-a0c5-41fa-a920-65a6d421ac98",
+      "isIncome": false,
+      "hidden": false
+    },
+    {
+      "id": "3aba29a6-f822-4eb5-88c7-0d905a0ec6ed",
+      "name": "Travel",
+      "groupId": "7de949b0-a0c5-41fa-a920-65a6d421ac98",
+      "isIncome": false,
+      "hidden": false
+    },
+    {
+      "id": "3a72dd19-db1a-48a0-966b-2061bd6776a7",
+      "name": "Office Equipment",
+      "groupId": "7de949b0-a0c5-41fa-a920-65a6d421ac98",
+      "isIncome": false,
+      "hidden": false
+    },
+    {
+      "id": "377e4222-1fac-4120-a1eb-54716bc70765",
+      "name": "Software",
+      "groupId": "7de949b0-a0c5-41fa-a920-65a6d421ac98",
+      "isIncome": false,
+      "hidden": false
+    },
+    {
+      "id": "dbd4a4f1-d47c-4f01-94fb-0c641416ba2a",
+      "name": "Charity",
+      "groupId": "de57f1c9-2415-461c-8bc4-ef25094484c8",
+      "isIncome": false,
+      "hidden": false
+    },
+    {
+      "id": "b78592c9-43f7-4c4f-9487-14fcc2285681",
+      "name": "Estimated Payments",
+      "groupId": "ff6b34c1-d68b-4f56-a0ce-ff0b2cf497f9",
+      "isIncome": false,
+      "hidden": false
+    },
+    {
+      "id": "afbf7408-eb54-4e3d-b267-a1294a790080",
+      "name": "Interest",
+      "groupId": "2E1F5BDB-209B-43F9-AF2C-3CE28E380C00",
+      "isIncome": true,
+      "hidden": false
+    },
+    {
+      "id": "78ee87bc-6222-4b70-9fc1-34afa4b3660c",
+      "name": "Consulting",
+      "groupId": "2E1F5BDB-209B-43F9-AF2C-3CE28E380C00",
+      "isIncome": true,
+      "hidden": false
+    },
+    {
+      "id": "a194773e-aa39-40a2-89e5-09e9939961e2",
+      "name": "Design",
+      "groupId": "2E1F5BDB-209B-43F9-AF2C-3CE28E380C00",
+      "isIncome": true,
+      "hidden": false
+    },
+    {
+      "id": "3c1699a5-522a-435e-86dc-93d900a14f0e",
+      "name": "Income",
+      "groupId": "2E1F5BDB-209B-43F9-AF2C-3CE28E380C00",
+      "isIncome": true,
+      "hidden": false
+    },
+    {
+      "id": "506e8d9d-7ed0-4397-84e4-07a9185dc6b2",
+      "name": "Starting Balances",
+      "groupId": "2E1F5BDB-209B-43F9-AF2C-3CE28E380C00",
+      "isIncome": true,
+      "hidden": false
+    }
+  ],
+  "transactions": [
+    {
+      "id": "33d5c647-5608-43fd-b6b0-e77ff27b4747",
+      "date": "2025-01-01",
+      "amountCents": 120000,
+      "amountDollars": 1200,
+      "category": "Equity:Opening Balances",
+      "importedId": "T000",
+      "notes": "T000 | None | Seed balance for tests",
+      "cleared": true
+    },
+    {
+      "id": "20f0ee60-7efb-4c7b-8f72-777c4755d660",
+      "date": "2025-01-15",
+      "amountCents": 250000,
+      "amountDollars": 2500,
+      "category": "Income:Freelance:Design",
+      "importedId": "T001",
+      "notes": "T001 | Schedule C gross receipts | Synthetic client income",
+      "cleared": true
+    },
+    {
+      "id": "d511a07d-375f-4983-8b6c-41a7e621d7ff",
+      "date": "2025-01-31",
+      "amountCents": -5900,
+      "amountDollars": -59,
+      "category": "Expenses:Business:Software",
+      "importedId": "T002",
+      "notes": "T002 | Schedule C software | Synthetic business expense",
+      "cleared": true
+    },
+    {
+      "id": "5732348c-410b-4255-9ff5-e6da2afae8bb",
+      "date": "2025-02-03",
+      "amountCents": -32000,
+      "amountDollars": -320,
+      "category": "Expenses:Business:Office Equipment",
+      "importedId": "T003",
+      "notes": "T003 | Schedule C office equipment | Synthetic business expense",
+      "cleared": true
+    },
+    {
+      "id": "83c7e321-79cb-4fd7-b59a-ec6f8acdbd33",
+      "date": "2025-03-12",
+      "amountCents": 180000,
+      "amountDollars": 1800,
+      "category": "Income:Freelance:Consulting",
+      "importedId": "T004",
+      "notes": "T004 | Schedule C gross receipts | Synthetic client income",
+      "cleared": true
+    },
+    {
+      "id": "32b2efec-f06b-4600-adda-fc5c50cf7f78",
+      "date": "2025-03-16",
+      "amountCents": -3875,
+      "amountDollars": -38.75,
+      "category": "Expenses:Business:Travel",
+      "importedId": "T005",
+      "notes": "T005 | Schedule C local travel | Synthetic business expense",
+      "cleared": true
+    },
+    {
+      "id": "5d9b0712-31e8-41bc-a9f8-1d3dac72ac3d",
+      "date": "2025-03-31",
+      "amountCents": 4218,
+      "amountDollars": 42.18,
+      "category": "Income:Interest",
+      "importedId": "T006",
+      "notes": "T006 | Schedule B interest | Synthetic interest income",
+      "cleared": true
+    },
+    {
+      "id": "b312cfcd-07aa-4831-b9a0-1a6f6477d8e2",
+      "date": "2025-04-05",
+      "amountCents": -12000,
+      "amountDollars": -120,
+      "category": "Expenses:Charity",
+      "importedId": "T007",
+      "notes": "T007 | Schedule A cash charity | Synthetic charitable donation",
+      "cleared": true
+    },
+    {
+      "id": "70408ff7-265c-4d4e-8670-77d35758ac03",
+      "date": "2025-05-08",
+      "amountCents": -7423,
+      "amountDollars": -74.23,
+      "category": "Expenses:Business:Office Supplies",
+      "importedId": "T008",
+      "notes": "T008 | Schedule C office supplies | Synthetic business expense",
+      "cleared": true
+    },
+    {
+      "id": "b6f8ada5-d113-42eb-ac6e-f88ca391cc60",
+      "date": "2025-06-01",
+      "amountCents": -1200,
+      "amountDollars": -12,
+      "category": "Expenses:Business:Bank Fees",
+      "importedId": "T009",
+      "notes": "T009 | Schedule C bank fees | Synthetic business expense",
+      "cleared": true
+    },
+    {
+      "id": "75d2bf07-e1fc-42a1-a94b-f1196941fe3e",
+      "date": "2025-06-15",
+      "amountCents": -40000,
+      "amountDollars": -400,
+      "category": "Liabilities:Federal Tax:Estimated Payments",
+      "importedId": "T010",
+      "notes": "T010 | Form 1040 estimated payments | Synthetic tax payment",
+      "cleared": true
+    },
+    {
+      "id": "28e906ee-7d7d-4840-a1fa-459c6be0d020",
+      "date": "2025-06-20",
+      "amountCents": 320000,
+      "amountDollars": 3200,
+      "category": "Income:Freelance:Design",
+      "importedId": "T011",
+      "notes": "T011 | Schedule C gross receipts | Synthetic client income",
+      "cleared": true
+    },
+    {
+      "id": "46585a65-9975-4267-812b-863666099537",
+      "date": "2025-07-04",
+      "amountCents": -24900,
+      "amountDollars": -249,
+      "category": "Expenses:Business:Professional Education",
+      "importedId": "T012",
+      "notes": "T012 | Schedule C education placeholder | Synthetic business expense",
+      "cleared": true
+    },
+    {
+      "id": "5843ee1e-20ac-4786-a309-2c033a095649",
+      "date": "2025-08-15",
+      "amountCents": -18000,
+      "amountDollars": -180,
+      "category": "Expenses:Business:Software",
+      "importedId": "T013",
+      "notes": "T013 | Schedule C software | Synthetic business expense",
+      "cleared": true
+    },
+    {
+      "id": "4e3380c6-0e43-4f01-a968-0f303ca45468",
+      "date": "2025-09-03",
+      "amountCents": -21000,
+      "amountDollars": -210,
+      "category": "Expenses:Business:Coworking",
+      "importedId": "T014",
+      "notes": "T014 | Schedule C workspace | Synthetic business expense",
+      "cleared": true
+    },
+    {
+      "id": "f739bca2-bac5-480b-a635-b4442c379e8e",
+      "date": "2025-09-10",
+      "amountCents": -25000,
+      "amountDollars": -250,
+      "category": "Expenses:Charity",
+      "importedId": "T015",
+      "notes": "T015 | Schedule A cash charity | Synthetic charitable donation",
+      "cleared": true
+    },
+    {
+      "id": "58408264-5913-4b50-8f54-666640160be9",
+      "date": "2025-10-01",
+      "amountCents": 3557,
+      "amountDollars": 35.57,
+      "category": "Income:Interest",
+      "importedId": "T016",
+      "notes": "T016 | Schedule B interest | Synthetic interest income",
+      "cleared": true
+    },
+    {
+      "id": "33f30cca-6400-4349-91b5-10b7a7223880",
+      "date": "2025-11-05",
+      "amountCents": 275000,
+      "amountDollars": 2750,
+      "category": "Income:Freelance:Consulting",
+      "importedId": "T017",
+      "notes": "T017 | Schedule C gross receipts | Synthetic client income",
+      "cleared": true
+    },
+    {
+      "id": "ca33841c-e50d-468b-bba9-56e0676a1152",
+      "date": "2025-12-15",
+      "amountCents": -65000,
+      "amountDollars": -650,
+      "category": "Liabilities:Federal Tax:Estimated Payments",
+      "importedId": "T018",
+      "notes": "T018 | Form 1040 estimated payments | Synthetic tax payment",
+      "cleared": true
+    },
+    {
+      "id": "8e536b3f-5062-43e0-99d6-502473528664",
+      "date": "2025-12-31",
+      "amountCents": -2499,
+      "amountDollars": -24.99,
+      "category": "Expenses:Business:Software",
+      "importedId": "TADD",
+      "notes": "TADD | Schedule C software",
+      "cleared": true
+    }
+  ],
+  "failureTests": [
+    {
+      "name": "malformed_date",
+      "accepted": false,
+      "errorName": "Error",
+      "message": "Bad date format: 13-40-2025\n\nExpression stack:\n  {\"date\":{\"$lt\":\"13-40-2025\"}}\n  filter([\n    {\n      \"account\": \"839133ed-b97a-45a0-b3f6-9738997a28f4\",\n      \"is_parent\": false\n    },\n    {\n      \"$or\": [\n        {\n          \"date\": {\n            \"$lt\": \"13-40-2025\"\n          }\n        },\n        {\n          \"$and\": [\n            {\n              \"date\": \"13-40-2025\"\n            },\n            {\n              \"$or\": [\n                {\n                  \"sort_order\": {\n                    \"$ne\": null\n                  }\n                }\n              ]\n            }\n          ]\n        }\n      ]\n    }\n  ])"
+    },
+    {
+      "name": "invalid_amount",
+      "accepted": false,
+      "errorName": "Error",
+      "message": "Amount is invalid, must be an integer: NaN"
+    },
+    {
+      "name": "unknown_category",
+      "accepted": true,
+      "result": "ok"
+    },
+    {
+      "name": "duplicate_imported_id_importTransactions_dry_run",
+      "accepted": true,
+      "result": {
+        "errors": [],
+        "addedCount": 0,
+        "updatedCount": 1,
+        "updatedPreviewCount": 1,
+        "addedImportedIds": []
+      }
+    },
+    {
+      "name": "duplicate_imported_id_addTransactions",
+      "accepted": true,
+      "result": "ok"
+    },
+    {
+      "name": "missing_budget_file",
+      "accepted": false,
+      "errorName": "Error",
+      "message": "Budget \"does-not-exist\" not found. Check the ID of your budget in the Advanced section of the settings page."
+    }
+  ]
+}

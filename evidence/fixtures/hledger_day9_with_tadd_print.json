@@ -1,0 +1,1962 @@
+[
+  {
+    "tcode": "T000",
+    "tcomment": "tax_hint:None, memo:Seed balance for tests",
+    "tdate": "2025-01-01",
+    "tdate2": null,
+    "tdescription": "Opening Balance | Synthetic starting checking balance",
+    "tindex": 1,
+    "tpostings": [
+      {
+        "paccount": "Assets:Checking",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 120000,
+              "decimalPlaces": 2,
+              "floatingPoint": 1200
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "1",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "Equity:Opening Balances",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -120000,
+              "decimalPlaces": 2,
+              "floatingPoint": -1200
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "1",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 1,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 1,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      }
+    ],
+    "tstatus": "Unmarked",
+    "ttags": [
+      [
+        "tax_hint",
+        "None"
+      ],
+      [
+        "memo",
+        "Seed balance for tests"
+      ]
+    ]
+  },
+  {
+    "tcode": "T001",
+    "tcomment": "tax_hint:Schedule C gross receipts, memo:Synthetic client income",
+    "tdate": "2025-01-15",
+    "tdate2": null,
+    "tdescription": "Acme Design Co | Freelance design project payment",
+    "tindex": 2,
+    "tpostings": [
+      {
+        "paccount": "Assets:Checking",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 250000,
+              "decimalPlaces": 2,
+              "floatingPoint": 2500
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "2",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "Income:Freelance:Design",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -250000,
+              "decimalPlaces": 2,
+              "floatingPoint": -2500
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "2",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 2,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 2,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      }
+    ],
+    "tstatus": "Unmarked",
+    "ttags": [
+      [
+        "tax_hint",
+        "Schedule C gross receipts"
+      ],
+      [
+        "memo",
+        "Synthetic client income"
+      ]
+    ]
+  },
+  {
+    "tcode": "T002",
+    "tcomment": "tax_hint:Schedule C software, memo:Synthetic business expense",
+    "tdate": "2025-01-31",
+    "tdate2": null,
+    "tdescription": "CloudCode Tools | Monthly software subscription",
+    "tindex": 3,
+    "tpostings": [
+      {
+        "paccount": "Assets:Checking",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -5900,
+              "decimalPlaces": 2,
+              "floatingPoint": -59
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "3",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "Expenses:Business:Software",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 5900,
+              "decimalPlaces": 2,
+              "floatingPoint": 59
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "3",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 3,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 3,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      }
+    ],
+    "tstatus": "Unmarked",
+    "ttags": [
+      [
+        "tax_hint",
+        "Schedule C software"
+      ],
+      [
+        "memo",
+        "Synthetic business expense"
+      ]
+    ]
+  },
+  {
+    "tcode": "T003",
+    "tcomment": "tax_hint:Schedule C office equipment, memo:Synthetic business expense",
+    "tdate": "2025-02-03",
+    "tdate2": null,
+    "tdescription": "DeskHub Supply | Office chair purchase",
+    "tindex": 4,
+    "tpostings": [
+      {
+        "paccount": "Assets:Checking",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -32000,
+              "decimalPlaces": 2,
+              "floatingPoint": -320
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "4",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "Expenses:Business:Office Equipment",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 32000,
+              "decimalPlaces": 2,
+              "floatingPoint": 320
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "4",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 4,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 4,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      }
+    ],
+    "tstatus": "Unmarked",
+    "ttags": [
+      [
+        "tax_hint",
+        "Schedule C office equipment"
+      ],
+      [
+        "memo",
+        "Synthetic business expense"
+      ]
+    ]
+  },
+  {
+    "tcode": "T004",
+    "tcomment": "tax_hint:Schedule C gross receipts, memo:Synthetic client income",
+    "tdate": "2025-03-12",
+    "tdate2": null,
+    "tdescription": "Northstar Analytics | Freelance consulting payment",
+    "tindex": 5,
+    "tpostings": [
+      {
+        "paccount": "Assets:Checking",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 180000,
+              "decimalPlaces": 2,
+              "floatingPoint": 1800
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "5",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "Income:Freelance:Consulting",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -180000,
+              "decimalPlaces": 2,
+              "floatingPoint": -1800
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "5",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 5,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 5,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      }
+    ],
+    "tstatus": "Unmarked",
+    "ttags": [
+      [
+        "tax_hint",
+        "Schedule C gross receipts"
+      ],
+      [
+        "memo",
+        "Synthetic client income"
+      ]
+    ]
+  },
+  {
+    "tcode": "T005",
+    "tcomment": "tax_hint:Schedule C local travel, memo:Synthetic business expense",
+    "tdate": "2025-03-16",
+    "tdate2": null,
+    "tdescription": "Metro Transit | Transit to client meeting",
+    "tindex": 6,
+    "tpostings": [
+      {
+        "paccount": "Assets:Checking",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -3875,
+              "decimalPlaces": 2,
+              "floatingPoint": -38.75
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "6",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "Expenses:Business:Travel",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 3875,
+              "decimalPlaces": 2,
+              "floatingPoint": 38.75
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "6",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 6,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 6,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      }
+    ],
+    "tstatus": "Unmarked",
+    "ttags": [
+      [
+        "tax_hint",
+        "Schedule C local travel"
+      ],
+      [
+        "memo",
+        "Synthetic business expense"
+      ]
+    ]
+  },
+  {
+    "tcode": "T006",
+    "tcomment": "tax_hint:Schedule B interest, memo:Synthetic interest income",
+    "tdate": "2025-03-31",
+    "tdate2": null,
+    "tdescription": "Sample Bank HYSA | Savings account interest",
+    "tindex": 7,
+    "tpostings": [
+      {
+        "paccount": "Assets:Checking",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 4218,
+              "decimalPlaces": 2,
+              "floatingPoint": 42.18
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "7",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "Income:Interest",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -4218,
+              "decimalPlaces": 2,
+              "floatingPoint": -42.18
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "7",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 7,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 7,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      }
+    ],
+    "tstatus": "Unmarked",
+    "ttags": [
+      [
+        "tax_hint",
+        "Schedule B interest"
+      ],
+      [
+        "memo",
+        "Synthetic interest income"
+      ]
+    ]
+  },
+  {
+    "tcode": "T007",
+    "tcomment": "tax_hint:Schedule A cash charity, memo:Synthetic charitable donation",
+    "tdate": "2025-04-05",
+    "tdate2": null,
+    "tdescription": "City Library Foundation | Cash charitable donation",
+    "tindex": 8,
+    "tpostings": [
+      {
+        "paccount": "Assets:Checking",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -12000,
+              "decimalPlaces": 2,
+              "floatingPoint": -120
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "8",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "Expenses:Charity",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 12000,
+              "decimalPlaces": 2,
+              "floatingPoint": 120
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "8",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 8,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 8,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      }
+    ],
+    "tstatus": "Unmarked",
+    "ttags": [
+      [
+        "tax_hint",
+        "Schedule A cash charity"
+      ],
+      [
+        "memo",
+        "Synthetic charitable donation"
+      ]
+    ]
+  },
+  {
+    "tcode": "T008",
+    "tcomment": "tax_hint:Schedule C office supplies, memo:Synthetic business expense",
+    "tdate": "2025-05-08",
+    "tdate2": null,
+    "tdescription": "OfficeMart | Printer paper and ink",
+    "tindex": 9,
+    "tpostings": [
+      {
+        "paccount": "Assets:Checking",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -7423,
+              "decimalPlaces": 2,
+              "floatingPoint": -74.23
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "9",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "Expenses:Business:Office Supplies",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 7423,
+              "decimalPlaces": 2,
+              "floatingPoint": 74.23
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "9",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 9,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 9,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      }
+    ],
+    "tstatus": "Unmarked",
+    "ttags": [
+      [
+        "tax_hint",
+        "Schedule C office supplies"
+      ],
+      [
+        "memo",
+        "Synthetic business expense"
+      ]
+    ]
+  },
+  {
+    "tcode": "T009",
+    "tcomment": "tax_hint:Schedule C bank fees, memo:Synthetic business expense",
+    "tdate": "2025-06-01",
+    "tdate2": null,
+    "tdescription": "Sample Bank | Business checking service fee",
+    "tindex": 10,
+    "tpostings": [
+      {
+        "paccount": "Assets:Checking",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -1200,
+              "decimalPlaces": 2,
+              "floatingPoint": -12
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "10",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "Expenses:Business:Bank Fees",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 1200,
+              "decimalPlaces": 2,
+              "floatingPoint": 12
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "10",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 10,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 10,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      }
+    ],
+    "tstatus": "Unmarked",
+    "ttags": [
+      [
+        "tax_hint",
+        "Schedule C bank fees"
+      ],
+      [
+        "memo",
+        "Synthetic business expense"
+      ]
+    ]
+  },
+  {
+    "tcode": "T010",
+    "tcomment": "tax_hint:Form 1040 estimated payments, memo:Synthetic tax payment",
+    "tdate": "2025-06-15",
+    "tdate2": null,
+    "tdescription": "Synthetic Federal Treasury | Quarterly estimated tax payment",
+    "tindex": 11,
+    "tpostings": [
+      {
+        "paccount": "Assets:Checking",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -40000,
+              "decimalPlaces": 2,
+              "floatingPoint": -400
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "11",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "Liabilities:Federal Tax:Estimated Payments",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 40000,
+              "decimalPlaces": 2,
+              "floatingPoint": 400
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "11",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 11,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 11,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      }
+    ],
+    "tstatus": "Unmarked",
+    "ttags": [
+      [
+        "tax_hint",
+        "Form 1040 estimated payments"
+      ],
+      [
+        "memo",
+        "Synthetic tax payment"
+      ]
+    ]
+  },
+  {
+    "tcode": "T011",
+    "tcomment": "tax_hint:Schedule C gross receipts, memo:Synthetic client income",
+    "tdate": "2025-06-20",
+    "tdate2": null,
+    "tdescription": "Acme Design Co | Freelance redesign payment",
+    "tindex": 12,
+    "tpostings": [
+      {
+        "paccount": "Assets:Checking",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 320000,
+              "decimalPlaces": 2,
+              "floatingPoint": 3200
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "12",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "Income:Freelance:Design",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -320000,
+              "decimalPlaces": 2,
+              "floatingPoint": -3200
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "12",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 12,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 12,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      }
+    ],
+    "tstatus": "Unmarked",
+    "ttags": [
+      [
+        "tax_hint",
+        "Schedule C gross receipts"
+      ],
+      [
+        "memo",
+        "Synthetic client income"
+      ]
+    ]
+  },
+  {
+    "tcode": "T012",
+    "tcomment": "tax_hint:Schedule C education placeholder, memo:Synthetic business expense",
+    "tdate": "2025-07-04",
+    "tdate2": null,
+    "tdescription": "Open Source Finance Summit | Professional education ticket",
+    "tindex": 13,
+    "tpostings": [
+      {
+        "paccount": "Assets:Checking",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -24900,
+              "decimalPlaces": 2,
+              "floatingPoint": -249
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "13",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "Expenses:Business:Professional Education",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 24900,
+              "decimalPlaces": 2,
+              "floatingPoint": 249
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "13",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 13,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 13,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      }
+    ],
+    "tstatus": "Unmarked",
+    "ttags": [
+      [
+        "tax_hint",
+        "Schedule C education placeholder"
+      ],
+      [
+        "memo",
+        "Synthetic business expense"
+      ]
+    ]
+  },
+  {
+    "tcode": "T013",
+    "tcomment": "tax_hint:Schedule C software, memo:Synthetic business expense",
+    "tdate": "2025-08-15",
+    "tdate2": null,
+    "tdescription": "CloudCode Tools | Annual software plan",
+    "tindex": 14,
+    "tpostings": [
+      {
+        "paccount": "Assets:Checking",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -18000,
+              "decimalPlaces": 2,
+              "floatingPoint": -180
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "14",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "Expenses:Business:Software",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 18000,
+              "decimalPlaces": 2,
+              "floatingPoint": 180
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "14",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 14,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 14,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      }
+    ],
+    "tstatus": "Unmarked",
+    "ttags": [
+      [
+        "tax_hint",
+        "Schedule C software"
+      ],
+      [
+        "memo",
+        "Synthetic business expense"
+      ]
+    ]
+  },
+  {
+    "tcode": "T014",
+    "tcomment": "tax_hint:Schedule C workspace, memo:Synthetic business expense",
+    "tdate": "2025-09-03",
+    "tdate2": null,
+    "tdescription": "DeskHub Coworking | Coworking day passes",
+    "tindex": 15,
+    "tpostings": [
+      {
+        "paccount": "Assets:Checking",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -21000,
+              "decimalPlaces": 2,
+              "floatingPoint": -210
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "15",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "Expenses:Business:Coworking",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 21000,
+              "decimalPlaces": 2,
+              "floatingPoint": 210
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "15",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 15,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 15,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      }
+    ],
+    "tstatus": "Unmarked",
+    "ttags": [
+      [
+        "tax_hint",
+        "Schedule C workspace"
+      ],
+      [
+        "memo",
+        "Synthetic business expense"
+      ]
+    ]
+  },
+  {
+    "tcode": "T015",
+    "tcomment": "tax_hint:Schedule A cash charity, memo:Synthetic charitable donation",
+    "tdate": "2025-09-10",
+    "tdate2": null,
+    "tdescription": "Neighborhood Food Fund | Cash charitable donation",
+    "tindex": 16,
+    "tpostings": [
+      {
+        "paccount": "Assets:Checking",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -25000,
+              "decimalPlaces": 2,
+              "floatingPoint": -250
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "16",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "Expenses:Charity",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 25000,
+              "decimalPlaces": 2,
+              "floatingPoint": 250
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "16",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 16,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 16,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      }
+    ],
+    "tstatus": "Unmarked",
+    "ttags": [
+      [
+        "tax_hint",
+        "Schedule A cash charity"
+      ],
+      [
+        "memo",
+        "Synthetic charitable donation"
+      ]
+    ]
+  },
+  {
+    "tcode": "T016",
+    "tcomment": "tax_hint:Schedule B interest, memo:Synthetic interest income",
+    "tdate": "2025-10-01",
+    "tdate2": null,
+    "tdescription": "Sample Bank HYSA | Savings account interest",
+    "tindex": 17,
+    "tpostings": [
+      {
+        "paccount": "Assets:Checking",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 3557,
+              "decimalPlaces": 2,
+              "floatingPoint": 35.57
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "17",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "Income:Interest",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -3557,
+              "decimalPlaces": 2,
+              "floatingPoint": -35.57
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "17",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 17,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 17,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      }
+    ],
+    "tstatus": "Unmarked",
+    "ttags": [
+      [
+        "tax_hint",
+        "Schedule B interest"
+      ],
+      [
+        "memo",
+        "Synthetic interest income"
+      ]
+    ]
+  },
+  {
+    "tcode": "T017",
+    "tcomment": "tax_hint:Schedule C gross receipts, memo:Synthetic client income",
+    "tdate": "2025-11-05",
+    "tdate2": null,
+    "tdescription": "Northstar Analytics | Freelance analytics payment",
+    "tindex": 18,
+    "tpostings": [
+      {
+        "paccount": "Assets:Checking",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 275000,
+              "decimalPlaces": 2,
+              "floatingPoint": 2750
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "18",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "Income:Freelance:Consulting",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -275000,
+              "decimalPlaces": 2,
+              "floatingPoint": -2750
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "18",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 18,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 18,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      }
+    ],
+    "tstatus": "Unmarked",
+    "ttags": [
+      [
+        "tax_hint",
+        "Schedule C gross receipts"
+      ],
+      [
+        "memo",
+        "Synthetic client income"
+      ]
+    ]
+  },
+  {
+    "tcode": "T018",
+    "tcomment": "tax_hint:Form 1040 estimated payments, memo:Synthetic tax payment",
+    "tdate": "2025-12-15",
+    "tdate2": null,
+    "tdescription": "Synthetic Federal Treasury | Quarterly estimated tax payment",
+    "tindex": 19,
+    "tpostings": [
+      {
+        "paccount": "Assets:Checking",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -65000,
+              "decimalPlaces": 2,
+              "floatingPoint": -650
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "19",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "Liabilities:Federal Tax:Estimated Payments",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 65000,
+              "decimalPlaces": 2,
+              "floatingPoint": 650
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "19",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 19,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 19,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\synthetic_freelancer_transactions.csv"
+      }
+    ],
+    "tstatus": "Unmarked",
+    "ttags": [
+      [
+        "tax_hint",
+        "Form 1040 estimated payments"
+      ],
+      [
+        "memo",
+        "Synthetic tax payment"
+      ]
+    ]
+  },
+  {
+    "tcode": "TADD",
+    "tcomment": "tax_hint:Schedule C software, memo:Synthetic add-transaction test",
+    "tdate": "2025-12-31",
+    "tdate2": null,
+    "tdescription": "CloudCode Tools | Standard add-transaction test",
+    "tindex": 20,
+    "tpostings": [
+      {
+        "paccount": "Assets:Checking",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": -2499,
+              "decimalPlaces": 2,
+              "floatingPoint": -24.99
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "1",
+        "ptype": "RegularPosting"
+      },
+      {
+        "paccount": "Expenses:Business:Software",
+        "pamount": [
+          {
+            "acommodity": "USD",
+            "acost": null,
+            "acostbasis": null,
+            "aquantity": {
+              "decimalMantissa": 2499,
+              "decimalPlaces": 2,
+              "floatingPoint": 24.99
+            },
+            "astyle": {
+              "ascommodityside": "L",
+              "ascommodityspaced": false,
+              "asdecimalmark": ".",
+              "asdigitgroups": null,
+              "asprecision": 2,
+              "asrounding": "NoRounding"
+            }
+          }
+        ],
+        "pbalanceassertion": null,
+        "pcomment": "",
+        "pdate": null,
+        "pdate2": null,
+        "poriginal": null,
+        "pstatus": "Unmarked",
+        "ptags": [],
+        "ptransaction_": "1",
+        "ptype": "RegularPosting"
+      }
+    ],
+    "tprecedingcomment": "",
+    "tsourcepos": [
+      {
+        "sourceColumn": 1,
+        "sourceLine": 1,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\hledger_synthetic_freelancer_tadd.csv"
+      },
+      {
+        "sourceColumn": 1,
+        "sourceLine": 1,
+        "sourceName": "C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\hledger_synthetic_freelancer_tadd.csv"
+      }
+    ],
+    "tstatus": "Unmarked",
+    "ttags": [
+      [
+        "tax_hint",
+        "Schedule C software"
+      ],
+      [
+        "memo",
+        "Synthetic add-transaction test"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,35 @@
+﻿Actual Budget Day 10 failure behavior transcript
+Source summary: evidence\fixtures\actual_day10_summary.json
+
+Command: parse failureTests from actual_day10_summary.json
+
+Test: malformed_date
+Accepted: False
+Error name: Error
+Message: Bad date format: 13-40-2025 |  | Expression stack: |   {"date":{"$lt":"13-40-2025"}} |   filter([ |     { |       "account": "839133ed-b97a-45a0-b3f6-9738997a28f4", |       "is_parent": false |     }, |     { |       "$or": [ |         { |           "date": { |             "$lt": "13-40-2025" |           } |         }, |         { |           "$and": [ |             { |               "date": "13-40-2025" |             }, |             { |               "$or": [ |                 { |                   "sort_order": { |                     "$ne": null |                   } |                 } |               ] |             } |           ] |         } |       ] |     } |   ])
+
+Test: invalid_amount
+Accepted: False
+Error name: Error
+Message: Amount is invalid, must be an integer: NaN
+
+Test: unknown_category
+Accepted: True
+Result: "ok"
+
+Test: duplicate_imported_id_importTransactions_dry_run
+Accepted: True
+Result: {"errors":[],"addedCount":0,"updatedCount":1,"updatedPreviewCount":1,"addedImportedIds":[]}
+
+Test: duplicate_imported_id_addTransactions
+Accepted: True
+Result: "ok"
+
+Test: missing_budget_file
+Accepted: False
+Error name: Error
+Message: Budget "does-not-exist" not found. Check the ID of your budget in the Advanced section of the settings page.
+
+Final state after accepted failure-test mutations:
+Final transaction count: 22
+Final checking balance: 11438.78

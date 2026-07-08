@@ -328,3 +328,138 @@ Prepare shared synthetic fixtures and a repeatable evaluation checklist for the 
 ### Tomorrow's Starting Point
 
 Execute Day 9 by evaluating hledger with the shared dataset and filling the first tool record.
+
+## 07-08-2026 - Phase 9: Evaluate Tool 1
+
+### Goal
+
+Evaluate hledger as the first Week 2 hands-on tool and refine the shared evaluation method.
+
+### What I Did
+
+- Downloaded the official hledger `1.52.1` Windows release binary to a temporary directory.
+- Captured setup and version evidence without performing a global install.
+- Added hledger CSV rules, an add-transaction fixture, bad-input fixtures, and JSON export artifacts.
+- Ran the shared workflow: load data, add `TADD`, list accounts, compute balance, run report, and export results.
+- Ran failure tests for bad date, bad amount, unknown account/category, missing file, and duplicate transaction ID.
+- Created `tool_records/tool_1.md` and the Day 9 exit note.
+
+### Evidence Captured
+
+- `tool_records/tool_1.md`
+- `notes/day_09_evaluate_hledger.md`
+- `evidence/commands/07-08-2026_hledger_setup.txt`
+- `evidence/commands/07-08-2026_hledger_version.txt`
+- `evidence/commands/07-08-2026_hledger_workflow.txt`
+- `evidence/commands/07-08-2026_hledger_failure-tests.txt`
+- hledger-specific fixtures and JSON outputs under `evidence/fixtures/`
+
+### Decisions Made
+
+- Keep hledger as a leading low-risk prototype candidate for a file/CLI/JSON adapter.
+- Treat hledger as tax-adjacent bookkeeping, not tax-preparation or filing software.
+- Validate duplicate IDs and unknown categories in any future wrapper because hledger accepts them by default.
+
+### Problems / Open Questions
+
+- hledger-web's JSON API remains untested locally.
+- hledger JSON output is machine-readable but needs normalization for a clean prototype API.
+- GPL-3.0-or-later implications should be reviewed before any redistributed wrapper or hosted service.
+
+### Tomorrow's Starting Point
+
+Execute Day 10 by evaluating Actual Budget with the shared synthetic dataset and comparing its local-first API/CLI behavior against hledger.
+
+## 07-08-2026 - Phase 10: Evaluate Tool 2
+
+### Goal
+
+Evaluate Actual Budget as the second Week 2 hands-on tool using the shared synthetic freelancer dataset and the same workflow/failure checklist used for hledger.
+
+### What I Did
+
+- Installed `@actual-app/api@26.7.0` and `@actual-app/cli@26.7.0` in a temporary npm directory.
+- Created `evidence/fixtures/actual_day10_evaluate.mjs` to drive the official Actual Node API against a scratch local budget.
+- Loaded the 19 baseline synthetic transactions, then added standard transaction `TADD`.
+- Queried accounts, categories, transactions, and account balance through the API.
+- Exported normalized JSON summaries and transaction rows for comparison with hledger.
+- Tested malformed date, invalid amount, unknown category, duplicate imported ID through `importTransactions` dry-run and direct `addTransactions`, and missing budget load.
+- Created `tool_records/tool_2.md` and the Day 10 exit note.
+
+### Evidence Captured
+
+- `tool_records/tool_2.md`
+- `notes/day_10_evaluate_actual.md`
+- `evidence/commands/07-08-2026_actual_setup.txt`
+- `evidence/commands/07-08-2026_actual_version.txt`
+- `evidence/commands/07-08-2026_actual_workflow.txt`
+- `evidence/commands/07-08-2026_actual_failure-tests.txt`
+- `evidence/fixtures/actual_day10_evaluate.mjs`
+- `evidence/fixtures/actual_day10_summary.json`
+- `evidence/fixtures/actual_day10_transactions_after_add.json`
+
+### Decisions Made
+
+- Keep Actual Budget as a strong local-first app/API candidate and possible prototype backup.
+- Treat Actual's tax relevance as manual tax-adjacent bookkeeping and reporting, not tax preparation.
+- Prefer `importTransactions` when reconciliation and duplicate imported-ID behavior matters.
+- Require wrapper-side validation before `addTransactions` because direct adds accepted an unknown category id and duplicate imported ID.
+
+### Problems / Open Questions
+
+- `runImport` logged an unauthorized cloud upload during local evaluation even though the local budget worked.
+- Bad-date errors are correct but verbose; a wrapper should normalize them.
+- Category paths need wrapper-side reconstruction because Actual stores category groups and leaf names separately.
+- Actual has no native Form 1040, schedules, PDF tax form, MeF, or e-file workflow.
+
+### Tomorrow's Starting Point
+
+Execute Day 11 by evaluating Firefly III as the REST/API-backed personal-finance comparator.
+
+## 07-08-2026 - Phase 11: Evaluate Tool 3
+
+### Goal
+
+Evaluate Firefly III as the third Week 2 hands-on tool and the REST/API-backed personal-finance comparator.
+
+### What I Did
+
+- Started Docker Desktop and ran isolated local `fireflyiii/core:version-6.6.6` plus `mariadb:lts` containers.
+- Created a synthetic local Firefly user, Passport personal-access client, and short-lived API tokens without storing tokens in the repository.
+- Added `evidence/fixtures/firefly_day11_evaluate.mjs` to drive the Firefly REST API with the shared synthetic freelancer dataset.
+- Modeled `T000` as the Firefly account opening balance, created 12 categories, and posted the 18 non-opening baseline rows through `/api/v1/transactions`.
+- Added standard transaction `TADD`, queried account balance and insight endpoints, and exported normalized JSON.
+- Ran failure tests for malformed date, invalid amount, unknown category, duplicate transaction, and missing input file.
+- Created `tool_records/tool_3.md` and the Day 11 exit note.
+
+### Evidence Captured
+
+- `tool_records/tool_3.md`
+- `notes/day_11_evaluate_firefly_iii.md`
+- `evidence/commands/07-08-2026_firefly-iii_setup.txt`
+- `evidence/commands/07-08-2026_firefly-iii_version.txt`
+- `evidence/commands/07-08-2026_firefly-iii_workflow.txt`
+- `evidence/commands/07-08-2026_firefly-iii_failure-tests.txt`
+- `evidence/fixtures/firefly_day11_evaluate.mjs`
+- `evidence/fixtures/firefly_day11_summary.json`
+- `evidence/fixtures/firefly_day11_transactions_after_add.json`
+- `evidence/fixtures/firefly_day11_failure_results.json`
+
+### Decisions Made
+
+- Keep Firefly III as the strongest REST-first bookkeeping/API comparator.
+- Treat Firefly's tax relevance as manual tax-adjacent bookkeeping and reporting, not tax calculation or filing.
+- Require wrapper-side allowlists for controlled tax categories because Firefly can auto-create unknown categories.
+- Consider Firefly for a REST-focused prototype, but keep hledger as the lower-friction local/file adapter candidate.
+
+### Problems / Open Questions
+
+- Docker/auth setup is heavier than hledger and Actual Budget.
+- The first app run failed until `APP_KEY` was corrected to exactly 32 characters.
+- No REST transaction dry-run path was found.
+- Firefly has no native Form 1040, schedules, PDF tax form, MeF, or e-file workflow.
+- AGPL-3.0 implications need review before redistributed or hosted wrapper work.
+
+### Tomorrow's Starting Point
+
+Execute Day 12 by evaluating a fourth shortlisted tool or backup candidate, preferably a tax-specific candidate such as `tenforty` to balance the three bookkeeping/API evaluations.

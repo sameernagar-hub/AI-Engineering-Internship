@@ -1,0 +1,113 @@
+{
+  "evaluated_at": "2026-07-08T04:32:49.374Z",
+  "tool": "Firefly III",
+  "tests": [
+    {
+      "name": "malformed_date",
+      "accepted": false,
+      "http_status": 422,
+      "message": "The value must be a valid date or time value (ISO 8601).",
+      "errors": {
+        "transactions.0.date": [
+          "The value must be a valid date or time value (ISO 8601)."
+        ]
+      },
+      "body_type": "object"
+    },
+    {
+      "name": "invalid_amount",
+      "accepted": false,
+      "http_status": 422,
+      "message": "The transaction amount must be a number.",
+      "errors": {
+        "transactions.0.amount": [
+          "The transaction amount must be a number."
+        ]
+      },
+      "body_type": "object"
+    },
+    {
+      "name": "unknown_category",
+      "accepted": true,
+      "http_status": 200,
+      "response_id": "21",
+      "response_type": "transactions"
+    },
+    {
+      "name": "duplicate_transaction_id",
+      "accepted": false,
+      "http_status": 422,
+      "message": "Duplicate of transaction #2.",
+      "errors": {
+        "transactions.0.description": [
+          "Duplicate of transaction #2."
+        ]
+      },
+      "body_type": "object"
+    },
+    {
+      "name": "missing_input_file",
+      "accepted": false,
+      "message": "ENOENT: no such file or directory, open 'C:\\Users\\nagar\\OneDrive\\Documents\\AI Engineering Internship\\evidence\\fixtures\\does_not_exist.csv'",
+      "code": "ENOENT"
+    }
+  ],
+  "categories_after_failure_tests": [
+    {
+      "id": "9",
+      "name": "Expenses:Business:Bank Fees"
+    },
+    {
+      "id": "12",
+      "name": "Expenses:Business:Coworking"
+    },
+    {
+      "id": "13",
+      "name": "Expenses:Business:Imaginary Category"
+    },
+    {
+      "id": "3",
+      "name": "Expenses:Business:Office Equipment"
+    },
+    {
+      "id": "8",
+      "name": "Expenses:Business:Office Supplies"
+    },
+    {
+      "id": "11",
+      "name": "Expenses:Business:Professional Education"
+    },
+    {
+      "id": "2",
+      "name": "Expenses:Business:Software"
+    },
+    {
+      "id": "5",
+      "name": "Expenses:Business:Travel"
+    },
+    {
+      "id": "7",
+      "name": "Expenses:Charity"
+    },
+    {
+      "id": "4",
+      "name": "Income:Freelance:Consulting"
+    },
+    {
+      "id": "1",
+      "name": "Income:Freelance:Design"
+    },
+    {
+      "id": "6",
+      "name": "Income:Interest"
+    },
+    {
+      "id": "10",
+      "name": "Liabilities:Federal Tax:Estimated Payments"
+    }
+  ],
+  "notes": [
+    "The unknown-category test is intentionally allowed to mutate the scratch instance if Firefly auto-creates the category.",
+    "The main workflow summary and transaction export were written before failure tests were run."
+  ]
+}

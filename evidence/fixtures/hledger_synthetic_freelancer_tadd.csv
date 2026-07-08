@@ -1,0 +1,2 @@
+transaction_id,date,payee,description,account,category,tax_hint,amount_usd,cleared,memo
+TADD,12-31-2025,CloudCode Tools,Standard add-transaction test,Assets:Checking,Expenses:Business:Software,Schedule C software,-24.99,true,Synthetic add-transaction test

@@ -1,0 +1,17 @@
+﻿Actual Budget Day 10 setup transcript
+Working directory: C:\Users\nagar\OneDrive\Documents\AI Engineering Internship
+Temp dependency directory: C:\Users\nagar\AppData\Local\Temp\actual-day10-eval-recorded
+
+Command: remove existing temp dependency directory
+No existing temp directory found.
+Created temp directory.
+
+Command: npm install --prefix <temp> @actual-app/api@26.7.0 @actual-app/cli@26.7.0
+npm warn deprecated prebuild-install@7.1.3: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
+
+added 99 packages in 26s
+
+15 packages are looking for funding
+  run `npm fund` for details
+
+Install exit code: 0

@@ -1,0 +1,2 @@
+transaction_id,date,payee,description,account,category,tax_hint,amount_usd,cleared,memo
+TUNKNOWN,12-30-2025,Unknown Category Example,Unknown account test,Assets:Checking,Expenses:Business:Imaginary Category,Schedule C software,-10.00,true,Synthetic unknown account test

@@ -1,0 +1,31 @@
+﻿Actual Budget Day 10 version transcript
+Working directory: C:\Users\nagar\OneDrive\Documents\AI Engineering Internship
+Temp dependency directory: C:\Users\nagar\AppData\Local\Temp\actual-day10-eval-recorded
+
+Command: node --version
+v24.16.0
+
+Command: npm --version
+11.13.0
+
+Command: npm view @actual-app/api version dist.tarball license --json
+{
+  "version": "26.7.0",
+  "dist.tarball": "https://registry.npmjs.org/@actual-app/api/-/api-26.7.0.tgz",
+  "license": "MIT"
+}
+
+Command: npm view @actual-app/cli version license --json
+{
+  "version": "26.7.0",
+  "license": "MIT"
+}
+
+Command: npm list --prefix <temp> @actual-app/api @actual-app/cli --depth=0
+actual-day10-eval-recorded@ C:\Users\nagar\AppData\Local\Temp\actual-day10-eval-recorded
+├── @actual-app/api@26.7.0
+└── @actual-app/cli@26.7.0
+
+
+Command: actual --version
+26.7.0

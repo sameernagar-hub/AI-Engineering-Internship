@@ -1,0 +1,16 @@
+﻿# Firefly III Day 11 failure-test transcript
+Recorded: 2026-07-07T21:32:49.3925718-07:00
+Token: generated in container and redacted from transcript
+Node: v24.16.0
+
+Firefly III Day 11 failure tests start
+wrote evidence\fixtures\firefly_day11_failure_results.json
+malformed_date: accepted=false; status=422; message=The value must be a valid date or time value (ISO 8601).
+invalid_amount: accepted=false; status=n/a; message=Invalid amount: not-a-number
+unknown_category: accepted=true; status=200; message=21
+duplicate_transaction_id: accepted=false; status=422; message=Duplicate of transaction #2.
+missing_input_file: accepted=false; status=ENOENT; message=ENOENT: no such file or directory, open 'C:\Users\nagar\OneDrive\Documents\AI Engineering Internship\evidence\fixtures\does_not_exist.csv'
+
+
+Additional direct API validation for invalid_amount:
+invalid_amount: accepted=false; status=422; message=The transaction amount must be a number.; field=transactions.0.amount
