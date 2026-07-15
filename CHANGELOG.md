@@ -18,6 +18,7 @@ Each entry should answer:
 - Installed hledger `1.52.1` locally with Winget.
 - Added Windows Winget package discovery after `--hledger-bin`, `HLEDGER_BIN`, and `PATH` resolution.
 - Kept the missing-hledger failure-matrix case deterministic with an explicit local-discovery opt-out.
+- Added a repo-root `run_day20_demo.py` wrapper so `python run_day20_demo.py --json` works from the project root.
 - Updated the execution lab copy and generated manifest source so `python run_day20_demo.py --json` is the canonical live command.
 - Updated README, prototype README, design notes, and report outline current-state text.
 
@@ -31,6 +32,7 @@ The live Day 20 pipeline needed to run end to end from both the local Python wra
 - `prototype/tests/run_failure_matrix.py`
 - `prototype/execution_lab/app/lab-client.tsx`
 - `prototype/execution_lab/scripts/generate-manifest.mjs`
+- `run_day20_demo.py`
 - `README.md`
 - `prototype/README.md`
 - `prototype/design.md`

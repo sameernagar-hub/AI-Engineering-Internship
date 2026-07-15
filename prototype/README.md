@@ -55,6 +55,8 @@ python -m hledger_adapter demo
 
 The `demo` command selects the repository's canonical synthetic inputs automatically.
 
+The repository root also includes `run_day20_demo.py`, a small wrapper around this package's Day 20 runner, so reviewers can run `python run_day20_demo.py --json` from the project root.
+
 Implemented safety check through Day 19:
 
 ```text

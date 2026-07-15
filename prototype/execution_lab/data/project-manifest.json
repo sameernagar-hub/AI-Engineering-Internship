@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-15T03:33:39.452Z",
+  "generated_at": "2026-07-15T03:44:41.748Z",
   "project": {
     "name": "AI Engineering Internship Tax Tooling Prototype",
     "research_question": "What does the current open-source ecosystem for consumer tax bookkeeping and US tax-return preparation/submission look like, and how feasible is it to connect representative tools to other software?",
@@ -369,8 +369,8 @@
       "files": [
         {
           "path": "CHANGELOG.md",
-          "bytes": 39582,
-          "sha256": "9ad59bfef72eeda294491724ebc77f9902bf74bc51e60600485ac6b8ecbcd41f",
+          "bytes": 39718,
+          "sha256": "b0de863b490aa450ee2829aeb06125f2d9e2b3f11dd74d74364c25b55bfa8785",
           "title": "Changelog"
         }
       ]
@@ -948,8 +948,8 @@
         },
         {
           "path": "prototype/execution_lab/data/project-manifest.json",
-          "bytes": 59727,
-          "sha256": "7f538ceee9c25c043437cd54aab1166f2b56b57c1102f10be174bf969dcf269e",
+          "bytes": 59948,
+          "sha256": "dba4be625d0207a4df0fab69b9f993c7904cca129363583ed93203a3a1f02e38",
           "title": null
         },
         {
@@ -978,14 +978,14 @@
         },
         {
           "path": "prototype/execution_lab/public/project-manifest.json",
-          "bytes": 59727,
-          "sha256": "7f538ceee9c25c043437cd54aab1166f2b56b57c1102f10be174bf969dcf269e",
+          "bytes": 59948,
+          "sha256": "dba4be625d0207a4df0fab69b9f993c7904cca129363583ed93203a3a1f02e38",
           "title": null
         },
         {
           "path": "prototype/execution_lab/scripts/generate-manifest.mjs",
-          "bytes": 21656,
-          "sha256": "00b5ce07855b941e5020a937861d6d51e8a9ddf1e8a5b5df18bbec5324d1f67f",
+          "bytes": 21677,
+          "sha256": "8d3889354be4f63290420da59eb67a7d3f735c05fb4a4506101981e07fcf1f0d",
           "title": null
         },
         {
@@ -1056,8 +1056,8 @@
         },
         {
           "path": "prototype/README.md",
-          "bytes": 12698,
-          "sha256": "add68dae32a1b4a5dfff56e89201f0ea3b6d40d6b47c40a13aa109e6f69e77fd",
+          "bytes": 12885,
+          "sha256": "8fc9015bda99031d89c69e22da6681db547612e3e4a3005cc81ec262008665aa",
           "title": "Synthetic Freelancer hledger Adapter"
         },
         {
@@ -1076,6 +1076,12 @@
           "path": "prototype/tests/run_failure_matrix.py",
           "bytes": 10790,
           "sha256": "25e3f453084b06be3614baf67ccc99124240722372d7c3c875d203b2603e6a10",
+          "title": null
+        },
+        {
+          "path": "run_day20_demo.py",
+          "bytes": 237,
+          "sha256": "99f8628e7f201c9ee3220f4ba7741dafb10be117af015041a897df5bf5b6f1b6",
           "title": null
         }
       ]
@@ -1241,14 +1247,14 @@
         },
         {
           "path": "prototype/README.md",
-          "bytes": 12698,
-          "sha256": "add68dae32a1b4a5dfff56e89201f0ea3b6d40d6b47c40a13aa109e6f69e77fd",
+          "bytes": 12885,
+          "sha256": "8fc9015bda99031d89c69e22da6681db547612e3e4a3005cc81ec262008665aa",
           "title": "Synthetic Freelancer hledger Adapter"
         },
         {
           "path": "README.md",
-          "bytes": 4441,
-          "sha256": "cbd95f4189e3e6728745f94081a472a7602d909fe6aeb2d8aa6480a8aa4f4f39",
+          "bytes": 4484,
+          "sha256": "5eb066e5f6d335dd970ce6e8f43ee5ce99288265179f067cde3ca07fc5e2694a",
           "title": "AI Engineering Internship: Open-Source Tax Tooling Research"
         },
         {
@@ -1405,8 +1411,8 @@
           "Installed hledger `1.52.1` locally with Winget.",
           "Added Windows Winget package discovery after `--hledger-bin`, `HLEDGER_BIN`, and `PATH` resolution.",
           "Kept the missing-hledger failure-matrix case deterministic with an explicit local-discovery opt-out.",
-          "Updated the execution lab copy and generated manifest source so `python run_day20_demo.py --json` is the canonical live command.",
-          "Updated README, prototype README, design notes, and report outline current-state text."
+          "Added a repo-root `run_day20_demo.py` wrapper so `python run_day20_demo.py --json` works from the project root.",
+          "Updated the execution lab copy and generated manifest source so `python run_day20_demo.py --json` is the canonical live command."
         ]
       },
       {

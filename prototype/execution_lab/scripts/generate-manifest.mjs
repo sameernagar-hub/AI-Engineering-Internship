@@ -41,7 +41,7 @@ const GROUPS = [
     id: "prototype",
     label: "Prototype",
     purpose: "Synthetic-only hledger adapter, safety checks, design docs, and the execution lab.",
-    roots: ["prototype"],
+    roots: ["prototype", "run_day20_demo.py"],
   },
   {
     id: "research",
