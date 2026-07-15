@@ -20,6 +20,7 @@ Each entry should answer:
 - Kept the missing-hledger failure-matrix case deterministic with an explicit local-discovery opt-out.
 - Added a repo-root `run_day20_demo.py` wrapper so `python run_day20_demo.py --json` works from the project root.
 - Updated the execution lab copy and generated manifest source so `python run_day20_demo.py --json` is the canonical live command.
+- Updated enlarged lifecycle phase popups so live runs show phase-specific commands and output excerpts instead of repeating the whole adapter transcript.
 - Updated README, prototype README, design notes, and report outline current-state text.
 
 ### Why

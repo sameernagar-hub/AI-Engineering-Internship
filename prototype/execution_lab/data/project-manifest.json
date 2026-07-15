@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-15T03:44:41.748Z",
+  "generated_at": "2026-07-15T03:49:58.112Z",
   "project": {
     "name": "AI Engineering Internship Tax Tooling Prototype",
     "research_question": "What does the current open-source ecosystem for consumer tax bookkeeping and US tax-return preparation/submission look like, and how feasible is it to connect representative tools to other software?",
@@ -369,8 +369,8 @@
       "files": [
         {
           "path": "CHANGELOG.md",
-          "bytes": 39718,
-          "sha256": "b0de863b490aa450ee2829aeb06125f2d9e2b3f11dd74d74364c25b55bfa8785",
+          "bytes": 39873,
+          "sha256": "808232e8d7e3c87be35c8d0eb9af269fafa306f19735039ea2a50542f3a23d74",
           "title": "Changelog"
         }
       ]
@@ -924,8 +924,8 @@
         },
         {
           "path": "prototype/execution_lab/app/lab-client.tsx",
-          "bytes": 33518,
-          "sha256": "96e256f2ce50f8fcf9aeb4fac21c98011295828194597c314c5fd3c64c6a1c4b",
+          "bytes": 40621,
+          "sha256": "9eaa04366068a37d142786267ea55936b18bed4ccf3d49c3e7dfcdf144522097",
           "title": null
         },
         {
@@ -949,7 +949,7 @@
         {
           "path": "prototype/execution_lab/data/project-manifest.json",
           "bytes": 59948,
-          "sha256": "dba4be625d0207a4df0fab69b9f993c7904cca129363583ed93203a3a1f02e38",
+          "sha256": "e88fa615503583784e2b0a7f09cd24bad4f831ff2ede507ff421fb350ea535a4",
           "title": null
         },
         {
@@ -979,7 +979,7 @@
         {
           "path": "prototype/execution_lab/public/project-manifest.json",
           "bytes": 59948,
-          "sha256": "dba4be625d0207a4df0fab69b9f993c7904cca129363583ed93203a3a1f02e38",
+          "sha256": "e88fa615503583784e2b0a7f09cd24bad4f831ff2ede507ff421fb350ea535a4",
           "title": null
         },
         {

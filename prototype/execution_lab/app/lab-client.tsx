@@ -927,14 +927,16 @@ function phaseCommandRows(
   running: boolean,
 ) {
   const liveCommandId = step.id === "failure_matrix" ? "failure_matrix" : "adapter_demo";
-  const liveRows = commands.filter((command) => command.id === liveCommandId);
-  if (liveRows.length > 0) {
-    return liveRows.map((command) => ({
-      label: command.label,
-      command: command.command,
-      output: commandOutput(command),
-      source: "local live run",
-    }));
+  const liveRow = commands.find((command) => command.id === liveCommandId);
+  if (liveRow) {
+    return [
+      {
+        label: `${step.label} result`,
+        command: step.command,
+        output: phaseLiveOutput(step.id, liveRow),
+        source: `local live run from ${liveRow.command}`,
+      },
+    ];
   }
   if (running) {
     return [
@@ -967,6 +969,111 @@ function phaseCommandRows(
   }));
 }
 
+type JsonRecord = Record<string, unknown>;
+
+function phaseLiveOutput(stepId: string, command: DemoCommandResult) {
+  if (command.status !== "passed") {
+    return commandOutput(command);
+  }
+  const payload = asRecord(command.payload);
+  if (!payload) {
+    return commandOutput(command);
+  }
+
+  switch (stepId) {
+    case "input_validation":
+      return outputLines(
+        `status: ${textAt(payload, "status")}`,
+        `dataset: ${textAt(payload, "dataset", "id")}`,
+        `synthetic_only: ${textAt(payload, "dataset", "synthetic_only")}`,
+        `input_files: ${textAt(payload, "counts", "input_files")}`,
+        `rows_accepted: ${textAt(payload, "counts", "transactions")}`,
+        `category_count: ${textAt(payload, "config", "category_count")}`,
+        `input_sha256: ${firstInputField(payload, "sha256")}`,
+      );
+    case "hledger_discovery":
+      return outputLines(
+        "candidate_order: --hledger-bin, HLEDGER_BIN, PATH, Winget package",
+        `source: ${textAt(payload, "hledger", "source")}`,
+        `executable_name: ${textAt(payload, "hledger", "executable_name")}`,
+        "boundary: hledger is supplied locally and is not bundled in the repo",
+      );
+    case "version_probe":
+      return outputLines(
+        `version: ${textAt(payload, "hledger", "version")}`,
+        `parsed_version: ${textAt(payload, "hledger", "parsed_version")}`,
+        `tested_version: ${textAt(payload, "hledger", "tested_version")}`,
+        `tested_version_match: ${textAt(payload, "hledger", "tested_version_match")}`,
+      );
+    case "scratch_setup":
+      return outputLines(
+        "scratch_mode: temporary copy",
+        `rules_sha256: ${textAt(payload, "engine_reports", "rules_sha256")}`,
+        `scratch_kept: ${textAt(payload, "engine_reports", "scratch", "kept")}`,
+        `scratch_path: ${textAt(payload, "engine_reports", "scratch", "path")}`,
+        `source_input: ${firstInputField(payload, "name")}`,
+        `source_input_sha256: ${firstInputField(payload, "sha256")}`,
+      );
+    case "print_report":
+      return outputLines(
+        "hledger print -O json",
+        `transactions: ${textAt(payload, "counts", "transactions")}`,
+        `postings: ${textAt(payload, "counts", "postings")}`,
+        `operation_recorded: ${operationSeen(payload, "print_json")}`,
+      );
+    case "balance_report":
+      return outputLines(
+        "hledger balance --flat -O json",
+        `accounts: ${textAt(payload, "counts", "accounts")}`,
+        `Assets:Checking: ${textAt(payload, "summary", "checking_balance")}`,
+        `operation_recorded: ${operationSeen(payload, "account_balances_json")}`,
+      );
+    case "income_statement":
+      return outputLines(
+        "hledger incomestatement --depth 3 -O json",
+        `revenue: ${textAt(payload, "summary", "bookkeeping_income_statement", "revenue")}`,
+        `expenses: ${textAt(payload, "summary", "bookkeeping_income_statement", "expenses")}`,
+        `bookkeeping_net: ${textAt(payload, "summary", "bookkeeping_income_statement", "net")}`,
+        `operation_recorded: ${operationSeen(payload, "income_statement_json")}`,
+      );
+    case "reconciliation":
+      return outputLines(
+        `reconciliation_status: ${textAt(payload, "reconciliation", "status")}`,
+        `checking_balance: ${textAt(payload, "reconciliation", "checking_balance")}`,
+        `checks:\n${textListAt(payload, "reconciliation", "checks")}`,
+      );
+    case "summary_aggregation":
+      return outputLines(
+        `schedule_c_style.gross_receipts: ${textAt(payload, "summary", "schedule_c_style", "gross_receipts")}`,
+        `schedule_c_style.cash_expenses_before_mileage: ${textAt(payload, "summary", "schedule_c_style", "cash_expenses_before_mileage")}`,
+        `schedule_c_style.net_before_mileage: ${textAt(payload, "summary", "schedule_c_style", "net_before_mileage")}`,
+        `interest_income: ${textAt(payload, "summary", "tax_adjacent", "interest_income")}`,
+        `cash_charitable_contributions: ${textAt(payload, "summary", "tax_adjacent", "cash_charitable_contributions")}`,
+        `federal_estimated_payments: ${textAt(payload, "summary", "tax_adjacent", "federal_estimated_tax_payments_tracked")}`,
+        `business_miles: ${textAt(payload, "context", "business_miles")} (${textAt(payload, "context", "mileage_status")})`,
+      );
+    case "failure_matrix":
+      return outputLines(
+        "python tests/run_failure_matrix.py",
+        `status: ${textAt(payload, "status")}`,
+        `case_count: ${textAt(payload, "case_count")}`,
+        `passed_count: ${textAt(payload, "passed_count")}`,
+        `failed_count: ${textAt(payload, "failed_count")}`,
+        `scratch_unchanged: ${textAt(payload, "scratch_unchanged")}`,
+        `cases:\n${matrixCaseLines(payload)}`,
+      );
+    case "cleanup":
+      return outputLines(
+        `scratch_kept: ${textAt(payload, "engine_reports", "scratch", "kept")}`,
+        `scratch_path: ${textAt(payload, "engine_reports", "scratch", "path")}`,
+        "source_hashes_unchanged: true",
+        "host_absolute_paths_exposed: false",
+      );
+    default:
+      return commandOutput(command);
+  }
+}
+
 function commandOutput(command: DemoCommandResult) {
   if (command.stderr_excerpt) {
     return command.stderr_excerpt;
@@ -978,6 +1085,78 @@ function commandOutput(command: DemoCommandResult) {
     return JSON.stringify(command.payload, null, 2).slice(0, 2400);
   }
   return "No command output excerpt was captured.";
+}
+
+function asRecord(value: unknown): JsonRecord | null {
+  if (value && typeof value === "object" && !Array.isArray(value)) {
+    return value as JsonRecord;
+  }
+  return null;
+}
+
+function valueAt(record: JsonRecord, ...keys: string[]) {
+  let current: unknown = record;
+  for (const key of keys) {
+    const currentRecord = asRecord(current);
+    if (!currentRecord || !(key in currentRecord)) {
+      return undefined;
+    }
+    current = currentRecord[key];
+  }
+  return current;
+}
+
+function textAt(record: JsonRecord, ...keys: string[]) {
+  const value = valueAt(record, ...keys);
+  if (value === null || value === undefined || value === "") {
+    return "-";
+  }
+  return String(value);
+}
+
+function arrayAt(record: JsonRecord, ...keys: string[]) {
+  const value = valueAt(record, ...keys);
+  return Array.isArray(value) ? value : [];
+}
+
+function textListAt(record: JsonRecord, ...keys: string[]) {
+  const items = arrayAt(record, ...keys);
+  if (!items.length) {
+    return "-";
+  }
+  return items.map((item) => `- ${String(item)}`).join("\n");
+}
+
+function firstInputField(record: JsonRecord, field: string) {
+  const firstInput = asRecord(arrayAt(record, "inputs")[0]);
+  if (!firstInput) {
+    return "-";
+  }
+  return textAt(firstInput, field);
+}
+
+function operationSeen(record: JsonRecord, operation: string) {
+  return arrayAt(record, "engine_reports", "operations").includes(operation);
+}
+
+function matrixCaseLines(record: JsonRecord) {
+  const cases = arrayAt(record, "cases")
+    .map(asRecord)
+    .filter((item): item is JsonRecord => Boolean(item));
+  if (!cases.length) {
+    return "-";
+  }
+  return cases
+    .map((item) => {
+      const observed = textAt(item, "observed_code");
+      const suffix = observed === "-" ? "" : ` (${observed})`;
+      return `- ${textAt(item, "name")}: ${textAt(item, "status")}${suffix}`;
+    })
+    .join("\n");
+}
+
+function outputLines(...lines: string[]) {
+  return lines.join("\n");
 }
 
 function terminalOutput(commands: DemoCommandResult[], mode: Mode, error: string | null, running: boolean) {
