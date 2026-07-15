@@ -299,6 +299,7 @@ The executable is resolved in this order:
 1. `--hledger-bin PATH`.
 2. `HLEDGER_BIN`.
 3. `hledger` or `hledger.exe` on `PATH`.
+4. On Windows, Winget's user-scoped `simonmichael.hledger` package directory.
 
 The candidate must resolve to an executable regular file. Executed runs call `--version` with the same configuration, color, and pager isolation flags used for reports, then capture the complete version string. Version 1.52.1 is the only tested baseline. A different version may continue only if every expected JSON shape and reconciliation invariant passes; the result then includes an `UNTESTED_HLEDGER_VERSION` warning.
 

@@ -68,4 +68,4 @@ Phase 22 completed the final report structure early at user request. The report 
 
 The frozen prototype includes `prototype/run_day20_demo.py`, a generated repo-relative manifest, a Next.js execution lab under `prototype/execution_lab/`, local live-run API behavior for configured hledger environments, verified replay for deployed/static review, clickable lifecycle phase popups with commands/output, a prototype architecture tab, evidence drawers, artifact inventory, changelog/details tabs, safety results, and `prototype/retrospective.md`.
 
-The current local environment does not have hledger on `PATH`, so live adapter execution reports `HLEDGER_NOT_FOUND` unless a reviewer supplies `--hledger-bin` or `HLEDGER_BIN`. The failure matrix and verified replay path remain runnable without hledger.
+The current local environment has hledger `1.52.1` installed through Winget, so `python run_day20_demo.py --json` and the execution lab's `/api/run` backend can execute the live synthetic pipeline. Reviewers can still supply `--hledger-bin` or `HLEDGER_BIN`; without any local hledger install, the failure matrix and verified replay path remain runnable.

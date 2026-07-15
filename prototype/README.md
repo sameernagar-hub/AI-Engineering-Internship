@@ -41,16 +41,16 @@ It will not:
 
 ## Runtime and Interface
 
-The implementation uses Python 3.11+ with no third-party runtime dependencies. hledger remains a separate prerequisite. The package lives directly under `prototype/hledger_adapter/`, so the examples run from `prototype/` without installation; this is why fixture paths begin with `../evidence/`.
+The implementation uses Python 3.11+ with no third-party runtime dependencies. hledger remains a separate prerequisite; on Windows, a user-scoped Winget install can be discovered after the explicit and PATH-based options. The package lives directly under `prototype/hledger_adapter/`, so the examples run from `prototype/` without installation; this is why fixture paths begin with `../evidence/`.
 
 Implemented CLI commands through Day 18:
 
 ```text
 python -m hledger_adapter validate --transactions ../evidence/fixtures/synthetic_freelancer_transactions.csv --context ../evidence/fixtures/synthetic_freelancer_tax_profile.json --confirm-synthetic
-python -m hledger_adapter summarize --transactions ../evidence/fixtures/synthetic_freelancer_transactions.csv --context ../evidence/fixtures/synthetic_freelancer_tax_profile.json --hledger-bin /path/to/hledger --confirm-synthetic
-python -m hledger_adapter summarize --transactions ../evidence/fixtures/synthetic_freelancer_transactions.csv --context ../evidence/fixtures/synthetic_freelancer_tax_profile.json --hledger-bin /path/to/hledger --dry-run --confirm-synthetic
-python -m hledger_adapter smoke --hledger-bin /path/to/hledger
-python -m hledger_adapter demo --hledger-bin /path/to/hledger
+python -m hledger_adapter summarize --transactions ../evidence/fixtures/synthetic_freelancer_transactions.csv --context ../evidence/fixtures/synthetic_freelancer_tax_profile.json --confirm-synthetic
+python -m hledger_adapter summarize --transactions ../evidence/fixtures/synthetic_freelancer_transactions.csv --context ../evidence/fixtures/synthetic_freelancer_tax_profile.json --dry-run --confirm-synthetic
+python -m hledger_adapter smoke
+python -m hledger_adapter demo
 ```
 
 The `demo` command selects the repository's canonical synthetic inputs automatically.
@@ -64,7 +64,7 @@ python tests/run_failure_matrix.py
 Day 20 demo package:
 
 ```text
-python run_day20_demo.py --json --hledger-bin <configured hledger>
+python run_day20_demo.py --json
 cd execution_lab
 npm install
 npm run dev
@@ -174,10 +174,11 @@ The adapter will look for hledger in this order:
 1. `--hledger-bin PATH`
 2. `HLEDGER_BIN`
 3. `hledger` or `hledger.exe` on `PATH`
+4. Windows Winget's user-scoped `simonmichael.hledger` package directory
 
 It will run `--version` before reports and record the detected version. The project tested hledger 1.52.1 during Day 9; other versions will be labeled untested and must still pass output-shape and reconciliation checks.
 
-No executable is committed, auto-downloaded, or installed by this project. See [`tool_records/tool_1.md`](../tool_records/tool_1.md) and the [Day 9 workflow evidence](../evidence/commands/07-08-2026_hledger_workflow.txt) for the evaluated setup and behavior.
+No executable is committed, auto-downloaded, or installed by this project. This workspace has hledger 1.52.1 installed locally with Winget so the plain Day 20 demo command can run live. See [`tool_records/tool_1.md`](../tool_records/tool_1.md) and the [Day 9 workflow evidence](../evidence/commands/07-08-2026_hledger_workflow.txt) for the evaluated setup and behavior.
 
 ## Limitations and Licensing
 
@@ -189,7 +190,7 @@ The repository's prototype code is covered by the repository's MIT license. hled
 
 Phase 21 completed the freeze review:
 
-- Re-ran the packaged demo entrypoints and confirmed the current machine still reaches the documented `HLEDGER_NOT_FOUND` boundary when hledger is not configured.
+- Re-ran the packaged demo entrypoints and confirmed missing hledger still reaches the documented `HLEDGER_NOT_FOUND` boundary when local discovery is disabled.
 - Rechecked the failure matrix, compile pass, and execution-lab build.
 - Tightened the execution lab layout for desktop and mobile, with the prototype runner, enlarged lifecycle, input table, command interface, and output tables on the homepage.
 - Captured the retrospective covering what worked, what failed, what the integration proves, and what remains out of scope.

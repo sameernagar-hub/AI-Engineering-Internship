@@ -265,7 +265,7 @@ Limitations:
 - Synthetic data only.
 - No tax advice, official tax treatment decisions, tax return preparation, PDF generation, MeF submission, or refund guarantee in the prototype.
 - hledger is a separate GPL-3.0-or-later binary and is not bundled.
-- The current local machine does not have hledger on `PATH`; live execution reaches the documented `HLEDGER_NOT_FOUND` boundary unless configured.
+- The current local machine has hledger 1.52.1 installed through Winget; live execution still reaches the documented `HLEDGER_NOT_FOUND` boundary if no explicit, environment, PATH, or Winget candidate is configured.
 - Tool evaluations are point-in-time snapshots and may change with new releases.
 - Week 2/3 depth favored five hands-on candidates over exhaustive testing of every open-source project.
 - State tax coverage, foreign filer cases, Schedule D/E depth, credits, and production filing workflows remain incomplete or untested.

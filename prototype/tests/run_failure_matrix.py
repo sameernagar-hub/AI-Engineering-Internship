@@ -293,6 +293,7 @@ def _run_case(case: Case, temp_root: Path) -> dict[str, Any]:
     if case.env_path_without_hledger:
         env.pop("HLEDGER_BIN", None)
         env["PATH"] = str(temp_root)
+        env["HLEDGER_ADAPTER_DISABLE_LOCAL_DISCOVERY"] = "1"
 
     completed = subprocess.run(
         [sys.executable, "-m", "hledger_adapter", *case.args],

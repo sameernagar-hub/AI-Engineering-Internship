@@ -17,6 +17,7 @@ from .validation import sha256_file
 
 HLEDGER_FLAGS = ["--no-conf", "--color=no", "--pager=no"]
 VERSION_RE = re.compile(r"\bhledger\s+([0-9]+(?:\.[0-9]+){1,3})\b")
+LOCAL_DISCOVERY_DISABLE_ENV = "HLEDGER_ADAPTER_DISABLE_LOCAL_DISCOVERY"
 
 
 def resolve_hledger_binary(explicit: str | None) -> HledgerBinary:
@@ -36,9 +37,13 @@ def resolve_hledger_binary(explicit: str | None) -> HledgerBinary:
             if _is_executable_file(candidate):
                 return HledgerBinary(path=candidate, source="path")
 
+    winget_candidate = _resolve_windows_winget_binary()
+    if winget_candidate:
+        return HledgerBinary(path=winget_candidate, source="winget")
+
     raise AdapterError(
         "HLEDGER_NOT_FOUND",
-        "Could not find hledger via --hledger-bin, HLEDGER_BIN, or PATH",
+        "Could not find hledger via --hledger-bin, HLEDGER_BIN, PATH, or local package installs",
         exit_code=EXIT_HLEDGER_DISCOVERY,
     )
 
@@ -69,6 +74,32 @@ def _is_executable_file(path: Path) -> bool:
     if os.access(path, os.X_OK):
         return True
     return os.name == "nt" and path.suffix.lower() in {".exe", ".cmd", ".bat"}
+
+
+def _resolve_windows_winget_binary() -> Path | None:
+    if os.name != "nt" or os.environ.get(LOCAL_DISCOVERY_DISABLE_ENV):
+        return None
+    local_appdata = os.environ.get("LOCALAPPDATA")
+    if not local_appdata:
+        return None
+    packages_root = Path(local_appdata) / "Microsoft" / "WinGet" / "Packages"
+    if not packages_root.exists():
+        return None
+
+    try:
+        package_dirs = sorted(
+            packages_root.glob("simonmichael.hledger_*"),
+            key=lambda path: path.stat().st_mtime,
+            reverse=True,
+        )
+    except OSError:
+        return None
+
+    for package_dir in package_dirs:
+        candidate = package_dir / "hledger.exe"
+        if _is_executable_file(candidate):
+            return candidate.resolve()
+    return None
 
 
 def probe_version(binary: HledgerBinary, category_map: CategoryMap, cwd: Path | None = None) -> HledgerVersion:

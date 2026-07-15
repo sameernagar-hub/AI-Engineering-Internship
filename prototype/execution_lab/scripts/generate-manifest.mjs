@@ -87,9 +87,9 @@ const EXECUTION_STEPS = [
   {
     id: "hledger_discovery",
     label: "hledger discovery",
-    command: "resolve --hledger-bin, HLEDGER_BIN, then PATH",
+    command: "resolve --hledger-bin, HLEDGER_BIN, PATH, then Winget package",
     expected_status: "passed locally when hledger is configured",
-    key_outputs: ["source: argument, environment, or path", "candidate executable name only"],
+    key_outputs: ["source: argument, environment, path, or winget", "candidate executable name only"],
     evidence: ["prototype/hledger_adapter/hledger.py", "tool_records/tool_1.md"],
   },
   {
@@ -170,7 +170,7 @@ const PHASE_OUTPUTS = {
   input_validation:
     "status: ok\nrows_accepted: 19\nsynthetic_boundary: confirmed\ncategory_map: loaded",
   hledger_discovery:
-    "candidate_order: --hledger-bin, HLEDGER_BIN, PATH\ncurrent_unconfigured_status: HLEDGER_NOT_FOUND\nboundary: hledger is supplied by the reviewer, not bundled",
+    "candidate_order: --hledger-bin, HLEDGER_BIN, PATH, Winget package\nlocal_status_after_setup: source=winget\nboundary: hledger is supplied by the reviewer, not bundled",
   version_probe:
     "tested_baseline: hledger 1.52.1\nwarning_policy: different versions continue only after shape and reconciliation checks pass",
   scratch_setup:
@@ -296,15 +296,15 @@ async function main() {
       },
     ],
     execution: {
-      local_live_command: "python run_day20_demo.py --json --hledger-bin <configured hledger>",
+      local_live_command: "python run_day20_demo.py --json",
       verified_replay_source: "Committed Day 18 and Day 19 command transcripts",
       steps: EXECUTION_STEPS.map(withPhaseCommands),
     },
     artifacts,
     prototype: {
       commands: [
-        "python run_day20_demo.py",
-        "python -m hledger_adapter demo --hledger-bin <configured hledger>",
+        "python run_day20_demo.py --json",
+        "python -m hledger_adapter demo",
         "python tests/run_failure_matrix.py",
         "cd execution_lab && npm run dev",
       ],
@@ -315,7 +315,7 @@ async function main() {
         "prototype/config/hledger.csv.rules",
       ],
       known_hledger_boundary:
-        "hledger is a separate local prerequisite. It is not bundled, installed, or required for verified replay.",
+        "hledger is a separate local prerequisite. It is not bundled and can be supplied by flag, HLEDGER_BIN, PATH, or the local Winget package install.",
       summary_totals: {
         transactions: 19,
         postings: 38,
@@ -345,7 +345,7 @@ async function main() {
         "No tax return preparation",
         "No tax treatment decisions",
         "No Form 1040, MeF XML, e-file, or refund estimate",
-        "No hledger bundling or auto-install",
+        "No hledger bundling",
       ],
       input_preview: inputPreview,
     },

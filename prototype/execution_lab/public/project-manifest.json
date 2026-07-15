@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-15T03:09:11.539Z",
+  "generated_at": "2026-07-15T03:33:39.452Z",
   "project": {
     "name": "AI Engineering Internship Tax Tooling Prototype",
     "research_question": "What does the current open-source ecosystem for consumer tax bookkeeping and US tax-return preparation/submission look like, and how feasible is it to connect representative tools to other software?",
@@ -115,7 +115,7 @@
     }
   ],
   "execution": {
-    "local_live_command": "python run_day20_demo.py --json --hledger-bin <configured hledger>",
+    "local_live_command": "python run_day20_demo.py --json",
     "verified_replay_source": "Committed Day 18 and Day 19 command transcripts",
     "steps": [
       {
@@ -144,10 +144,10 @@
       {
         "id": "hledger_discovery",
         "label": "hledger discovery",
-        "command": "resolve --hledger-bin, HLEDGER_BIN, then PATH",
+        "command": "resolve --hledger-bin, HLEDGER_BIN, PATH, then Winget package",
         "expected_status": "passed locally when hledger is configured",
         "key_outputs": [
-          "source: argument, environment, or path",
+          "source: argument, environment, path, or winget",
           "candidate executable name only"
         ],
         "evidence": [
@@ -157,8 +157,8 @@
         "phase_commands": [
           {
             "label": "Phase command",
-            "command": "resolve --hledger-bin, HLEDGER_BIN, then PATH",
-            "output_excerpt": "candidate_order: --hledger-bin, HLEDGER_BIN, PATH\ncurrent_unconfigured_status: HLEDGER_NOT_FOUND\nboundary: hledger is supplied by the reviewer, not bundled",
+            "command": "resolve --hledger-bin, HLEDGER_BIN, PATH, then Winget package",
+            "output_excerpt": "candidate_order: --hledger-bin, HLEDGER_BIN, PATH, Winget package\nlocal_status_after_setup: source=winget\nboundary: hledger is supplied by the reviewer, not bundled",
             "source": "prototype/hledger_adapter/hledger.py"
           }
         ]
@@ -369,8 +369,8 @@
       "files": [
         {
           "path": "CHANGELOG.md",
-          "bytes": 37649,
-          "sha256": "521c75a4d06289229d50826660c4122126662e393ccb08735450dba7ccffff6c",
+          "bytes": 39582,
+          "sha256": "9ad59bfef72eeda294491724ebc77f9902bf74bc51e60600485ac6b8ecbcd41f",
           "title": "Changelog"
         }
       ]
@@ -900,8 +900,8 @@
         },
         {
           "path": "prototype/design.md",
-          "bytes": 34845,
-          "sha256": "5500f29216e5e4b5a2c610ef4ca776b25e6e2683985625dcdebea0e696302e9f",
+          "bytes": 34923,
+          "sha256": "6f4c4a4f02777af55fb60c4113ba0f85d7c6e09fad4aeea4c2abd56384266b19",
           "title": "hledger Adapter Prototype Design"
         },
         {
@@ -924,8 +924,8 @@
         },
         {
           "path": "prototype/execution_lab/app/lab-client.tsx",
-          "bytes": 33509,
-          "sha256": "90b680eec42af5eabe7bc79c97ff86cd3de8122848c89da477e1cb0628654083",
+          "bytes": 33518,
+          "sha256": "96e256f2ce50f8fcf9aeb4fac21c98011295828194597c314c5fd3c64c6a1c4b",
           "title": null
         },
         {
@@ -948,14 +948,14 @@
         },
         {
           "path": "prototype/execution_lab/data/project-manifest.json",
-          "bytes": 60025,
-          "sha256": "379032284a7d7c3cdcc8fd477de25b640bf7e68a4e79a9feed2a031d071cc1b9",
+          "bytes": 59727,
+          "sha256": "7f538ceee9c25c043437cd54aab1166f2b56b57c1102f10be174bf969dcf269e",
           "title": null
         },
         {
           "path": "prototype/execution_lab/next-env.d.ts",
-          "bytes": 251,
-          "sha256": "7ad303e40d4fddf44f156129e397511953a71481c5cfd86b1862649aaaf240cc",
+          "bytes": 247,
+          "sha256": "7b550dda9686c16f36a17bf9051d5dbf31e98555b30d114ac49fc49a1e712651",
           "title": null
         },
         {
@@ -978,14 +978,14 @@
         },
         {
           "path": "prototype/execution_lab/public/project-manifest.json",
-          "bytes": 60025,
-          "sha256": "379032284a7d7c3cdcc8fd477de25b640bf7e68a4e79a9feed2a031d071cc1b9",
+          "bytes": 59727,
+          "sha256": "7f538ceee9c25c043437cd54aab1166f2b56b57c1102f10be174bf969dcf269e",
           "title": null
         },
         {
           "path": "prototype/execution_lab/scripts/generate-manifest.mjs",
-          "bytes": 21662,
-          "sha256": "e40d3a3768220016d025745322f7b24b1a5ca2eca98bb612338b733b682e638b",
+          "bytes": 21656,
+          "sha256": "00b5ce07855b941e5020a937861d6d51e8a9ddf1e8a5b5df18bbec5324d1f67f",
           "title": null
         },
         {
@@ -1020,8 +1020,8 @@
         },
         {
           "path": "prototype/hledger_adapter/hledger.py",
-          "bytes": 11037,
-          "sha256": "21459be88134e3c9f775cad0e21f85595d84a6795facce08e3a3f1e5e6e84b99",
+          "bytes": 12070,
+          "sha256": "460b41e844302bd8ecaa248b513588b0d3dbe0e74b7d8538598735710b798ed4",
           "title": null
         },
         {
@@ -1056,8 +1056,8 @@
         },
         {
           "path": "prototype/README.md",
-          "bytes": 12573,
-          "sha256": "4efae355dd0fb5a61557c63c3ca03c8311acb432bdfa3006aa7497c5b64b5bd8",
+          "bytes": 12698,
+          "sha256": "add68dae32a1b4a5dfff56e89201f0ea3b6d40d6b47c40a13aa109e6f69e77fd",
           "title": "Synthetic Freelancer hledger Adapter"
         },
         {
@@ -1074,8 +1074,8 @@
         },
         {
           "path": "prototype/tests/run_failure_matrix.py",
-          "bytes": 10729,
-          "sha256": "b0e00ea607911470be1381ca8ac2c5b2d3edfc37498206375b646c5df070bf47",
+          "bytes": 10790,
+          "sha256": "25e3f453084b06be3614baf67ccc99124240722372d7c3c875d203b2603e6a10",
           "title": null
         }
       ]
@@ -1197,8 +1197,8 @@
       "files": [
         {
           "path": "report/outline.md",
-          "bytes": 13390,
-          "sha256": "87edba0d67c2811ce8eb9c10d8c40b814a118fe2a6428f7b9676aaa0d234870c",
+          "bytes": 13459,
+          "sha256": "f1c099a9c647d2883d5529413c55f11773eef673f233a0f5012f0e236531ce69",
           "title": "Final Report Outline"
         },
         {
@@ -1241,14 +1241,14 @@
         },
         {
           "path": "prototype/README.md",
-          "bytes": 12573,
-          "sha256": "4efae355dd0fb5a61557c63c3ca03c8311acb432bdfa3006aa7497c5b64b5bd8",
+          "bytes": 12698,
+          "sha256": "add68dae32a1b4a5dfff56e89201f0ea3b6d40d6b47c40a13aa109e6f69e77fd",
           "title": "Synthetic Freelancer hledger Adapter"
         },
         {
           "path": "README.md",
-          "bytes": 4341,
-          "sha256": "b1a312cc3cdbdebc47441624335e5b1e49f73db05e4ff61f887571661aef9046",
+          "bytes": 4441,
+          "sha256": "cbd95f4189e3e6728745f94081a472a7602d909fe6aeb2d8aa6480a8aa4f4f39",
           "title": "AI Engineering Internship: Open-Source Tax Tooling Research"
         },
         {
@@ -1274,8 +1274,8 @@
   ],
   "prototype": {
     "commands": [
-      "python run_day20_demo.py",
-      "python -m hledger_adapter demo --hledger-bin <configured hledger>",
+      "python run_day20_demo.py --json",
+      "python -m hledger_adapter demo",
       "python tests/run_failure_matrix.py",
       "cd execution_lab && npm run dev"
     ],
@@ -1285,7 +1285,7 @@
       "prototype/config/category_map.json",
       "prototype/config/hledger.csv.rules"
     ],
-    "known_hledger_boundary": "hledger is a separate local prerequisite. It is not bundled, installed, or required for verified replay.",
+    "known_hledger_boundary": "hledger is a separate local prerequisite. It is not bundled and can be supplied by flag, HLEDGER_BIN, PATH, or the local Winget package install.",
     "summary_totals": {
       "transactions": 19,
       "postings": 38,
@@ -1315,7 +1315,7 @@
       "No tax return preparation",
       "No tax treatment decisions",
       "No Form 1040, MeF XML, e-file, or refund estimate",
-      "No hledger bundling or auto-install"
+      "No hledger bundling"
     ],
     "input_preview": {
       "source_path": "evidence/fixtures/synthetic_freelancer_transactions.csv",
@@ -1400,6 +1400,16 @@
     "source_path": "CHANGELOG.md",
     "entries": [
       {
+        "title": "07-15-2026 - Local hledger Setup and Live Backend Completion",
+        "bullets": [
+          "Installed hledger `1.52.1` locally with Winget.",
+          "Added Windows Winget package discovery after `--hledger-bin`, `HLEDGER_BIN`, and `PATH` resolution.",
+          "Kept the missing-hledger failure-matrix case deterministic with an explicit local-discovery opt-out.",
+          "Updated the execution lab copy and generated manifest source so `python run_day20_demo.py --json` is the canonical live command.",
+          "Updated README, prototype README, design notes, and report outline current-state text."
+        ]
+      },
+      {
         "title": "07-15-2026 - Phase 22: Report Structure and Prototype UI Refinement",
         "bullets": [
           "Executed the Day 22 report-structure phase early at user request.",
@@ -1447,16 +1457,6 @@
           "Confirmed the matrix leaves scratch state unchanged and uses `summarize --dry-run` for preflight failures where possible.",
           "Updated the prototype README safety/failure sections and the root repository status.",
           "Updated the Day 20 roadmap to include a Vercel-ready project execution lab for changelog, notes, evidence, prototype status/output, report/deck state, research, tool records, and README artifacts."
-        ]
-      },
-      {
-        "title": "07-13-2026 - Phase 18: Balance and Report Summary",
-        "bullets": [
-          "Extended the hledger runner to execute `incomestatement --depth 3 -O json` alongside `print -O json` and `balance --flat -O json`.",
-          "Added `prototype/hledger_adapter/summary.py` to derive controlled summary buckets from reconciled transactions/accounts and cross-check them against hledger's income statement.",
-          "Implemented executed `summarize` output and upgraded `demo` to the canonical end-to-end fixed-fixture summary.",
-          "Added Schedule C-style gross receipts, cash-expense groupings, net before mileage, interest, charity, federal estimated-payment tracking, preserved mileage facts, warnings, limitations, and provenance.",
-          "Verified the baseline fixture, the baseline plus `TADD` scenario, dry-run behavior, smoke behavior, missing-context mileage handling, and default scratch cleanup."
         ]
       }
     ]

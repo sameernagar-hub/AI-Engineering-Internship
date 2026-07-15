@@ -293,7 +293,7 @@ export function LabClient({ manifest }: { manifest: ProjectManifest }) {
               <input
                 value={hledgerBin}
                 onChange={(event) => setHledgerBin(event.target.value)}
-                placeholder="blank uses HLEDGER_BIN or PATH"
+                placeholder="blank uses HLEDGER_BIN, PATH, or Winget"
                 spellCheck={false}
                 disabled={running}
                 autoComplete="off"

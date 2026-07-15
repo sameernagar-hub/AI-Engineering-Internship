@@ -11,6 +11,48 @@ Each entry should answer:
 - What evidence or files were added?
 - What is next?
 
+## 07-15-2026 - Local hledger Setup and Live Backend Completion
+
+### What Changed
+
+- Installed hledger `1.52.1` locally with Winget.
+- Added Windows Winget package discovery after `--hledger-bin`, `HLEDGER_BIN`, and `PATH` resolution.
+- Kept the missing-hledger failure-matrix case deterministic with an explicit local-discovery opt-out.
+- Updated the execution lab copy and generated manifest source so `python run_day20_demo.py --json` is the canonical live command.
+- Updated README, prototype README, design notes, and report outline current-state text.
+
+### Why
+
+The live Day 20 pipeline needed to run end to end from both the local Python wrapper and the execution lab's `/api/run` backend without asking reviewers to paste an executable path after hledger is installed.
+
+### Evidence / Files
+
+- `prototype/hledger_adapter/hledger.py`
+- `prototype/tests/run_failure_matrix.py`
+- `prototype/execution_lab/app/lab-client.tsx`
+- `prototype/execution_lab/scripts/generate-manifest.mjs`
+- `README.md`
+- `prototype/README.md`
+- `prototype/design.md`
+- `report/outline.md`
+
+### Verification
+
+- `winget search hledger --accept-source-agreements`
+- `winget install --id simonmichael.hledger --exact --accept-package-agreements --accept-source-agreements --scope user`
+- `hledger --version` via the installed Winget executable
+- `npm run generate:manifest` from `prototype/execution_lab/`
+- `python -m compileall hledger_adapter tests run_day20_demo.py`
+- `python tests/run_failure_matrix.py`
+- `python run_day20_demo.py --json`
+- `npm run build` from `prototype/execution_lab/`
+- Direct `POST /api/run` returned HTTP 200 with `status: passed`
+- Production browser click on `Run Synthetic Demo` returned HTTP 200 from `/api/run` and rendered `Last run passed`
+
+### Next
+
+Draft the report introduction, method, and landscape sections from `report/outline.md`, then decide which comparison tables belong in the main body versus appendix.
+
 ## 07-15-2026 - Phase 22: Report Structure and Prototype UI Refinement
 
 ### What Changed
