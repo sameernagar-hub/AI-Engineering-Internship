@@ -11,6 +11,127 @@ Each entry should answer:
 - What evidence or files were added?
 - What is next?
 
+## 07-15-2026 - Phase 22: Report Structure and Prototype UI Refinement
+
+### What Changed
+
+- Executed the Day 22 report-structure phase early at user request.
+- Added `report/outline.md` as the final report skeleton with sections for introduction, method, landscape, tool evaluations, comparison, prototype, recommendation, limitations, future work, appendices, and missing-evidence checks.
+- Added `notes/day_22_report_structure.md`.
+- Updated the execution lab so lifecycle phases open a focused popup showing the selected phase command, command output, status, key outputs, and evidence.
+- Added a prototype architecture tab generated from the repo manifest.
+- Updated the execution-lab manifest copy to align with the internship repo and report framing instead of older Day 20-only wording.
+- Updated README and prototype README status notes.
+
+### Why
+
+Day 22 needed a complete report skeleton before drafting prose. The UI refinement also makes the prototype easier for a reviewer to inspect: clicking a lifecycle phase now visibly enlarges the phase context and shows the command/output details behind that phase.
+
+### Evidence / Files
+
+- `report/outline.md`
+- `notes/day_22_report_structure.md`
+- `report/README.md`
+- `prototype/execution_lab/app/lab-client.tsx`
+- `prototype/execution_lab/app/globals.css`
+- `prototype/execution_lab/app/types.ts`
+- `prototype/execution_lab/scripts/generate-manifest.mjs`
+- `prototype/execution_lab/app/layout.tsx`
+- `README.md`
+- `prototype/README.md`
+
+### Verification
+
+- `npm run generate:manifest` from `prototype/execution_lab/`
+- `python -m compileall hledger_adapter tests run_day20_demo.py`
+- `python tests/run_failure_matrix.py`
+- `npm run build` from `prototype/execution_lab/`
+- `python run_day20_demo.py --json`
+- Local dev server HTTP checks for `/` and `/project-manifest.json` on `http://127.0.0.1:3005`
+
+The packaged demo wrapper returned the documented local boundary: the adapter command reported `HLEDGER_NOT_FOUND` because hledger is not configured on this machine, while the safety failure matrix passed 15/15 cases and confirmed scratch was unchanged.
+
+Browser-level click verification was not available in this session because no controllable browser backend was exposed; the UI change was verified through TypeScript/build checks, the running page HTTP 200 response, and the generated manifest containing 11 lifecycle phases and 4 architecture layers.
+
+### Next
+
+Draft the report introduction, method, and landscape sections from `report/outline.md`, then decide which comparison tables belong in the main body versus appendix.
+
+## 07-14-2026 - Phase 21: Prototype Review and Freeze
+
+### What Changed
+
+- Executed the Day 21 prototype freeze early at user request.
+- Fixed the execution lab layout so the homepage stays focused on live prototype testing: synthetic inputs, command interface, enlarged execution lifecycle, output tables, and results.
+- Moved project details into tabs, including project scope, evidence, artifacts, changelog, and contribution guidance.
+- Added a generated synthetic CSV preview and recent changelog entries to the execution-lab manifest without exposing host-absolute paths.
+- Tightened `/api/run` input handling for the optional hledger binary path and marked responses `no-store`.
+- Added `prototype/retrospective.md`.
+- Updated `research/comparison_matrix.md` with Day 21 implementation lessons.
+
+### Why
+
+Day 21 needed to freeze the prototype for report writing and make the reviewer UI stable on desktop and mobile. The prototype now foregrounds the runnable integration and keeps supporting project history in separate tabs.
+
+### Evidence / Files
+
+- `prototype/retrospective.md`
+- `prototype/execution_lab/app/lab-client.tsx`
+- `prototype/execution_lab/app/globals.css`
+- `prototype/execution_lab/scripts/generate-manifest.mjs`
+- `prototype/execution_lab/app/api/run/route.ts`
+- `research/comparison_matrix.md`
+
+### Verification
+
+- `python -m compileall hledger_adapter tests run_day20_demo.py`
+- `python tests/run_failure_matrix.py`
+- `python run_day20_demo.py --json`
+- `npm run build` from `prototype/execution_lab/`
+
+The current machine still does not have hledger configured, so the packaged live demo reports `HLEDGER_NOT_FOUND` for the adapter run while the failure matrix passes. This remains the documented setup boundary, not a frozen-prototype blocker.
+
+### Next
+
+Use the frozen prototype, retrospective, comparison lessons, and execution lab as inputs to the final report and deck.
+
+## 07-14-2026 - Phase 20: Demo Packaging and Project Execution Lab UI
+
+### What Changed
+
+- Added `prototype/run_day20_demo.py` as the one-command Day 20 demo package for the canonical synthetic adapter demo plus the safety failure matrix.
+- Added the Vercel-ready Next.js execution lab under `prototype/execution_lab/`.
+- Added generated repo-relative manifests at `prototype/execution_lab/data/project-manifest.json` and `prototype/execution_lab/public/project-manifest.json`.
+- Built local live-run behavior through `/api/run` and verified replay behavior for environments without hledger.
+- Added UI surfaces for the execution rail, result totals, safety matrix, evidence drawer, artifact manifest, unsupported capabilities, and Git contribution workflow.
+- Updated README, prototype README, prototype design, research log, and the Day 20 exit note.
+
+### Why
+
+Day 20 needed to turn the prototype from terminal-only evidence into a runnable reviewer surface. The app now shows how synthetic rows move through validation, hledger discovery, report execution, reconciliation, summary generation, failure handling, evidence, and contribution steps without accepting real data or exposing local paths.
+
+### Evidence / Files
+
+- `prototype/run_day20_demo.py`
+- `prototype/execution_lab/`
+- `prototype/execution_lab/data/project-manifest.json`
+- `prototype/execution_lab/public/project-manifest.json`
+- `notes/day_20_demo_packaging_execution_lab.md`
+
+### Verification
+
+- `python -m compileall hledger_adapter tests run_day20_demo.py`
+- `python tests/run_failure_matrix.py`
+- `python run_day20_demo.py --json`
+- `npm run build` from `prototype/execution_lab/`
+- Local HTTP checks for `/`, `/project-manifest.json`, and `/api/run`
+
+The current machine does not have hledger configured, so `/api/run` and `run_day20_demo.py --json` report `HLEDGER_NOT_FOUND` for the live adapter demo while the failure matrix passes. This matches the documented setup boundary.
+
+### Next
+
+Execute Day 21 by reviewing the packaged prototype from a clean state, fixing only blockers, and writing the prototype retrospective.
+
 ## 07-13-2026 - Phase 20 UI Scope Refinement
 
 ### What Changed

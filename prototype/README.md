@@ -2,9 +2,9 @@
 
 ## Status
 
-Phase 19 safety and failure handling is complete. The CLI can load committed configuration, validate the canonical synthetic fixtures, discover and version-probe hledger, run real read-only `print -O json`, `balance --flat -O json`, and `incomestatement --depth 3 -O json` reports through scratch copies, reconcile the results, emit normalized transactions/account balances/controlled Schedule C-style totals/tax-adjacent facts, and run a stable failure matrix for expected bad inputs and hledger discovery failures.
+Phase 21 prototype review and freeze are complete. The CLI can load committed configuration, validate the canonical synthetic fixtures, discover and version-probe hledger, run real read-only `print -O json`, `balance --flat -O json`, and `incomestatement --depth 3 -O json` reports through scratch copies, reconcile the results, emit normalized transactions/account balances/controlled Schedule C-style totals/tax-adjacent facts, and run a stable failure matrix for expected bad inputs and hledger discovery failures.
 
-Demo packaging, a Vercel-ready project execution lab UI, and optional Markdown output are still planned for later phases.
+The frozen package includes a one-command demo wrapper at [`run_day20_demo.py`](run_day20_demo.py), a Vercel-ready Next.js execution lab at [`execution_lab/`](execution_lab/), and the Day 21 retrospective at [`retrospective.md`](retrospective.md). The execution lab now opens lifecycle phase popups with the command and command output for the selected phase, plus an architecture tab that summarizes the prototype flow. Optional Markdown output is deferred until report polish.
 
 The implementation contract is in [`design.md`](design.md). The selected target and comparison rationale are in [`research/prototype_target_decision.md`](../research/prototype_target_decision.md).
 
@@ -60,6 +60,18 @@ Implemented safety check through Day 19:
 ```text
 python tests/run_failure_matrix.py
 ```
+
+Day 20 demo package:
+
+```text
+python run_day20_demo.py --json --hledger-bin <configured hledger>
+cd execution_lab
+npm install
+npm run dev
+npm run build
+```
+
+The execution lab opens on the synthetic prototype workflow. `Run Synthetic Demo` calls a local API endpoint that runs `run_day20_demo.py` and never accepts alternate transaction files. `Replay Verified Run` animates the committed Day 18 and Day 19 evidence so a Vercel deployment can still show a functioning walkthrough without a local hledger executable.
 
 ### Commands
 
@@ -173,20 +185,14 @@ The labels `Schedule C-style`, `Schedule A`, and `Schedule B` describe controlle
 
 The repository's prototype code is covered by the repository's MIT license. hledger is a separate GPL-3.0-or-later program and is not bundled. Redistributing or embedding hledger, or packaging a combined work, requires a specific license-compliance review; this prototype does not make a legal conclusion.
 
-## Next Build Slice
+## Prototype Freeze Handoff
 
-Phase 20 will:
+Phase 21 completed the freeze review:
 
-- Add a one-command demo wrapper and expected-output sample.
-- Create a lightweight Vercel-ready project execution lab UI under the prototype workspace.
-- Make the first screen show something functioning: local live execution of the pinned synthetic demo and failure matrix, or a Vercel-safe verified replay from committed command evidence.
-- Generate or load a read-only artifact manifest covering the changelog, notes, evidence, prototype files/output, report/deck state, research files, tool records, and README files.
-- Include `about` and `why` manifest entries for the research question, hledger target choice, synthetic-data boundary, adapter design, safety matrix, and artifact purpose.
-- Show command-to-result progression across validation, hledger discovery, version probe, scratch setup, report execution, reconciliation, summary aggregation, failure matrix, cleanup, and output excerpts.
-- Include a Git contribution panel for branch creation, checks, commit, push, and review.
-- Keep copy specific to this project and avoid generic filler, prompt-related wording, or unrelated marketing sections.
-- Keep the app local-first now and deployable later on Vercel without exposing private paths, secrets, or real data.
+- Re-ran the packaged demo entrypoints and confirmed the current machine still reaches the documented `HLEDGER_NOT_FOUND` boundary when hledger is not configured.
+- Rechecked the failure matrix, compile pass, and execution-lab build.
+- Tightened the execution lab layout for desktop and mobile, with the prototype runner, enlarged lifecycle, input table, command interface, and output tables on the homepage.
+- Captured the retrospective covering what worked, what failed, what the integration proves, and what remains out of scope.
+- Deferred optional Markdown rendering until final report polish.
 
-Markdown rendering and final clean-checkout verification follow in Phase 21 as defined in [`design.md`](design.md).
-
-The detailed Day 20 UI brief is [`day20_project_lab_ui_brief.md`](day20_project_lab_ui_brief.md).
+Next work should draft the report from [`../report/outline.md`](../report/outline.md), the frozen prototype, [`retrospective.md`](retrospective.md), and the detailed Day 20 UI brief at [`day20_project_lab_ui_brief.md`](day20_project_lab_ui_brief.md).

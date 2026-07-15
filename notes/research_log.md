@@ -900,3 +900,136 @@ Make the Day 20 UI requirement specific enough to build: a functioning project e
 ### Tomorrow's Starting Point
 
 Execute Day 20 by building the project execution lab UI and manifest generator.
+
+## 07-14-2026 - Phase 20: Demo Packaging and Project Execution Lab UI
+
+### Goal
+
+Make the prototype runnable and inspectable through a one-command demo package and a Vercel-ready project execution lab.
+
+### What I Did
+
+- Added `prototype/run_day20_demo.py` to run the canonical synthetic adapter demo and safety failure matrix as one JSON-emitting workflow.
+- Added the Next.js app in `prototype/execution_lab/`.
+- Added generated manifests at `prototype/execution_lab/data/project-manifest.json` and `prototype/execution_lab/public/project-manifest.json`.
+- Built the lab UI around run/replay controls, execution steps, result totals, safety matrix status, evidence links, artifact groups, unsupported capabilities, and Git contribution guidance.
+- Added `/api/run` for local live execution and Vercel-safe replay behavior.
+- Updated README, prototype README, prototype design, changelog, and the Day 20 exit note.
+
+### Evidence Captured
+
+- `prototype/run_day20_demo.py`
+- `prototype/execution_lab/`
+- `notes/day_20_demo_packaging_execution_lab.md`
+
+### Verification
+
+- `python -m compileall hledger_adapter tests run_day20_demo.py`
+- `python tests/run_failure_matrix.py`
+- `python run_day20_demo.py --json`
+- `npm run build` from `prototype/execution_lab/`
+- `http://localhost:3000` returned HTTP 200.
+- `http://localhost:3000/project-manifest.json` returned HTTP 200.
+- `POST http://localhost:3000/api/run` returned HTTP 200; the adapter demo reported `HLEDGER_NOT_FOUND` because hledger is not configured locally, while the failure matrix passed.
+
+### Decisions Made
+
+- Keep hledger as a local prerequisite and make verified replay the deployed review path.
+- Keep the execution lab self-contained under `prototype/execution_lab/`.
+- Pin TypeScript to `5.9.3` for a stable Next build.
+
+### Problems / Open Questions
+
+- Live hledger execution still requires a configured hledger binary.
+- npm reports two moderate advisories; no forced audit fix was applied.
+
+### Tomorrow's Starting Point
+
+Execute Day 21 by reviewing the prototype package from a clean state and writing the prototype retrospective.
+
+## 07-14-2026 - Phase 21: Prototype Review and Freeze
+
+### Goal
+
+Freeze the hledger prototype for report writing, fix blocker-level execution-lab layout gaps, and capture the implementation lessons.
+
+### What I Did
+
+- Reviewed the packaged demo entrypoints and kept the documented hledger setup boundary visible.
+- Refined the execution lab homepage around live testing: synthetic input table, command interface, enlarged phase lifecycle, output table, and failure-matrix result.
+- Moved project scope, evidence, artifacts, changelog, and contribution guidance into separate tabs.
+- Added `prototype/retrospective.md`.
+- Updated `research/comparison_matrix.md` with Day 21 implementation lessons.
+- Updated README, prototype README, prototype design, and changelog for the frozen state.
+
+### Evidence Captured
+
+- `prototype/retrospective.md`
+- `prototype/execution_lab/app/lab-client.tsx`
+- `prototype/execution_lab/app/globals.css`
+- `prototype/execution_lab/scripts/generate-manifest.mjs`
+- `research/comparison_matrix.md`
+
+### Verification
+
+- `python -m compileall hledger_adapter tests run_day20_demo.py`
+- `python tests/run_failure_matrix.py`
+- `python run_day20_demo.py --json`
+- `npm run build` from `prototype/execution_lab/`
+
+The current machine still lacks hledger, so the packaged live demo reports `HLEDGER_NOT_FOUND` for the adapter command while the safety failure matrix passes.
+
+### Decision Made
+
+Freeze the prototype feature set for report writing. Optional Markdown output is deferred because the JSON contract and execution lab already carry the strongest integration evidence.
+
+### Next Starting Point
+
+Use the frozen prototype, comparison lessons, and retrospective to draft the final report and deck.
+
+## 07-15-2026 - Phase 22: Report Structure and Prototype UI Refinement
+
+### Goal
+
+Execute the Day 22 report-structure phase early and make the prototype execution lab easier to inspect from the lifecycle.
+
+### What I Did
+
+- Added `report/outline.md` with the final report skeleton and missing-evidence checklist.
+- Added `notes/day_22_report_structure.md`.
+- Pulled structured findings from the five tool records, comparison matrix, prototype decision, retrospective, and internship brief alignment into the report outline.
+- Updated the execution lab lifecycle so each phase opens a popup with the phase command, command output, status, key outputs, and evidence links.
+- Added a prototype architecture tab backed by the generated manifest.
+- Updated app metadata and copy so the UI aligns with the internship repo/report framing rather than older Day 20-only wording.
+
+### Evidence Captured
+
+- `report/outline.md`
+- `notes/day_22_report_structure.md`
+- `prototype/execution_lab/app/lab-client.tsx`
+- `prototype/execution_lab/app/globals.css`
+- `prototype/execution_lab/scripts/generate-manifest.mjs`
+- `prototype/execution_lab/app/types.ts`
+
+### Verification
+
+- `npm run generate:manifest` from `prototype/execution_lab/` passed.
+- `python -m compileall hledger_adapter tests run_day20_demo.py` passed.
+- `python tests/run_failure_matrix.py` passed 15/15 cases and kept scratch unchanged.
+- `npm run build` from `prototype/execution_lab/` passed.
+- `python run_day20_demo.py --json` returned the documented local boundary: the adapter command reported `HLEDGER_NOT_FOUND` because hledger is not configured on this machine, while the safety failure matrix passed.
+- Local dev server HTTP checks for `/` and `/project-manifest.json` on `http://127.0.0.1:3005` returned 200; the manifest reported 11 lifecycle phases and 4 architecture layers.
+- Browser-level click verification was not available in this session because no controllable browser backend was exposed.
+
+### Decisions Made
+
+- Keep the UI minimalist by replacing the visible contribution tab with an architecture tab, while leaving contribution metadata available in the manifest.
+- Treat final public release/project-health claims as point-in-time and refreshable before publication.
+
+### Problems / Open Questions
+
+- The local environment still lacks hledger on `PATH`; live hledger execution remains a documented setup boundary.
+
+### Next Starting Point
+
+Draft the report introduction, method, and landscape sections from `report/outline.md`.

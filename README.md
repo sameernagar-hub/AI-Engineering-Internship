@@ -64,4 +64,8 @@ This project is licensed under the MIT License. See [`LICENSE`](LICENSE) for det
 
 ## Repository Status
 
-Phase 19 completed safety and failure handling for the hledger adapter. The prototype now has a stable failure matrix for validation, context, dry-run, and hledger discovery failures, while retaining the Day 18 end-to-end summary over `print`, `balance`, and `incomestatement` JSON. Phase 20 is scoped to demo packaging plus a Vercel-ready project execution lab: a responsive app with local live synthetic runs, verified replay for deployment, artifact and `why` manifests, evidence traceability, and Git contribution guidance.
+Phase 22 completed the final report structure early at user request. The report skeleton is now in `report/outline.md`, with sections for introduction, method, landscape, tool evaluations, comparison, prototype, recommendation, limitations, future work, appendices, and missing-evidence checks.
+
+The frozen prototype includes `prototype/run_day20_demo.py`, a generated repo-relative manifest, a Next.js execution lab under `prototype/execution_lab/`, local live-run API behavior for configured hledger environments, verified replay for deployed/static review, clickable lifecycle phase popups with commands/output, a prototype architecture tab, evidence drawers, artifact inventory, changelog/details tabs, safety results, and `prototype/retrospective.md`.
+
+The current local environment does not have hledger on `PATH`, so live adapter execution reports `HLEDGER_NOT_FOUND` unless a reviewer supplies `--hledger-bin` or `HLEDGER_BIN`. The failure matrix and verified replay path remain runnable without hledger.

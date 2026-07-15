@@ -121,6 +121,18 @@ Filed Open Tax Engine has the highest tax-form upside. It is the only evaluated 
 - High-upside form-engine research candidate: Filed Open Tax Engine.
 - REST-first comparator for the final report: Firefly III.
 
+## Day 21 Implementation Lessons
+
+The Week 3 prototype confirmed the hledger selection. The successful parts were not hledger alone; they came from placing a strict adapter around hledger's permissive accounting model.
+
+| Lesson | Evidence | Impact on original decision |
+|---|---|---|
+| hledger remained the fastest path to a transparent prototype. | The adapter reached a repeatable synthetic CSV -> read-only CLI reports -> normalized JSON -> summary workflow. | Confirms hledger as the primary target. |
+| Wrapper validation is mandatory. | The Day 19 matrix verifies expected failures for unknown categories/accounts, duplicate IDs, tax-hint mismatches, wrong signs, malformed dates, missing files, and synthetic acknowledgement. | Keeps the hledger safety score at 4 rather than raising it to 5; the raw tool still accepts too much without the wrapper. |
+| The local binary boundary must be visible to reviewers. | Day 20 and Day 21 runs on the current machine correctly report `HLEDGER_NOT_FOUND` when hledger is not configured. | Confirms that replay mode and documented setup are product requirements, not convenience features. |
+| JSON is the right frozen output contract. | The UI and demo wrapper can consume counts, balances, Schedule C-style totals, warnings, limitations, and failure-matrix results directly. | Defers optional Markdown rendering until report polish. |
+| The prototype proves infrastructure, not tax preparation. | The adapter preserves mileage and estimated-payment facts but does not choose rates, calculate liability, produce forms, or file. | Confirms tenforty and Filed Open Tax Engine as future tax-specific components rather than replacements for the hledger bookkeeping adapter. |
+
 ## Day 15 Starting Point
 
 Start `prototype/design.md` by defining a small hledger CLI adapter:

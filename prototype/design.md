@@ -539,7 +539,7 @@ JSON is canonical. The optional Markdown report is rendered only from an already
 4. Unmapped facts and unsupported capabilities.
 5. Input, mapping, and rules hashes.
 
-Markdown rendering may be completed during Day 20 after the JSON contract is stable.
+Markdown rendering is deferred after the Day 21 freeze. It can be added during report polish if it helps presentation, but JSON remains the canonical integration contract.
 
 ## Day 20 Project Execution Lab UI
 
@@ -556,6 +556,8 @@ Core requirements:
 - Use project-specific engineering copy and real artifact names. Avoid generic filler, prompt-related wording, and unrelated marketing content.
 
 The detailed UI brief is `prototype/day20_project_lab_ui_brief.md`.
+
+Day 20 implementation lives under `prototype/execution_lab/`. It generates `data/project-manifest.json` and `public/project-manifest.json` from repository files, serves a local Node API route for `prototype/run_day20_demo.py`, and falls back to verified replay from committed command evidence when deployed where hledger cannot execute. The Day 21 freeze pass keeps the homepage focused on live prototype testing, moves project details into tabs, and keeps the manifest limited to repo-relative paths, hashes, synthetic input previews, and changelog summaries.
 
 ## Safety Defaults
 
@@ -650,6 +652,6 @@ This prototype invokes an unmodified executable as a separate process. That fact
 | Day 18 | Implement controlled bucket aggregation and the canonical JSON summary. |
 | Day 19 | Implement stable failures and the shared plus adapter-specific test matrix. |
 | Day 20 | Finish one-command demo, setup instructions, sample output, and a Vercel-ready project execution lab UI with live local execution, verified replay, generated artifact/why manifests, and Git contribution guidance. |
-| Day 21 | Run from a clean checkout, fix blocking issues, freeze features, and record the retrospective. |
+| Day 21 | Freeze the prototype, fix blocker-level execution-lab layout issues, record the retrospective, and update implementation lessons. |
 
 Actual Budget remains a contingency, not a second implementation. Switch only if the real hledger version/smoke call remains blocked after Day 16's safe setup attempts. If a switch is required, preserve this normalized output contract and document the reason before writing backup code.
