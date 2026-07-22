@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-20T02:21:42.229Z",
+  "generated_at": "2026-07-22T02:08:30.657Z",
   "project": {
     "name": "AI Engineering Internship Tax Tooling Prototype",
     "research_question": "What does the current open-source ecosystem for consumer tax bookkeeping and US tax-return preparation/submission look like, and how feasible is it to connect representative tools to other software?",
     "scope": "Consumer and freelancer-oriented bookkeeping and US tax-adjacent workflows, evaluated through public tools and synthetic data.",
     "synthetic_boundary": "Only committed synthetic fixtures are supported. The prototype does not accept real taxpayer data or provide tax advice.",
-    "current_phase": "Phase 30 - final QA complete",
-    "next_phase": "Finalize report, prototype repository, deck, and mentor summary",
+    "current_phase": "Phase 31 - final delivery complete",
+    "next_phase": "Optional post-internship extensions: screenshots, PDF deck export, hledger-to-tenforty experiment, and license review",
     "prototype_target": "Synthetic hledger CLI and JSON adapter"
   },
   "architecture": {
@@ -50,12 +50,11 @@
       },
       {
         "label": "Report package",
-        "detail": "The final report and deck are drafted from structured records, comparison matrices, prototype evidence, and the frozen retrospective.",
+        "detail": "The final report, mentor summary, and deck are built from structured records, comparison matrices, prototype evidence, and the frozen retrospective.",
         "artifacts": [
-          "report/",
-          "deck/",
-          "research/comparison_matrix.md",
-          "prototype/retrospective.md"
+          "report/final_report.md",
+          "deck/open_source_tax_tooling_final_deck.pptx",
+          "notes/mentor_summary.md"
         ]
       }
     ],
@@ -369,8 +368,8 @@
       "files": [
         {
           "path": "CHANGELOG.md",
-          "bytes": 53036,
-          "sha256": "2d2eaf5f48e78e9379ba492f58ab2620b820268faea717deb1d20f12e2b6acb3",
+          "bytes": 55193,
+          "sha256": "7b8f01c44f0c091f4ea2ded323c28d5abc536e0cc0dac28d9c4257dd539bcb03",
           "title": "Changelog"
         }
       ]
@@ -549,15 +548,33 @@
           "title": "Day 30 - Final QA and Rehearsal"
         },
         {
+          "path": "notes/day_31_final_delivery.md",
+          "bytes": 2843,
+          "sha256": "10ac7db24af0ca9f704056bc67b2168b6713598b7584f04f94d4dfd132cbae2f",
+          "title": "Day 31 - Final Delivery"
+        },
+        {
           "path": "notes/internship_brief_alignment.md",
           "bytes": 3517,
           "sha256": "7f7dea38b5e73ffca1acd24b717dfbb547f57407a3ace75ee5e2210f29e238f0",
           "title": "Internship Brief Alignment"
         },
         {
+          "path": "notes/mentor_summary.md",
+          "bytes": 2159,
+          "sha256": "1140180e92a77079ba4d8111a0819c5e66dced555f06cba9b8596c88ef5a005a",
+          "title": "Mentor Summary - Final Delivery"
+        },
+        {
+          "path": "notes/public_metadata_refresh_2026-07-22.md",
+          "bytes": 2141,
+          "sha256": "1d385537017aaefceb3c723de4b344b10cc18173f6dde78e22c340fe987b71eb",
+          "title": "Public Metadata Refresh - 2026-07-22"
+        },
+        {
           "path": "notes/research_log.md",
-          "bytes": 71557,
-          "sha256": "00ffbad61275249b3bebc1659d1be20322ed7d630763f14333f1d2c0ff2dac87",
+          "bytes": 74608,
+          "sha256": "062bc89230c8429445f9fa0c4d04bd3458eae3f671b2a62f924beb111cc51f27",
           "title": "Research Log"
         },
         {
@@ -954,8 +971,20 @@
         },
         {
           "path": "prototype/execution_lab/.gitignore",
-          "bytes": 57,
-          "sha256": "d4b7f715aaa5f740558ac81f2b316d634a5c0138a40b62e45a4c314773e2859f",
+          "bytes": 77,
+          "sha256": "925cf09fd719bb5ddb02e272ccccee0a226bb0a0e7052273e684b83069aa0a49",
+          "title": null
+        },
+        {
+          "path": "prototype/execution_lab/.vercel/project.json",
+          "bytes": 118,
+          "sha256": "7c56ecb44709afa7c1b32eec4560db03aadf7cafbd6aa254cd450a16be43a3e3",
+          "title": null
+        },
+        {
+          "path": "prototype/execution_lab/.vercel/README.txt",
+          "bytes": 520,
+          "sha256": "f5d1ed0f5032ae128931f46459b5faa1af6319fc2dfb3e7a5fe54a84bf93dbd6",
           "title": null
         },
         {
@@ -996,8 +1025,8 @@
         },
         {
           "path": "prototype/execution_lab/data/project-manifest.json",
-          "bytes": 62761,
-          "sha256": "91c2c95e1dc99bcca1ca675e9e423098a3d3719c049f226b38c8fcbc07148e66",
+          "bytes": 64511,
+          "sha256": "c8cab4030acdad12809f39345e386f9dea06828b4f1f4294f0e64583eacf3a27",
           "title": null
         },
         {
@@ -1026,14 +1055,14 @@
         },
         {
           "path": "prototype/execution_lab/public/project-manifest.json",
-          "bytes": 62761,
-          "sha256": "91c2c95e1dc99bcca1ca675e9e423098a3d3719c049f226b38c8fcbc07148e66",
+          "bytes": 64511,
+          "sha256": "c8cab4030acdad12809f39345e386f9dea06828b4f1f4294f0e64583eacf3a27",
           "title": null
         },
         {
           "path": "prototype/execution_lab/scripts/generate-manifest.mjs",
-          "bytes": 21684,
-          "sha256": "987d71b07df5e2fd169d13b13e40768c594caf59923d2d7269b8c3151a9ddf8c",
+          "bytes": 22113,
+          "sha256": "f2c3f3fa683643cd0e427af45f3c504727a8b2e1027c6e7a0d8f9c23531a0ebf",
           "title": null
         },
         {
@@ -1104,8 +1133,8 @@
         },
         {
           "path": "prototype/README.md",
-          "bytes": 12829,
-          "sha256": "11b1c71309aaf5bde8fa3311ec1b9d6848a18345a46d0ac8adbd9fc3bc589341",
+          "bytes": 12924,
+          "sha256": "0d4fe1aa91f552fdc0847c44ae84e2148d118468620bb9f1766862ca6c499538",
           "title": "Synthetic Freelancer hledger Adapter"
         },
         {
@@ -1247,13 +1276,19 @@
     {
       "id": "report",
       "label": "Report",
-      "purpose": "Written report workspace and placeholder state for final delivery.",
+      "purpose": "Final written report plus preserved intermediate drafts.",
       "files": [
         {
           "path": "report/comparison_recommendation_draft.md",
           "bytes": 14222,
           "sha256": "256801b0ed0ba3e31aeb106a257aab1e34dca20fd8dddf91f92a29694400e014",
           "title": "Comparison and Recommendation Draft"
+        },
+        {
+          "path": "report/final_report.md",
+          "bytes": 28481,
+          "sha256": "f120aff7bff43e441c722cc339cfbcdd8ac30221986e21847f00c9462137f9c0",
+          "title": "Open-Source Consumer Tax Tooling and Programmatic Integration Surfaces"
         },
         {
           "path": "report/full_report_draft.md",
@@ -1281,8 +1316,8 @@
         },
         {
           "path": "report/README.md",
-          "bytes": 1093,
-          "sha256": "c5f8d71faaac5cfe9c0fa192f2858487e6be4768fdbd7816f0313a60aeb4f175",
+          "bytes": 1216,
+          "sha256": "db8af50b01d7183c405760ddd7510f07c5776b783efd5af07943983052a4e06a",
           "title": "Report Workspace"
         },
         {
@@ -1296,10 +1331,16 @@
     {
       "id": "deck",
       "label": "Deck",
-      "purpose": "Presentation deck workspace and placeholder state for final delivery.",
+      "purpose": "Final editable presentation deck plus outline and preserved draft.",
       "files": [
         {
           "path": "deck/open_source_tax_tooling_draft_deck.pptx",
+          "bytes": 77161,
+          "sha256": "8ed7daec51422b1adf0c5171dacc4b998ce03b8399a033646c7bb19cd23ed931",
+          "title": null
+        },
+        {
+          "path": "deck/open_source_tax_tooling_final_deck.pptx",
           "bytes": 77161,
           "sha256": "8ed7daec51422b1adf0c5171dacc4b998ce03b8399a033646c7bb19cd23ed931",
           "title": null
@@ -1312,8 +1353,8 @@
         },
         {
           "path": "deck/README.md",
-          "bytes": 728,
-          "sha256": "73c2dee3b9bc5dfed8b83bfdbf8560b0924ec5b8fe27c7b8aefd1188b583bcf5",
+          "bytes": 898,
+          "sha256": "f1c61d7d972b2584ee8280637c823c9aebec4ae69d86c90425e99b54ce9d086a",
           "title": "Deck Workspace"
         }
       ]
@@ -1325,8 +1366,8 @@
       "files": [
         {
           "path": "deck/README.md",
-          "bytes": 728,
-          "sha256": "73c2dee3b9bc5dfed8b83bfdbf8560b0924ec5b8fe27c7b8aefd1188b583bcf5",
+          "bytes": 898,
+          "sha256": "f1c61d7d972b2584ee8280637c823c9aebec4ae69d86c90425e99b54ce9d086a",
           "title": "Deck Workspace"
         },
         {
@@ -1337,20 +1378,20 @@
         },
         {
           "path": "prototype/README.md",
-          "bytes": 12829,
-          "sha256": "11b1c71309aaf5bde8fa3311ec1b9d6848a18345a46d0ac8adbd9fc3bc589341",
+          "bytes": 12924,
+          "sha256": "0d4fe1aa91f552fdc0847c44ae84e2148d118468620bb9f1766862ca6c499538",
           "title": "Synthetic Freelancer hledger Adapter"
         },
         {
           "path": "README.md",
-          "bytes": 4497,
-          "sha256": "eff51550f208266b4aa3f743e8f92f6254119a0eb32d212b10ff4d88f9469151",
+          "bytes": 7537,
+          "sha256": "d0efb3df54a6590ae08748593cc6c807422160bb0efb17a15bddda06ee672fba",
           "title": "AI Engineering Internship: Open-Source Tax Tooling Research"
         },
         {
           "path": "report/README.md",
-          "bytes": 1093,
-          "sha256": "c5f8d71faaac5cfe9c0fa192f2858487e6be4768fdbd7816f0313a60aeb4f175",
+          "bytes": 1216,
+          "sha256": "db8af50b01d7183c405760ddd7510f07c5776b783efd5af07943983052a4e06a",
           "title": "Report Workspace"
         },
         {
@@ -1496,6 +1537,16 @@
     "source_path": "CHANGELOG.md",
     "entries": [
       {
+        "title": "07-22-2026 - Phase 31: Final Delivery",
+        "bullets": [
+          "Executed the Day 31 final-delivery phase early at user request.",
+          "Added the final report entrypoint at `report/final_report.md`.",
+          "Added the final editable deck copy at `deck/open_source_tax_tooling_final_deck.pptx`.",
+          "Added `notes/mentor_summary.md`, `notes/day_31_final_delivery.md`, and `notes/public_metadata_refresh_2026-07-22.md`.",
+          "Rewrote `README.md` as the complete project overview, scope, deliverable index, prototype handoff, verification guide, and deployment reference."
+        ]
+      },
+      {
         "title": "07-20-2026 - Phase 30: Final QA and Rehearsal",
         "bullets": [
           "Executed the Day 30 final-QA phase early at user request.",
@@ -1543,16 +1594,6 @@
           "Added `notes/day_27_report_revision.md`.",
           "Consolidated the Day 23-26 report drafts into one report with executive summary, introduction, method, landscape, tool evaluations, comparison, prototype, recommendation, limitations, future work, evidence index, and publication checklist.",
           "Updated `README.md`, `report/README.md`, and `report/outline.md` to point to the full report draft."
-        ]
-      },
-      {
-        "title": "07-16-2026 - Phase 26: Prototype Writeup",
-        "bullets": [
-          "Executed the Day 26 prototype-writeup phase early at user request.",
-          "Added `report/prototype_writeup_draft.md` with the hledger adapter architecture, demo workflow, setup summary, sample output, safety choices, limitations, and proof statement.",
-          "Added `notes/day_26_prototype_writeup.md`.",
-          "Updated `README.md`, `report/README.md`, `report/outline.md`, and `prototype/README.md` to reference the Day 26 prototype writeup.",
-          "`report/prototype_writeup_draft.md`"
         ]
       }
     ]

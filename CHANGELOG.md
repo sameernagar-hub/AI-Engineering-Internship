@@ -11,6 +11,48 @@ Each entry should answer:
 - What evidence or files were added?
 - What is next?
 
+## 07-22-2026 - Phase 31: Final Delivery
+
+### What Changed
+
+- Executed the Day 31 final-delivery phase early at user request.
+- Added the final report entrypoint at `report/final_report.md`.
+- Added the final editable deck copy at `deck/open_source_tax_tooling_final_deck.pptx`.
+- Added `notes/mentor_summary.md`, `notes/day_31_final_delivery.md`, and `notes/public_metadata_refresh_2026-07-22.md`.
+- Rewrote `README.md` as the complete project overview, scope, deliverable index, prototype handoff, verification guide, and deployment reference.
+- Updated report, deck, prototype, and execution-lab manifest wording to mark final delivery complete.
+- Made the execution-lab manifest generator Vercel-aware so production builds use the committed manifest instead of crawling parent repository paths.
+- Deployed the execution lab to Vercel at `https://executionlab.vercel.app`.
+
+### Why
+
+Day 31 needed to turn the mentor-review draft package into a final, publishable project package. The Vercel build fix was required because production deployment uploads the execution-lab directory, while local manifest generation depends on the full parent repository.
+
+### Evidence / Files
+
+- `README.md`
+- `report/final_report.md`
+- `deck/open_source_tax_tooling_final_deck.pptx`
+- `notes/mentor_summary.md`
+- `notes/day_31_final_delivery.md`
+- `notes/public_metadata_refresh_2026-07-22.md`
+- `prototype/execution_lab/scripts/generate-manifest.mjs`
+- `prototype/execution_lab/data/project-manifest.json`
+- `prototype/execution_lab/public/project-manifest.json`
+- Vercel production URL: `https://executionlab.vercel.app`
+
+### Verification
+
+- `python run_day20_demo.py --json`
+- `python -m compileall prototype/hledger_adapter prototype/tests run_day20_demo.py prototype/run_day20_demo.py`
+- `npm run build`
+- Vercel-mode build simulation with `VERCEL=1 npm run build`
+- `vercel --prod --yes`
+
+### Next
+
+The internship project is complete. Optional follow-up work can add a deck PDF export, execution-lab screenshots, a hledger-to-tenforty liability experiment, broader synthetic datasets, and deeper GPL/AGPL license review before redistributed or hosted integrations.
+
 ## 07-20-2026 - Phase 30: Final QA and Rehearsal
 
 ### What Changed

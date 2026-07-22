@@ -58,13 +58,13 @@ const GROUPS = [
   {
     id: "report",
     label: "Report",
-    purpose: "Written report workspace and placeholder state for final delivery.",
+    purpose: "Final written report plus preserved intermediate drafts.",
     roots: ["report"],
   },
   {
     id: "deck",
     label: "Deck",
-    purpose: "Presentation deck workspace and placeholder state for final delivery.",
+    purpose: "Final editable presentation deck plus outline and preserved draft.",
     roots: ["deck"],
   },
   {
@@ -223,8 +223,8 @@ const ARCHITECTURE = {
     {
       label: "Report package",
       detail:
-        "The final report and deck are drafted from structured records, comparison matrices, prototype evidence, and the frozen retrospective.",
-      artifacts: ["report/", "deck/", "research/comparison_matrix.md", "prototype/retrospective.md"],
+        "The final report, mentor summary, and deck are built from structured records, comparison matrices, prototype evidence, and the frozen retrospective.",
+      artifacts: ["report/final_report.md", "deck/open_source_tax_tooling_final_deck.pptx", "notes/mentor_summary.md"],
     },
   ],
   boundaries: [
@@ -236,6 +236,15 @@ const ARCHITECTURE = {
 };
 
 async function main() {
+  if (process.env.VERCEL === "1") {
+    const dataPath = path.join(appRoot, "data", "project-manifest.json");
+    const publicPath = path.join(appRoot, "public", "project-manifest.json");
+    if (await exists(dataPath) && await exists(publicPath)) {
+      console.log("Using committed project manifests for Vercel build.");
+      return;
+    }
+  }
+
   const [artifacts, fixtureHashes, inputPreview, changelog] = await Promise.all([
     artifactGroups(),
     selectedFixtureHashes(),
@@ -253,8 +262,8 @@ async function main() {
         "Consumer and freelancer-oriented bookkeeping and US tax-adjacent workflows, evaluated through public tools and synthetic data.",
       synthetic_boundary:
         "Only committed synthetic fixtures are supported. The prototype does not accept real taxpayer data or provide tax advice.",
-      current_phase: "Phase 30 - final QA complete",
-      next_phase: "Finalize report, prototype repository, deck, and mentor summary",
+      current_phase: "Phase 31 - final delivery complete",
+      next_phase: "Optional post-internship extensions: screenshots, PDF deck export, hledger-to-tenforty experiment, and license review",
       prototype_target: "Synthetic hledger CLI and JSON adapter",
     },
     architecture: ARCHITECTURE,

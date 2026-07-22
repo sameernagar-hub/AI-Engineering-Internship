@@ -1449,3 +1449,58 @@ Verify that all deliverables are consistent, runnable, and safe to package for f
 ### Tomorrow's Starting Point
 
 Execute Day 31 by finalizing the report, prototype repository, deck, and mentor summary for delivery.
+
+## 07-22-2026 - Phase 31: Final Delivery
+
+### Goal
+
+Finalize the report, prototype repository, presentation deck, and mentor summary, deploy the execution lab to Vercel, then commit and push the completed project.
+
+### What I Did
+
+- Created `report/final_report.md` from the consolidated report draft and updated it with final status, Day 31 metadata refresh, and delivery checklist wording.
+- Copied the editable PowerPoint deck to `deck/open_source_tax_tooling_final_deck.pptx`.
+- Added `notes/mentor_summary.md`.
+- Added `notes/day_31_final_delivery.md`.
+- Added `notes/public_metadata_refresh_2026-07-22.md`.
+- Rewrote the root README into a full project overview, final deliverable map, scope/safety statement, prototype guide, execution-lab guide, repository map, verification commands, and deployment reference.
+- Updated `report/README.md`, `deck/README.md`, and `prototype/README.md` to point to final delivery artifacts.
+- Updated the execution-lab manifest source to show `Phase 31 - final delivery complete`.
+- Made the manifest generator use committed manifests when `VERCEL=1`, because Vercel production builds do not have the full parent repository available for artifact crawling.
+- Deployed the execution lab to Vercel at `https://executionlab.vercel.app`.
+
+### Evidence Captured
+
+- `README.md`
+- `report/final_report.md`
+- `deck/open_source_tax_tooling_final_deck.pptx`
+- `notes/mentor_summary.md`
+- `notes/day_31_final_delivery.md`
+- `notes/public_metadata_refresh_2026-07-22.md`
+- `prototype/execution_lab/scripts/generate-manifest.mjs`
+- `prototype/execution_lab/data/project-manifest.json`
+- `prototype/execution_lab/public/project-manifest.json`
+
+### Decisions Made
+
+- Preserve draft artifacts as history, but make `report/final_report.md` and `deck/open_source_tax_tooling_final_deck.pptx` the reviewer-facing final files.
+- Keep the prototype frozen and avoid adding optional Markdown output or tax-calculation behavior during final delivery.
+- Use committed manifests in Vercel builds, while local builds still regenerate manifests from the full repository.
+- Treat `https://executionlab.vercel.app` as the production review URL.
+
+### Verification
+
+- `python run_day20_demo.py --json` passed locally with hledger `1.52.1`, 19 transactions, 38 postings, 14 accounts, checking balance `8964.77`, reconciliation `passed`, and 15/15 failure-matrix cases passed.
+- `python -m compileall prototype/hledger_adapter prototype/tests run_day20_demo.py prototype/run_day20_demo.py` completed successfully.
+- `npm run build` completed successfully locally.
+- Vercel-mode build simulation with `VERCEL=1 npm run build` completed successfully.
+- `vercel --prod --yes` completed successfully.
+
+### Problems / Open Questions
+
+- No required Day 31 blockers remain.
+- Optional post-internship work can include a PDF deck export, screenshots, hledger-to-tenforty experiment, larger synthetic datasets, and deeper GPL/AGPL review.
+
+### Tomorrow's Starting Point
+
+The internship project is complete and ready for mentor review or portfolio use.

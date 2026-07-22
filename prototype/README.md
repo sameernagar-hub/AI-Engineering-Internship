@@ -4,7 +4,7 @@
 
 Phase 21 prototype review and freeze are complete. The CLI can load committed configuration, validate the canonical synthetic fixtures, discover and version-probe hledger, run real read-only `print -O json`, `balance --flat -O json`, and `incomestatement --depth 3 -O json` reports through scratch copies, reconcile the results, emit normalized transactions/account balances/controlled Schedule C-style totals/tax-adjacent facts, and run a stable failure matrix for expected bad inputs and hledger discovery failures.
 
-The frozen package includes a one-command demo wrapper at [`run_day20_demo.py`](run_day20_demo.py), a Vercel-ready Next.js execution lab at [`execution_lab/`](execution_lab/), and the Day 21 retrospective at [`retrospective.md`](retrospective.md). The execution lab now opens lifecycle phase popups with the command and command output for the selected phase, plus an architecture tab that summarizes the prototype flow. Optional Markdown output is deferred until report polish.
+The frozen package includes a one-command demo wrapper at [`run_day20_demo.py`](run_day20_demo.py), a Vercel-ready Next.js execution lab at [`execution_lab/`](execution_lab/), and the Day 21 retrospective at [`retrospective.md`](retrospective.md). The execution lab opens lifecycle phase popups with the command and command output for the selected phase, plus an architecture tab that summarizes the prototype flow. Optional Markdown output remains a future enhancement because the JSON contract, failure matrix, and execution lab already cover the final demo need.
 
 The implementation contract is in [`design.md`](design.md). The selected target and comparison rationale are in [`research/prototype_target_decision.md`](../research/prototype_target_decision.md).
 
@@ -198,4 +198,4 @@ Phase 21 completed the freeze review:
 - Captured the retrospective covering what worked, what failed, what the integration proves, and what remains out of scope.
 - Deferred optional Markdown rendering until final report polish.
 
-Day 30 completed final QA and rehearsal across the report, prototype, deck, README files, and synthetic-data boundary. Next work should finalize the report, prototype repository, deck, and mentor summary for Day 31 delivery.
+Day 31 final delivery is complete. The prototype is frozen, verified, documented in `report/final_report.md`, represented in the final deck, and available through the execution lab's local live-run and Vercel verified-replay modes.
