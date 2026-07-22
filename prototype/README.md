@@ -73,7 +73,7 @@ npm run dev
 npm run build
 ```
 
-The execution lab opens on the synthetic prototype workflow. `Run Synthetic Demo` calls a local API endpoint that runs `run_day20_demo.py` and never accepts alternate transaction files. `Replay Verified Run` animates the committed Day 18 and Day 19 evidence so a Vercel deployment can still show a functioning walkthrough without a local hledger executable.
+The execution lab opens on the synthetic prototype workflow. Locally, `Run Synthetic Demo` calls an API endpoint that runs `run_day20_demo.py` and never accepts alternate transaction files. On Vercel, the same button returns a committed verified runner payload generated from the local command, so the hosted demo shows the same commands, outputs, summaries, and safety checks without requiring a local hledger executable. `Replay Verified Run` keeps the walkthrough available as an explicitly replayed mode.
 
 ### Commands
 

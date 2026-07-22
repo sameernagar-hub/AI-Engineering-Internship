@@ -1,6 +1,8 @@
 import { spawn } from "node:child_process";
 import path from "node:path";
 import { NextResponse } from "next/server";
+import verifiedDemoRun from "../../../data/verified-demo-run.json";
+import type { DemoRunResult } from "../../types";
 
 export const runtime = "nodejs";
 
@@ -16,12 +18,7 @@ type RequestBody = {
 export async function POST(request: Request) {
   const body = (await request.json().catch(() => ({}))) as RequestBody;
   if (body.mode === "replay" || process.env.VERCEL === "1") {
-    return jsonNoStore({
-      status: "passed",
-      mode: "verified_replay",
-      replay_only: true,
-      message: "Replay uses committed command transcripts and does not execute local hledger.",
-    });
+    return jsonNoStore(verifiedReplayResult());
   }
 
   const appRoot = process.cwd();
@@ -39,6 +36,18 @@ export async function POST(request: Request) {
 
   const result = await runLocalCommand(python, args, prototypeRoot);
   return jsonNoStore(result);
+}
+
+function verifiedReplayResult(): DemoRunResult {
+  const result = JSON.parse(JSON.stringify(verifiedDemoRun)) as DemoRunResult;
+  return {
+    ...result,
+    mode: "verified_replay",
+    execution_steps: result.execution_steps.map((step) => ({
+      ...step,
+      source: "verified-demo-run",
+    })),
+  };
 }
 
 function validateHledgerBin(value: unknown) {

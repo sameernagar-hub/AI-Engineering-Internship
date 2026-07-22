@@ -1,6 +1,6 @@
 # Open-Source Tax Tooling - AI Engineering Research
 
-This repository is the completed July 2026 AI engineering internship project on open-source consumer tax tooling, bookkeeping systems, and programmatic integration surfaces.
+This repository is the completed July 2026 AI engineering research project on open-source consumer tax tooling, bookkeeping systems, and programmatic integration surfaces.
 
 ## Final Status
 
@@ -93,7 +93,7 @@ npm run build
 The app has two run modes:
 
 - Local live run: calls `/api/run`, which runs the fixed synthetic Python demo when hledger is available.
-- Verified replay: animates committed command evidence for Vercel/static review without requiring a local hledger binary.
+- Hosted synthetic run / verified replay: returns the committed local runner payload on Vercel so the same commands, outputs, summaries, and safety checks are visible without requiring a local hledger binary.
 
 ## Repository Map
 

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AI Tax Tooling Prototype",
-  description: "Synthetic-only hledger adapter prototype for the AI engineering internship report.",
+  title: "Open-Source Tax Tooling - AI Engineering Research",
+  description: "Synthetic execution lab for open-source tax tooling research.",
 };
 
 export default function RootLayout({

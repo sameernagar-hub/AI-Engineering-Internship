@@ -859,6 +859,17 @@ th {
   background: var(--red-soft);
 }
 
+.info-banner {
+  margin-bottom: 10px;
+  border: 1px solid #add7dc;
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: var(--teal-dark);
+  background: var(--teal-soft);
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
 .details-zone {
   margin-top: 14px;
 }

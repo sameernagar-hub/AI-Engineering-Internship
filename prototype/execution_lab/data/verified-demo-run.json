@@ -1,0 +1,820 @@
+{
+  "commands": [
+    {
+      "command": "python -m hledger_adapter demo",
+      "duration_ms": 1831,
+      "exit_code": 0,
+      "id": "adapter_demo",
+      "label": "Canonical synthetic adapter demo",
+      "payload": {
+        "accounts": [
+          {
+            "ledger_balance": "8964.77",
+            "name": "Assets:Checking"
+          },
+          {
+            "ledger_balance": "-1200.00",
+            "name": "Equity:Opening Balances"
+          },
+          {
+            "ledger_balance": "12.00",
+            "name": "Expenses:Business:Bank Fees"
+          },
+          {
+            "ledger_balance": "210.00",
+            "name": "Expenses:Business:Coworking"
+          },
+          {
+            "ledger_balance": "320.00",
+            "name": "Expenses:Business:Office Equipment"
+          },
+          {
+            "ledger_balance": "74.23",
+            "name": "Expenses:Business:Office Supplies"
+          },
+          {
+            "ledger_balance": "249.00",
+            "name": "Expenses:Business:Professional Education"
+          },
+          {
+            "ledger_balance": "239.00",
+            "name": "Expenses:Business:Software"
+          },
+          {
+            "ledger_balance": "38.75",
+            "name": "Expenses:Business:Travel"
+          },
+          {
+            "ledger_balance": "370.00",
+            "name": "Expenses:Charity"
+          },
+          {
+            "ledger_balance": "-4550.00",
+            "name": "Income:Freelance:Consulting"
+          },
+          {
+            "ledger_balance": "-5700.00",
+            "name": "Income:Freelance:Design"
+          },
+          {
+            "ledger_balance": "-77.75",
+            "name": "Income:Interest"
+          },
+          {
+            "ledger_balance": "1050.00",
+            "name": "Liabilities:Federal Tax:Estimated Payments"
+          }
+        ],
+        "adapter": {
+          "name": "hledger_adapter",
+          "version": "0.1.0"
+        },
+        "command": "demo",
+        "config": {
+          "category_count": 13,
+          "category_map_sha256": "9a51204ab73ef18fedad4cce17655f3dd8e39f39a6a2ab8822837efe1fa17748",
+          "rules_sha256": "114e2644c27a535506b11509211883e1c4ba5f47982dba843939e502a0ecd68b"
+        },
+        "context": {
+          "business_miles": "78.2",
+          "mileage_status": "preserved_not_calculated",
+          "name": "synthetic_freelancer_tax_profile.json",
+          "sha256": "fe81be0fa84b9a16ace285fac9731b9fc6503e101778b497228b8ef43b02c946",
+          "supplied": true
+        },
+        "counts": {
+          "accounts": 14,
+          "input_files": 1,
+          "postings": 38,
+          "transactions": 19
+        },
+        "dataset": {
+          "currency": "USD",
+          "id": "synthetic-freelancer-2025-v1",
+          "synthetic_data_acknowledged": true,
+          "synthetic_only": true,
+          "tax_year": 2025
+        },
+        "engine_reports": {
+          "operations": [
+            "print_json",
+            "account_balances_json",
+            "income_statement_json"
+          ],
+          "rules_sha256": "114e2644c27a535506b11509211883e1c4ba5f47982dba843939e502a0ecd68b",
+          "scratch": {
+            "kept": false,
+            "path": null
+          }
+        },
+        "hledger": {
+          "executable_name": "hledger.exe",
+          "parsed_version": "1.52.1",
+          "source": "path",
+          "tested_version": "1.52.1",
+          "tested_version_match": true,
+          "version": "hledger 1.52.1-g3834a163b-20260428, windows-x86_64"
+        },
+        "inputs": [
+          {
+            "bytes": 3269,
+            "name": "synthetic_freelancer_transactions.csv",
+            "rows": 19,
+            "sha256": "d9ec4ede86d5b7ec437e93c8ff26533581a5ba75f4970465f10e055865f814bd"
+          }
+        ],
+        "limitations": [
+          "Synthetic bookkeeping summary only; real taxpayer data is unsupported.",
+          "Tax-adjacent labels are controlled mappings, not tax-treatment decisions.",
+          "Mileage is preserved from context and no mileage deduction is calculated."
+        ],
+        "mode": "executed",
+        "provenance": {
+          "context": {
+            "name": "synthetic_freelancer_tax_profile.json",
+            "sha256": "fe81be0fa84b9a16ace285fac9731b9fc6503e101778b497228b8ef43b02c946",
+            "supplied": true
+          },
+          "engine_operations": [
+            "print_json",
+            "account_balances_json",
+            "income_statement_json"
+          ],
+          "inputs": [
+            {
+              "bytes": 3269,
+              "name": "synthetic_freelancer_transactions.csv",
+              "rows": 19,
+              "sha256": "d9ec4ede86d5b7ec437e93c8ff26533581a5ba75f4970465f10e055865f814bd"
+            }
+          ],
+          "mapping_sha256": "9a51204ab73ef18fedad4cce17655f3dd8e39f39a6a2ab8822837efe1fa17748",
+          "rules_sha256": "114e2644c27a535506b11509211883e1c4ba5f47982dba843939e502a0ecd68b"
+        },
+        "reconciliation": {
+          "checking_balance": "8964.77",
+          "checks": [
+            "transaction_ids_exact",
+            "two_balanced_usd_postings_per_transaction",
+            "source_account_amounts_match_csv",
+            "category_postings_equal_and_opposite",
+            "accounts_match_input_categories",
+            "account_balances_match_reconciled_postings",
+            "checking_balance_matches_source_postings"
+          ],
+          "status": "passed"
+        },
+        "schema_version": "1.0.0",
+        "status": "ok",
+        "summary": {
+          "bookkeeping_income_statement": {
+            "equivalent_to_schedule_c_style": false,
+            "expenses": "1512.98",
+            "net": "8814.77",
+            "revenue": "10327.75"
+          },
+          "checking_balance": "8964.77",
+          "opening_balance": "1200.00",
+          "schedule_c_style": {
+            "cash_expenses_before_mileage": "1142.98",
+            "cash_expenses_by_category": {
+              "bank_fees": "12.00",
+              "coworking": "210.00",
+              "local_travel": "38.75",
+              "office_equipment": "320.00",
+              "office_supplies": "74.23",
+              "professional_education_placeholder": "249.00",
+              "software": "239.00"
+            },
+            "gross_receipts": "10250.00",
+            "net_before_mileage": "9107.02",
+            "tax_treatment_authoritative": false
+          },
+          "tax_adjacent": {
+            "cash_charitable_contributions": "370.00",
+            "federal_estimated_tax_payments_tracked": "1050.00",
+            "interest_income": "77.75"
+          }
+        },
+        "transactions": [
+          {
+            "category": "Equity:Opening Balances",
+            "date": "2025-01-01",
+            "description": "Synthetic starting checking balance",
+            "id": "T000",
+            "memo": "Seed balance for tests",
+            "payee": "Opening Balance",
+            "source_account": "Assets:Checking",
+            "source_amount": "1200.00",
+            "source_cleared": true,
+            "tax_hint": "None"
+          },
+          {
+            "category": "Income:Freelance:Design",
+            "date": "2025-01-15",
+            "description": "Freelance design project payment",
+            "id": "T001",
+            "memo": "Synthetic client income",
+            "payee": "Acme Design Co",
+            "source_account": "Assets:Checking",
+            "source_amount": "2500.00",
+            "source_cleared": true,
+            "tax_hint": "Schedule C gross receipts"
+          },
+          {
+            "category": "Expenses:Business:Software",
+            "date": "2025-01-31",
+            "description": "Monthly software subscription",
+            "id": "T002",
+            "memo": "Synthetic business expense",
+            "payee": "CloudCode Tools",
+            "source_account": "Assets:Checking",
+            "source_amount": "-59.00",
+            "source_cleared": true,
+            "tax_hint": "Schedule C software"
+          },
+          {
+            "category": "Expenses:Business:Office Equipment",
+            "date": "2025-02-03",
+            "description": "Office chair purchase",
+            "id": "T003",
+            "memo": "Synthetic business expense",
+            "payee": "DeskHub Supply",
+            "source_account": "Assets:Checking",
+            "source_amount": "-320.00",
+            "source_cleared": true,
+            "tax_hint": "Schedule C office equipment"
+          },
+          {
+            "category": "Income:Freelance:Consulting",
+            "date": "2025-03-12",
+            "description": "Freelance consulting payment",
+            "id": "T004",
+            "memo": "Synthetic client income",
+            "payee": "Northstar Analytics",
+            "source_account": "Assets:Checking",
+            "source_amount": "1800.00",
+            "source_cleared": true,
+            "tax_hint": "Schedule C gross receipts"
+          },
+          {
+            "category": "Expenses:Business:Travel",
+            "date": "2025-03-16",
+            "description": "Transit to client meeting",
+            "id": "T005",
+            "memo": "Synthetic business expense",
+            "payee": "Metro Transit",
+            "source_account": "Assets:Checking",
+            "source_amount": "-38.75",
+            "source_cleared": true,
+            "tax_hint": "Schedule C local travel"
+          },
+          {
+            "category": "Income:Interest",
+            "date": "2025-03-31",
+            "description": "Savings account interest",
+            "id": "T006",
+            "memo": "Synthetic interest income",
+            "payee": "Sample Bank HYSA",
+            "source_account": "Assets:Checking",
+            "source_amount": "42.18",
+            "source_cleared": true,
+            "tax_hint": "Schedule B interest"
+          },
+          {
+            "category": "Expenses:Charity",
+            "date": "2025-04-05",
+            "description": "Cash charitable donation",
+            "id": "T007",
+            "memo": "Synthetic charitable donation",
+            "payee": "City Library Foundation",
+            "source_account": "Assets:Checking",
+            "source_amount": "-120.00",
+            "source_cleared": true,
+            "tax_hint": "Schedule A cash charity"
+          },
+          {
+            "category": "Expenses:Business:Office Supplies",
+            "date": "2025-05-08",
+            "description": "Printer paper and ink",
+            "id": "T008",
+            "memo": "Synthetic business expense",
+            "payee": "OfficeMart",
+            "source_account": "Assets:Checking",
+            "source_amount": "-74.23",
+            "source_cleared": true,
+            "tax_hint": "Schedule C office supplies"
+          },
+          {
+            "category": "Expenses:Business:Bank Fees",
+            "date": "2025-06-01",
+            "description": "Business checking service fee",
+            "id": "T009",
+            "memo": "Synthetic business expense",
+            "payee": "Sample Bank",
+            "source_account": "Assets:Checking",
+            "source_amount": "-12.00",
+            "source_cleared": true,
+            "tax_hint": "Schedule C bank fees"
+          },
+          {
+            "category": "Liabilities:Federal Tax:Estimated Payments",
+            "date": "2025-06-15",
+            "description": "Quarterly estimated tax payment",
+            "id": "T010",
+            "memo": "Synthetic tax payment",
+            "payee": "Synthetic Federal Treasury",
+            "source_account": "Assets:Checking",
+            "source_amount": "-400.00",
+            "source_cleared": true,
+            "tax_hint": "Form 1040 estimated payments"
+          },
+          {
+            "category": "Income:Freelance:Design",
+            "date": "2025-06-20",
+            "description": "Freelance redesign payment",
+            "id": "T011",
+            "memo": "Synthetic client income",
+            "payee": "Acme Design Co",
+            "source_account": "Assets:Checking",
+            "source_amount": "3200.00",
+            "source_cleared": true,
+            "tax_hint": "Schedule C gross receipts"
+          },
+          {
+            "category": "Expenses:Business:Professional Education",
+            "date": "2025-07-04",
+            "description": "Professional education ticket",
+            "id": "T012",
+            "memo": "Synthetic business expense",
+            "payee": "Open Source Finance Summit",
+            "source_account": "Assets:Checking",
+            "source_amount": "-249.00",
+            "source_cleared": true,
+            "tax_hint": "Schedule C education placeholder"
+          },
+          {
+            "category": "Expenses:Business:Software",
+            "date": "2025-08-15",
+            "description": "Annual software plan",
+            "id": "T013",
+            "memo": "Synthetic business expense",
+            "payee": "CloudCode Tools",
+            "source_account": "Assets:Checking",
+            "source_amount": "-180.00",
+            "source_cleared": true,
+            "tax_hint": "Schedule C software"
+          },
+          {
+            "category": "Expenses:Business:Coworking",
+            "date": "2025-09-03",
+            "description": "Coworking day passes",
+            "id": "T014",
+            "memo": "Synthetic business expense",
+            "payee": "DeskHub Coworking",
+            "source_account": "Assets:Checking",
+            "source_amount": "-210.00",
+            "source_cleared": true,
+            "tax_hint": "Schedule C workspace"
+          },
+          {
+            "category": "Expenses:Charity",
+            "date": "2025-09-10",
+            "description": "Cash charitable donation",
+            "id": "T015",
+            "memo": "Synthetic charitable donation",
+            "payee": "Neighborhood Food Fund",
+            "source_account": "Assets:Checking",
+            "source_amount": "-250.00",
+            "source_cleared": true,
+            "tax_hint": "Schedule A cash charity"
+          },
+          {
+            "category": "Income:Interest",
+            "date": "2025-10-01",
+            "description": "Savings account interest",
+            "id": "T016",
+            "memo": "Synthetic interest income",
+            "payee": "Sample Bank HYSA",
+            "source_account": "Assets:Checking",
+            "source_amount": "35.57",
+            "source_cleared": true,
+            "tax_hint": "Schedule B interest"
+          },
+          {
+            "category": "Income:Freelance:Consulting",
+            "date": "2025-11-05",
+            "description": "Freelance analytics payment",
+            "id": "T017",
+            "memo": "Synthetic client income",
+            "payee": "Northstar Analytics",
+            "source_account": "Assets:Checking",
+            "source_amount": "2750.00",
+            "source_cleared": true,
+            "tax_hint": "Schedule C gross receipts"
+          },
+          {
+            "category": "Liabilities:Federal Tax:Estimated Payments",
+            "date": "2025-12-15",
+            "description": "Quarterly estimated tax payment",
+            "id": "T018",
+            "memo": "Synthetic tax payment",
+            "payee": "Synthetic Federal Treasury",
+            "source_account": "Assets:Checking",
+            "source_amount": "-650.00",
+            "source_cleared": true,
+            "tax_hint": "Form 1040 estimated payments"
+          }
+        ],
+        "unmapped_tax_facts": [
+          {
+            "code": "BUSINESS_MILEAGE",
+            "deduction_usd": null,
+            "status": "preserved_not_calculated",
+            "unit": "mile",
+            "value": "78.2"
+          },
+          {
+            "amount": "370.00",
+            "code": "CHARITY_TREATMENT",
+            "status": "summarized_no_deductibility_decision"
+          },
+          {
+            "amount": "1050.00",
+            "code": "ESTIMATED_PAYMENT_TREATMENT",
+            "status": "summarized_no_tax_liability_or_refund"
+          }
+        ],
+        "unsupported_capabilities": [
+          "tax_liability_calculation",
+          "deductibility_determination",
+          "form_1040_generation",
+          "schedule_generation",
+          "refund_calculation",
+          "return_validation",
+          "efile_submission"
+        ],
+        "warnings": [
+          {
+            "code": "NOT_TAX_CALCULATION",
+            "message": "Results are bookkeeping summaries and non-authoritative tax-adjacent labels."
+          },
+          {
+            "code": "TAX_HINTS_NON_AUTHORITATIVE",
+            "message": "Tax hints are controlled synthetic labels, not tax treatment."
+          }
+        ]
+      },
+      "status": "passed",
+      "stderr_excerpt": "",
+      "stdout_excerpt": "{\n  \"accounts\": [\n    {\n      \"ledger_balance\": \"8964.77\",\n      \"name\": \"Assets:Checking\"\n    },\n    {\n      \"ledger_balance\": \"-1200.00\",\n      \"name\": \"Equity:Opening Balances\"\n    },\n    {\n      \"ledger_balance\": \"12.00\",\n      \"name\": \"Expenses:Business:Bank Fees\"\n    },\n    {\n      \"ledger_balance\": \"210.00\",\n      \"name\": \"Expenses:Business:Coworking\"\n    },\n    {\n      \"ledger_balance\": \"320.00\",\n      \"name\": \"Expenses:Business:Office Equipment\"\n    },\n    {\n      \"ledger_balance\": \"74.23\",\n      \"name\": \"Expenses:Business:Office Supplies\"\n    },\n    {\n      \"ledger_balance\": \"249.00\",\n      \"name\": \"Expenses:Business:Professional Education\"\n    },\n    {\n      \"ledger_balance\": \"239.00\",\n      \"name\": \"Expenses:Business:Software\"\n    },\n    {\n      \"ledger_balance\": \"38.75\",\n      \"name\": \"Expenses:Business:Travel\"\n    },\n    {\n      \"ledger_balance\": \"370.00\",\n      \"name\": \"Expenses:Charity\"\n    },\n    {\n      \"ledger_balance\": \"-4550.00\",\n      \"name\": \"Income:Freelance:Consulting\"\n    },\n    {\n      \"ledger_balance\": \"-5700.00\",\n      \"name\": \"Income:Freelance:Design\"\n    },\n    {\n      \"ledger_balance\": \"-77.75\",\n      \"name\": \"Income:Interest\"\n    },\n    {\n      \"ledger_balance\": \"1050.00\",\n      \"name\": \"Liabilities:Federal Tax:Estimated Payments\"\n    }\n  ],\n  \"adapter\": {\n    \"name\": \"hledger_adapter\",\n    \"version\": \"0.1.0\"\n  },\n  \"command\": \"demo\",\n  \"config\": {\n    \"category_count\": 13,\n    \"category_map_sha256\": \"9a51204ab73ef18fedad4cce17655f3dd8e39f39a6a2ab8822837efe1fa17748\",\n    \"rules_sha256\": \"114e2644c27a535506b11509211883e1c4ba5f47982dba843939e502a0ecd68b\"\n  },\n  \"context\": {\n    \"business_miles\": \"78.2\",\n    \"mileage_status\": \"preserved_not_calculated\",\n    \"name\": \"synthetic_freelancer_tax_profile.json\",\n    \"sha256\": \"fe81be0fa84b9a16ace285fac9731b9fc6503e101778b497228b8ef43b02c946\",\n    \"supplied\": true\n  },\n  \"counts\": {\n    \"accounts\": 14,\n    \"input_files\": 1,\n    \"postings\": 38,\n    \"transactions\": 19\n  },\n  \"dataset\": {\n    \"currency\": \"USD\",\n    \"id\": \"synthetic-freelancer-2025-v1\",\n    \"synthetic_data_acknowledged\": true,\n    \"synthetic_only\": true,\n    \"tax_year\": 2025\n  },\n  \"engine_reports\": {\n    \"operations\": [\n      \"print_json\",\n      \"account_balances_json\",\n      \"income_statement_json\"\n    ],\n    \"rules_sha256\": \"114e2644c27a535506b11509211883e1c4ba5f47982dba843939e502a0ecd68b\",\n    \"scratch\": {\n      \"kept\": false,\n      \"path\": null\n    }\n  },\n  \"hledger\": {\n    \"executable_name\": \"hledger.exe\",\n    \"parsed_version\": \"1.52.1\",\n    \"source\": \"path\",\n    \"tested_version\": \"1.52.1\",\n    \"tested_version_match\": true,\n    \"version\": \"hledger 1.52.1-g3834a163b-20260428, windows-x86_64\"\n  },\n  \"inputs\": [\n    {\n      \"bytes\": 3269,\n      \"name\": \"synthetic_freelancer_transactions.csv\",\n      \"rows\": 19,\n      \"sha256\": \"d9ec4ede86d5b7ec437e93c8ff26533581a5ba75f4970465f10e055865f814bd\"\n    }\n  ],\n  \"limitations\": [\n    \"Synthetic bookkeeping summary only; real taxpayer data is unsupported.\",\n    \"Tax-adjacent labels are controlled mappings, not tax-treatment decisions.\",\n    \"Mileage is preserved from context and no mileage deduction is calculated.\"\n  ],\n  \"mode\": \"executed\",\n  \"provenance\": {\n    \"context\": {\n      \"name\": \"synthetic_freelancer_tax_profile.json\",\n      \"sha256\": \"fe81be0fa84b9a16ace285fac9731b9fc6503e101778b497228b8ef43b02c946\",\n      \"supplied\": true\n    },\n    \"engine_operations\": [\n      \"print_json\",\n      \"account_balances_json\",\n      \"income_statement_json\"\n    ],\n    \"inputs\": [\n      {\n        \"bytes\": 3269,\n        \"name\": \"synthetic_freelancer_transactions.csv\",\n        \"rows\": 19,\n        \"sha256\": \"d9ec4ede86d5b7ec437e93c8ff26533581a5ba75f4970465f10e055865f814bd\"\n      }\n    ],\n    \"mapping_sha256\": \"9a51204ab73ef18fedad4cce17655f3dd8e39f39a6a2ab8822837efe1fa17748\",\n    \"rules_sha256\": \"114e2644c27a535506b11509211883e1c4ba5f47982dba843939e502a0ecd68b\"\n  },\n  \"reconciliation\": {\n    \"checking_balance\": \"8964.77\",\n    \"checks\": [\n      \"transaction_ids_ex"
+    },
+    {
+      "command": "python tests/run_failure_matrix.py",
+      "duration_ms": 6011,
+      "exit_code": 0,
+      "id": "failure_matrix",
+      "label": "Safety failure matrix",
+      "payload": {
+        "case_count": 15,
+        "cases": [
+          {
+            "expected_code": null,
+            "expected_exit": 0,
+            "name": "valid_input_validate_ok",
+            "observed_code": null,
+            "observed_exit": 0,
+            "problems": [],
+            "status": "passed"
+          },
+          {
+            "expected_code": "SYNTHETIC_CONFIRMATION_REQUIRED",
+            "expected_exit": 2,
+            "name": "missing_synthetic_ack",
+            "observed_code": "SYNTHETIC_CONFIRMATION_REQUIRED",
+            "observed_exit": 2,
+            "problems": [],
+            "status": "passed"
+          },
+          {
+            "expected_code": "INPUT_DATE_INVALID",
+            "expected_exit": 2,
+            "name": "malformed_date",
+            "observed_code": "INPUT_DATE_INVALID",
+            "observed_exit": 2,
+            "problems": [],
+            "status": "passed"
+          },
+          {
+            "expected_code": "INPUT_AMOUNT_INVALID",
+            "expected_exit": 2,
+            "name": "invalid_amount",
+            "observed_code": "INPUT_AMOUNT_INVALID",
+            "observed_exit": 2,
+            "problems": [],
+            "status": "passed"
+          },
+          {
+            "expected_code": "INPUT_CATEGORY_UNKNOWN",
+            "expected_exit": 2,
+            "name": "unknown_category",
+            "observed_code": "INPUT_CATEGORY_UNKNOWN",
+            "observed_exit": 2,
+            "problems": [],
+            "status": "passed"
+          },
+          {
+            "expected_code": "INPUT_ACCOUNT_UNKNOWN",
+            "expected_exit": 2,
+            "name": "unknown_source_account",
+            "observed_code": "INPUT_ACCOUNT_UNKNOWN",
+            "observed_exit": 2,
+            "problems": [],
+            "status": "passed"
+          },
+          {
+            "expected_code": "INPUT_ID_DUPLICATE",
+            "expected_exit": 2,
+            "name": "duplicate_transaction_id",
+            "observed_code": "INPUT_ID_DUPLICATE",
+            "observed_exit": 2,
+            "problems": [],
+            "status": "passed"
+          },
+          {
+            "expected_code": "INPUT_NOT_FOUND",
+            "expected_exit": 2,
+            "name": "missing_transaction_file",
+            "observed_code": "INPUT_NOT_FOUND",
+            "observed_exit": 2,
+            "problems": [],
+            "status": "passed"
+          },
+          {
+            "expected_code": "INPUT_TAX_HINT_MISMATCH",
+            "expected_exit": 2,
+            "name": "tax_hint_mismatch",
+            "observed_code": "INPUT_TAX_HINT_MISMATCH",
+            "observed_exit": 2,
+            "problems": [],
+            "status": "passed"
+          },
+          {
+            "expected_code": "INPUT_SIGN_INVALID",
+            "expected_exit": 2,
+            "name": "wrong_amount_sign",
+            "observed_code": "INPUT_SIGN_INVALID",
+            "observed_exit": 2,
+            "problems": [],
+            "status": "passed"
+          },
+          {
+            "expected_code": "CONTEXT_INVALID",
+            "expected_exit": 2,
+            "name": "context_dataset_mismatch",
+            "observed_code": "CONTEXT_INVALID",
+            "observed_exit": 2,
+            "problems": [],
+            "status": "passed"
+          },
+          {
+            "expected_code": "CONTEXT_INVALID",
+            "expected_exit": 2,
+            "name": "context_negative_mileage",
+            "observed_code": "CONTEXT_INVALID",
+            "observed_exit": 2,
+            "problems": [],
+            "status": "passed"
+          },
+          {
+            "expected_code": "DRY_RUN_OPTION_CONFLICT",
+            "expected_exit": 2,
+            "name": "dry_run_keep_scratch_conflict",
+            "observed_code": "DRY_RUN_OPTION_CONFLICT",
+            "observed_exit": 2,
+            "problems": [],
+            "status": "passed"
+          },
+          {
+            "expected_code": "HLEDGER_NOT_FOUND",
+            "expected_exit": 3,
+            "name": "hledger_not_found",
+            "observed_code": "HLEDGER_NOT_FOUND",
+            "observed_exit": 3,
+            "problems": [],
+            "status": "passed"
+          },
+          {
+            "expected_code": "HLEDGER_UNUSABLE",
+            "expected_exit": 3,
+            "name": "hledger_unusable_candidate",
+            "observed_code": "HLEDGER_UNUSABLE",
+            "observed_exit": 3,
+            "problems": [],
+            "status": "passed"
+          }
+        ],
+        "failed_count": 0,
+        "passed_count": 15,
+        "scratch_unchanged": true,
+        "status": "passed"
+      },
+      "status": "passed",
+      "stderr_excerpt": "",
+      "stdout_excerpt": "{\n  \"case_count\": 15,\n  \"cases\": [\n    {\n      \"expected_code\": null,\n      \"expected_exit\": 0,\n      \"name\": \"valid_input_validate_ok\",\n      \"observed_code\": null,\n      \"observed_exit\": 0,\n      \"problems\": [],\n      \"status\": \"passed\"\n    },\n    {\n      \"expected_code\": \"SYNTHETIC_CONFIRMATION_REQUIRED\",\n      \"expected_exit\": 2,\n      \"name\": \"missing_synthetic_ack\",\n      \"observed_code\": \"SYNTHETIC_CONFIRMATION_REQUIRED\",\n      \"observed_exit\": 2,\n      \"problems\": [],\n      \"status\": \"passed\"\n    },\n    {\n      \"expected_code\": \"INPUT_DATE_INVALID\",\n      \"expected_exit\": 2,\n      \"name\": \"malformed_date\",\n      \"observed_code\": \"INPUT_DATE_INVALID\",\n      \"observed_exit\": 2,\n      \"problems\": [],\n      \"status\": \"passed\"\n    },\n    {\n      \"expected_code\": \"INPUT_AMOUNT_INVALID\",\n      \"expected_exit\": 2,\n      \"name\": \"invalid_amount\",\n      \"observed_code\": \"INPUT_AMOUNT_INVALID\",\n      \"observed_exit\": 2,\n      \"problems\": [],\n      \"status\": \"passed\"\n    },\n    {\n      \"expected_code\": \"INPUT_CATEGORY_UNKNOWN\",\n      \"expected_exit\": 2,\n      \"name\": \"unknown_category\",\n      \"observed_code\": \"INPUT_CATEGORY_UNKNOWN\",\n      \"observed_exit\": 2,\n      \"problems\": [],\n      \"status\": \"passed\"\n    },\n    {\n      \"expected_code\": \"INPUT_ACCOUNT_UNKNOWN\",\n      \"expected_exit\": 2,\n      \"name\": \"unknown_source_account\",\n      \"observed_code\": \"INPUT_ACCOUNT_UNKNOWN\",\n      \"observed_exit\": 2,\n      \"problems\": [],\n      \"status\": \"passed\"\n    },\n    {\n      \"expected_code\": \"INPUT_ID_DUPLICATE\",\n      \"expected_exit\": 2,\n      \"name\": \"duplicate_transaction_id\",\n      \"observed_code\": \"INPUT_ID_DUPLICATE\",\n      \"observed_exit\": 2,\n      \"problems\": [],\n      \"status\": \"passed\"\n    },\n    {\n      \"expected_code\": \"INPUT_NOT_FOUND\",\n      \"expected_exit\": 2,\n      \"name\": \"missing_transaction_file\",\n      \"observed_code\": \"INPUT_NOT_FOUND\",\n      \"observed_exit\": 2,\n      \"problems\": [],\n      \"status\": \"passed\"\n    },\n    {\n      \"expected_code\": \"INPUT_TAX_HINT_MISMATCH\",\n      \"expected_exit\": 2,\n      \"name\": \"tax_hint_mismatch\",\n      \"observed_code\": \"INPUT_TAX_HINT_MISMATCH\",\n      \"observed_exit\": 2,\n      \"problems\": [],\n      \"status\": \"passed\"\n    },\n    {\n      \"expected_code\": \"INPUT_SIGN_INVALID\",\n      \"expected_exit\": 2,\n      \"name\": \"wrong_amount_sign\",\n      \"observed_code\": \"INPUT_SIGN_INVALID\",\n      \"observed_exit\": 2,\n      \"problems\": [],\n      \"status\": \"passed\"\n    },\n    {\n      \"expected_code\": \"CONTEXT_INVALID\",\n      \"expected_exit\": 2,\n      \"name\": \"context_dataset_mismatch\",\n      \"observed_code\": \"CONTEXT_INVALID\",\n      \"observed_exit\": 2,\n      \"problems\": [],\n      \"status\": \"passed\"\n    },\n    {\n      \"expected_code\": \"CONTEXT_INVALID\",\n      \"expected_exit\": 2,\n      \"name\": \"context_negative_mileage\",\n      \"observed_code\": \"CONTEXT_INVALID\",\n      \"observed_exit\": 2,\n      \"problems\": [],\n      \"status\": \"passed\"\n    },\n    {\n      \"expected_code\": \"DRY_RUN_OPTION_CONFLICT\",\n      \"expected_exit\": 2,\n      \"name\": \"dry_run_keep_scratch_conflict\",\n      \"observed_code\": \"DRY_RUN_OPTION_CONFLICT\",\n      \"observed_exit\": 2,\n      \"problems\": [],\n      \"status\": \"passed\"\n    },\n    {\n      \"expected_code\": \"HLEDGER_NOT_FOUND\",\n      \"expected_exit\": 3,\n      \"name\": \"hledger_not_found\",\n      \"observed_code\": \"HLEDGER_NOT_FOUND\",\n      \"observed_exit\": 3,\n      \"problems\": [],\n      \"status\": \"passed\"\n    },\n    {\n      \"expected_code\": \"HLEDGER_UNUSABLE\",\n      \"expected_exit\": 3,\n      \"name\": \"hledger_unusable_candidate\",\n      \"observed_code\": \"HLEDGER_UNUSABLE\",\n      \"observed_exit\": 3,\n      \"problems\": [],\n      \"status\": \"passed\"\n    }\n  ],\n  \"failed_count\": 0,\n  \"passed_count\": 15,\n  \"scratch_unchanged\": true,\n  \"status\": \"passed\"\n}\n"
+    }
+  ],
+  "execution_steps": [
+    {
+      "id": "input_validation",
+      "source": "python-runner",
+      "status": "passed"
+    },
+    {
+      "id": "hledger_discovery",
+      "source": "python-runner",
+      "status": "passed"
+    },
+    {
+      "id": "version_probe",
+      "source": "python-runner",
+      "status": "passed"
+    },
+    {
+      "id": "scratch_setup",
+      "source": "python-runner",
+      "status": "passed"
+    },
+    {
+      "id": "print_report",
+      "source": "python-runner",
+      "status": "passed"
+    },
+    {
+      "id": "balance_report",
+      "source": "python-runner",
+      "status": "passed"
+    },
+    {
+      "id": "income_statement",
+      "source": "python-runner",
+      "status": "passed"
+    },
+    {
+      "id": "reconciliation",
+      "source": "python-runner",
+      "status": "passed"
+    },
+    {
+      "id": "summary_aggregation",
+      "source": "python-runner",
+      "status": "passed"
+    },
+    {
+      "id": "failure_matrix",
+      "source": "python-runner",
+      "status": "passed"
+    },
+    {
+      "id": "cleanup",
+      "source": "python-runner",
+      "status": "passed"
+    }
+  ],
+  "failure_matrix": {
+    "case_count": 15,
+    "cases": [
+      {
+        "expected_code": null,
+        "name": "valid_input_validate_ok",
+        "observed_code": null,
+        "status": "passed"
+      },
+      {
+        "expected_code": "SYNTHETIC_CONFIRMATION_REQUIRED",
+        "name": "missing_synthetic_ack",
+        "observed_code": "SYNTHETIC_CONFIRMATION_REQUIRED",
+        "status": "passed"
+      },
+      {
+        "expected_code": "INPUT_DATE_INVALID",
+        "name": "malformed_date",
+        "observed_code": "INPUT_DATE_INVALID",
+        "status": "passed"
+      },
+      {
+        "expected_code": "INPUT_AMOUNT_INVALID",
+        "name": "invalid_amount",
+        "observed_code": "INPUT_AMOUNT_INVALID",
+        "status": "passed"
+      },
+      {
+        "expected_code": "INPUT_CATEGORY_UNKNOWN",
+        "name": "unknown_category",
+        "observed_code": "INPUT_CATEGORY_UNKNOWN",
+        "status": "passed"
+      },
+      {
+        "expected_code": "INPUT_ACCOUNT_UNKNOWN",
+        "name": "unknown_source_account",
+        "observed_code": "INPUT_ACCOUNT_UNKNOWN",
+        "status": "passed"
+      },
+      {
+        "expected_code": "INPUT_ID_DUPLICATE",
+        "name": "duplicate_transaction_id",
+        "observed_code": "INPUT_ID_DUPLICATE",
+        "status": "passed"
+      },
+      {
+        "expected_code": "INPUT_NOT_FOUND",
+        "name": "missing_transaction_file",
+        "observed_code": "INPUT_NOT_FOUND",
+        "status": "passed"
+      },
+      {
+        "expected_code": "INPUT_TAX_HINT_MISMATCH",
+        "name": "tax_hint_mismatch",
+        "observed_code": "INPUT_TAX_HINT_MISMATCH",
+        "status": "passed"
+      },
+      {
+        "expected_code": "INPUT_SIGN_INVALID",
+        "name": "wrong_amount_sign",
+        "observed_code": "INPUT_SIGN_INVALID",
+        "status": "passed"
+      },
+      {
+        "expected_code": "CONTEXT_INVALID",
+        "name": "context_dataset_mismatch",
+        "observed_code": "CONTEXT_INVALID",
+        "status": "passed"
+      },
+      {
+        "expected_code": "CONTEXT_INVALID",
+        "name": "context_negative_mileage",
+        "observed_code": "CONTEXT_INVALID",
+        "status": "passed"
+      },
+      {
+        "expected_code": "DRY_RUN_OPTION_CONFLICT",
+        "name": "dry_run_keep_scratch_conflict",
+        "observed_code": "DRY_RUN_OPTION_CONFLICT",
+        "status": "passed"
+      },
+      {
+        "expected_code": "HLEDGER_NOT_FOUND",
+        "name": "hledger_not_found",
+        "observed_code": "HLEDGER_NOT_FOUND",
+        "status": "passed"
+      },
+      {
+        "expected_code": "HLEDGER_UNUSABLE",
+        "name": "hledger_unusable_candidate",
+        "observed_code": "HLEDGER_UNUSABLE",
+        "status": "passed"
+      }
+    ],
+    "failed_count": 0,
+    "passed_count": 15,
+    "scratch_unchanged": true,
+    "status": "passed"
+  },
+  "limitations": [
+    "Synthetic bookkeeping summary only; real taxpayer data is unsupported.",
+    "Tax-adjacent labels are controlled mappings, not tax-treatment decisions.",
+    "Mileage is preserved from context and no mileage deduction is calculated."
+  ],
+  "mode": "local_live",
+  "schema_version": "1.0.0",
+  "status": "passed",
+  "summary": {
+    "accounts": 14,
+    "bookkeeping_expenses": "1512.98",
+    "bookkeeping_net": "8814.77",
+    "bookkeeping_revenue": "10327.75",
+    "business_miles": "78.2",
+    "cash_charitable_contributions": "370.00",
+    "checking_balance": "8964.77",
+    "federal_estimated_payments": "1050.00",
+    "hledger_version": "hledger 1.52.1-g3834a163b-20260428, windows-x86_64",
+    "interest_income": "77.75",
+    "postings": 38,
+    "reconciliation_status": "passed",
+    "schedule_c_cash_expenses_before_mileage": "1142.98",
+    "schedule_c_gross_receipts": "10250.00",
+    "schedule_c_net_before_mileage": "9107.02",
+    "transactions": 19
+  },
+  "synthetic_only": true,
+  "warnings": [
+    {
+      "code": "NOT_TAX_CALCULATION",
+      "message": "Results are bookkeeping summaries and non-authoritative tax-adjacent labels."
+    },
+    {
+      "code": "TAX_HINTS_NON_AUTHORITATIVE",
+      "message": "Tax hints are controlled synthetic labels, not tax treatment."
+    }
+  ]
+}

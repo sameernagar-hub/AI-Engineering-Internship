@@ -91,9 +91,11 @@ export function LabClient({ manifest }: { manifest: ProjectManifest }) {
   const failureMatrix = runResult?.failure_matrix?.case_count
     ? runResult.failure_matrix
     : manifest.prototype.failure_matrix;
+  const limitations = runResult?.limitations?.length ? runResult.limitations : manifest.prototype.unsupported_capabilities;
   const artifactCount = manifest.artifacts.reduce((total, group) => total + group.files.length, 0);
   const runCommands = runResult?.commands ?? [];
   const resultStatus = running ? "running" : runResult?.status ?? "waiting";
+  const runStatus = runResult?.status ?? null;
 
   useEffect(() => {
     return () => clearProgressTimer();
@@ -194,6 +196,7 @@ export function LabClient({ manifest }: { manifest: ProjectManifest }) {
           return;
         }
         clearProgressTimer();
+        setMode(payload.mode === "verified_replay" ? "replay" : "live");
         setRunResult(payload);
         const statuses = Object.fromEntries(
           manifest.execution.steps.map((step) => [
@@ -202,6 +205,7 @@ export function LabClient({ manifest }: { manifest: ProjectManifest }) {
           ]),
         ) as Record<string, StepStatus>;
         setStepStatuses(statuses);
+        focusResultStep(statuses);
       } else {
         if (runToken.current !== token) {
           return;
@@ -261,6 +265,16 @@ export function LabClient({ manifest }: { manifest: ProjectManifest }) {
   function openPhase(stepId: string) {
     setActiveStepId(stepId);
     setOpenStepId(stepId);
+  }
+
+  function focusResultStep(statuses: Record<string, StepStatus>) {
+    const attentionStep =
+      manifest.execution.steps.find((step) => statuses[step.id] === "failed") ??
+      manifest.execution.steps.find((step) => statuses[step.id] === "blocked") ??
+      manifest.execution.steps.at(-1);
+    if (attentionStep) {
+      setActiveStepId(attentionStep.id);
+    }
   }
 
   return (
@@ -334,8 +348,21 @@ export function LabClient({ manifest }: { manifest: ProjectManifest }) {
 
       <section className="io-grid" aria-label="Live prototype inputs and outputs">
         <InputDataPanel manifest={manifest} />
-        <CommandConsole commands={runCommands} manifest={manifest} mode={mode} error={runError} running={running} />
-        <ResultPanel summary={summary} failureMatrix={failureMatrix} limitations={manifest.prototype.unsupported_capabilities} error={runError} />
+        <CommandConsole
+          commands={runCommands}
+          manifest={manifest}
+          mode={mode}
+          error={runError}
+          running={running}
+          runStatus={runStatus}
+        />
+        <ResultPanel
+          summary={summary}
+          failureMatrix={failureMatrix}
+          limitations={limitations}
+          error={runError}
+          warnings={runResult?.warnings ?? []}
+        />
       </section>
 
       <section className="details-zone" aria-label="Project details">
@@ -590,13 +617,16 @@ function CommandConsole({
   mode,
   error,
   running,
+  runStatus,
 }: {
   commands: DemoCommandResult[];
   manifest: ProjectManifest;
   mode: Mode;
   error: string | null;
   running: boolean;
+  runStatus: DemoRunResult["status"] | null;
 }) {
+  const completedReplay = mode === "replay" && runStatus === "passed";
   const plannedCommands = commands.length
     ? commands
     : manifest.prototype.commands.map((command, index) => ({
@@ -610,7 +640,7 @@ function CommandConsole({
         stdout_excerpt: "",
         stderr_excerpt: "",
       }));
-  const terminalText = terminalOutput(commands, mode, error, running);
+  const terminalText = terminalOutput(commands, mode, error, running, runStatus);
 
   return (
     <section className="panel live-panel">
@@ -620,7 +650,7 @@ function CommandConsole({
           <div key={command.id} className="command-row" data-status={command.status}>
             <span>{command.label}</span>
             <code>{command.command}</code>
-            <strong>{commands.length ? `${command.status} / exit ${String(command.exit_code)}` : "ready"}</strong>
+            <strong>{commands.length ? `${command.status} / exit ${String(command.exit_code)}` : completedReplay ? "verified" : "ready"}</strong>
           </div>
         ))}
       </div>
@@ -634,16 +664,25 @@ function ResultPanel({
   failureMatrix,
   limitations,
   error,
+  warnings,
 }: {
   summary: Record<string, string | number | null | undefined>;
   failureMatrix: DemoRunResult["failure_matrix"];
   limitations: string[];
   error: string | null;
+  warnings: DemoRunResult["warnings"];
 }) {
   return (
     <section className="panel live-panel">
-      <PanelHeader icon={<CheckCircle2 aria-hidden="true" />} title="Live Output" detail="Summary and safety result" />
+      <PanelHeader icon={<CheckCircle2 aria-hidden="true" />} title="Prototype Output" detail="Summary and safety result" />
       {error ? <div className="error-banner">{error}</div> : null}
+      {!error && warnings.length
+        ? warnings.map((warning) => (
+            <div key={`${warning.code ?? "warning"}-${warning.message ?? ""}`} className="info-banner">
+              {warning.message ?? warning.code}
+            </div>
+          ))
+        : null}
       <div className="metric-grid">
         {countLabels.map((item) => (
           <Metric key={item.key} label={item.label} value={summary[item.key]} />
@@ -1159,7 +1198,13 @@ function outputLines(...lines: string[]) {
   return lines.join("\n");
 }
 
-function terminalOutput(commands: DemoCommandResult[], mode: Mode, error: string | null, running: boolean) {
+function terminalOutput(
+  commands: DemoCommandResult[],
+  mode: Mode,
+  error: string | null,
+  running: boolean,
+  runStatus: DemoRunResult["status"] | null,
+) {
   if (running) {
     return mode === "live"
       ? "$ python run_day20_demo.py --json\nrunning synthetic adapter and safety matrix..."
@@ -1169,6 +1214,9 @@ function terminalOutput(commands: DemoCommandResult[], mode: Mode, error: string
     return `$ run failed\n${error}`;
   }
   if (commands.length === 0) {
+    if (mode === "replay" && runStatus === "passed") {
+      return "$ replay verified command evidence\nstatus: passed\nall lifecycle phases matched the committed local run evidence.";
+    }
     return "$ ready\nUse Run Synthetic Demo for a local hledger-backed run, or Replay Verified Run for committed evidence.";
   }
   return commands

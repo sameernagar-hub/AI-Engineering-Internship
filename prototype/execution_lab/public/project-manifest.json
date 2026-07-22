@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-22T02:08:30.657Z",
+  "generated_at": "2026-07-22T03:54:12.412Z",
   "project": {
-    "name": "AI Engineering Internship Tax Tooling Prototype",
+    "name": "Open-Source Tax Tooling - AI Engineering Research",
     "research_question": "What does the current open-source ecosystem for consumer tax bookkeeping and US tax-return preparation/submission look like, and how feasible is it to connect representative tools to other software?",
     "scope": "Consumer and freelancer-oriented bookkeeping and US tax-adjacent workflows, evaluated through public tools and synthetic data.",
     "synthetic_boundary": "Only committed synthetic fixtures are supported. The prototype does not accept real taxpayer data or provide tax advice.",
@@ -368,8 +368,8 @@
       "files": [
         {
           "path": "CHANGELOG.md",
-          "bytes": 55193,
-          "sha256": "7b8f01c44f0c091f4ea2ded323c28d5abc536e0cc0dac28d9c4257dd539bcb03",
+          "bytes": 56789,
+          "sha256": "19c28080e11c29cba8e8904fc9cbaf482fff4fc472727aea1f6830c49be659df",
           "title": "Changelog"
         }
       ]
@@ -989,26 +989,26 @@
         },
         {
           "path": "prototype/execution_lab/app/api/run/route.ts",
-          "bytes": 4117,
-          "sha256": "d46be7d3f8307a2a89c615bc33d6af50e030e97bb6ff5fb71e2ea6a2ad4e52d7",
+          "bytes": 4385,
+          "sha256": "1502f8ffd505c061038347347fd9494bc48a3841bdab56d28053ae4d48348d2d",
           "title": null
         },
         {
           "path": "prototype/execution_lab/app/globals.css",
-          "bytes": 19079,
-          "sha256": "e7e5205a450f3100ae2dfbfd38b8790194be7974fe878e4e7fb62ad78e1b181b",
+          "bytes": 19294,
+          "sha256": "9a5d74430cb51ac38f1c07bef60573960ebb4e58e446d43b3128e7a05b01157b",
           "title": null
         },
         {
           "path": "prototype/execution_lab/app/lab-client.tsx",
-          "bytes": 40621,
-          "sha256": "9eaa04366068a37d142786267ea55936b18bed4ccf3d49c3e7dfcdf144522097",
+          "bytes": 42171,
+          "sha256": "b648e17cfb2db48e741b05e341b1aaf75d34df168f011f8d319f5ceb3690586b",
           "title": null
         },
         {
           "path": "prototype/execution_lab/app/layout.tsx",
-          "bytes": 420,
-          "sha256": "bc923007a3686c2cb05679229da004d428f4535df8b901c0eed607da27f7a11b",
+          "bytes": 424,
+          "sha256": "85ba4b728183ffa93a60bee0ad41d34723f2351ede968f5fed11a69ae7e77846",
           "title": null
         },
         {
@@ -1025,8 +1025,14 @@
         },
         {
           "path": "prototype/execution_lab/data/project-manifest.json",
-          "bytes": 64511,
-          "sha256": "c8cab4030acdad12809f39345e386f9dea06828b4f1f4294f0e64583eacf3a27",
+          "bytes": 64706,
+          "sha256": "e808a8f5bd05d91e6e98eb0b5839e3fef7bf5ab19cc7e71332481a5c45cb58c9",
+          "title": null
+        },
+        {
+          "path": "prototype/execution_lab/data/verified-demo-run.json",
+          "bytes": 36540,
+          "sha256": "5576a6954f4d9b002507f280dfaab47b5939a9ce2a2de38b95cfd8fb5c353bfa",
           "title": null
         },
         {
@@ -1055,14 +1061,14 @@
         },
         {
           "path": "prototype/execution_lab/public/project-manifest.json",
-          "bytes": 64511,
-          "sha256": "c8cab4030acdad12809f39345e386f9dea06828b4f1f4294f0e64583eacf3a27",
+          "bytes": 64706,
+          "sha256": "e808a8f5bd05d91e6e98eb0b5839e3fef7bf5ab19cc7e71332481a5c45cb58c9",
           "title": null
         },
         {
           "path": "prototype/execution_lab/scripts/generate-manifest.mjs",
-          "bytes": 22113,
-          "sha256": "f2c3f3fa683643cd0e427af45f3c504727a8b2e1027c6e7a0d8f9c23531a0ebf",
+          "bytes": 22115,
+          "sha256": "0d083380336ecf5ce7e39adb9c232be5e2d31c83a61e9679bbb1db9f3752626e",
           "title": null
         },
         {
@@ -1133,8 +1139,8 @@
         },
         {
           "path": "prototype/README.md",
-          "bytes": 12924,
-          "sha256": "0d4fe1aa91f552fdc0847c44ae84e2148d118468620bb9f1766862ca6c499538",
+          "bytes": 13075,
+          "sha256": "39944f7ae393f60c833e97048a805dab513bc0f32477550207d7623353d1baea",
           "title": "Synthetic Freelancer hledger Adapter"
         },
         {
@@ -1341,8 +1347,8 @@
         },
         {
           "path": "deck/open_source_tax_tooling_final_deck.pptx",
-          "bytes": 77161,
-          "sha256": "8ed7daec51422b1adf0c5171dacc4b998ce03b8399a033646c7bb19cd23ed931",
+          "bytes": 80200,
+          "sha256": "45bcadd920a017292c25cc85ae391fbfd169e8d8a1f19e7a173570516f307665",
           "title": null
         },
         {
@@ -1378,15 +1384,15 @@
         },
         {
           "path": "prototype/README.md",
-          "bytes": 12924,
-          "sha256": "0d4fe1aa91f552fdc0847c44ae84e2148d118468620bb9f1766862ca6c499538",
+          "bytes": 13075,
+          "sha256": "39944f7ae393f60c833e97048a805dab513bc0f32477550207d7623353d1baea",
           "title": "Synthetic Freelancer hledger Adapter"
         },
         {
           "path": "README.md",
-          "bytes": 7537,
-          "sha256": "d0efb3df54a6590ae08748593cc6c807422160bb0efb17a15bddda06ee672fba",
-          "title": "AI Engineering Internship: Open-Source Tax Tooling Research"
+          "bytes": 7612,
+          "sha256": "084d9f22b79c3fcf2d76c6cc4eb24a998cf68757d87da6956a9bae5058725a26",
+          "title": "Open-Source Tax Tooling - AI Engineering Research"
         },
         {
           "path": "report/README.md",
@@ -1537,6 +1543,16 @@
     "source_path": "CHANGELOG.md",
     "entries": [
       {
+        "title": "07-22-2026 - Phase 31: Hosted Demo Replay Fix",
+        "bullets": [
+          "Renamed the project-facing title to `Open-Source Tax Tooling - AI Engineering Research`.",
+          "Added a committed verified demo-run payload generated by `python run_day20_demo.py --json`.",
+          "Updated the execution lab API so Vercel returns the verified runner payload instead of a stub response.",
+          "Updated the UI so hosted synthetic runs show passed lifecycle phases, command rows, command output, summary totals, warnings, and failure-matrix results.",
+          "Clarified the README and prototype README hosted-demo behavior."
+        ]
+      },
+      {
         "title": "07-22-2026 - Phase 31: Final Delivery",
         "bullets": [
           "Executed the Day 31 final-delivery phase early at user request.",
@@ -1584,16 +1600,6 @@
           "Updated the execution-lab manifest source so the UI reports `Phase 27 - full report draft complete` and the next step as the deck outline.",
           "Regenerated `prototype/execution_lab/data/project-manifest.json` and `prototype/execution_lab/public/project-manifest.json`.",
           "`README.md`"
-        ]
-      },
-      {
-        "title": "07-16-2026 - Phase 27: Report Revision",
-        "bullets": [
-          "Executed the Day 27 report-revision phase early at user request.",
-          "Added `report/full_report_draft.md` as the consolidated full report draft for mentor review.",
-          "Added `notes/day_27_report_revision.md`.",
-          "Consolidated the Day 23-26 report drafts into one report with executive summary, introduction, method, landscape, tool evaluations, comparison, prototype, recommendation, limitations, future work, evidence index, and publication checklist.",
-          "Updated `README.md`, `report/README.md`, and `report/outline.md` to point to the full report draft."
         ]
       }
     ]

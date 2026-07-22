@@ -255,7 +255,7 @@ async function main() {
     schema_version: "1.0.0",
     generated_at: new Date().toISOString(),
     project: {
-      name: "AI Engineering Internship Tax Tooling Prototype",
+      name: "Open-Source Tax Tooling - AI Engineering Research",
       research_question:
         "What does the current open-source ecosystem for consumer tax bookkeeping and US tax-return preparation/submission look like, and how feasible is it to connect representative tools to other software?",
       scope:
